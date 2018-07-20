@@ -1,0 +1,50 @@
++b.authorization-popup.popup.popup-default
+  +b.closer
+  +b.inner
+    +b.tab-control
+      +e(data-tab="content-tab-1").item.active Вход
+      +e(data-tab="content-tab-2").item Регистрация
+    +b.social
+      p Через аккаунт в социальных сетях:
+      +e('ul').list
+        +e.item.facebook
+          a(href="#")
+        +e.item.vk
+          a(href="#") 
+        +e.item.ok
+          a(href="#") 
+
+    +b.tab-content
+      +e#content-tab-1.content-inner.active
+        +b.content-title или авторизуйтесь:
+
+        +b.form-wr
+          label
+            input(type="email" placeholder="Ваш e-mail*" required)
+          label
+            input(type="password" placeholder="Ваш пароль*" required)
+
+          +b.alert-msg Пожалуйста, проверьте правильность заполнения подсвеченных полей:
+          
+          button.btn.btn-submit(type="submit") Войти
+
+        +b.pass-recovery
+          a(href="#") Забыли пароль?
+
+      +e#content-tab-2.content-inner
+        +b.content-title Регистрация через e-mail:
+
+        +b.form-wr
+          label
+            input(type="text" placeholder="Вашу имя" required)
+          label
+            input(type="email" placeholder="Ваш e-mail*" required)
+          label
+            input(type="password" placeholder="Ваш пароль*" required)
+
+          +b.alert-msg Пожалуйста, проверьте правильность заполнения подсвеченных полей:
+
+          +b.legal
+            p Создавая аккаунт, вы соглашаетесь с нашими #[a(href="#") Правилами и условиями и Положением о конфиденциальности].
+          
+          button.btn.btn-submit(type="submit") Создать аккаунт

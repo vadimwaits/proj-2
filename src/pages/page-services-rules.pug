@@ -1,0 +1,137 @@
+doctype html
+include ../templates/vendor/bemto/bemto
+
+html(lang='ru')
+  head
+    include ../templates/partials/head/head
+  body
+    +b.popup-wr
+      include ../templates/partials/page-popups/authorization-popup
+          
+    +b.page-wrapper
+      +b.A.bg-link(href="#")
+      include ../templates/partials/page-anchor/anchor
+
+      +b.page-inner-wr
+        include ../templates/partials/page-header/header--logged
+        include ../templates/partials/page-search-toolbar/search-toolbar
+
+        +b.page-body
+          +b.page-profile
+            +b(style="background-image: url(./temp/page-top-bg2.png);").page-top
+              +e.user-info
+                +e.user-pic
+                  img(src="./assets/images/soys-about-logo.png")
+
+                +e.user-main
+                  +e.user-name.menu Меню
+                    +b.mobile-trigger
+
+            +b.page-aside
+              +e.list
+                +e.item
+                  a(href="#") О проекте
+                +e.item.active
+                  a(href="#") Правила
+                  +b('ul').list
+                    +e.item.active
+                      a(href="#") Общие положения
+                    +e.item
+                      a(href="#") Права и обязанности
+                    +e.item
+                      a(href="#") Требования при использовании Сайта
+                    +e.item
+                      a(href="#") Модерация
+                    +e.item
+                      a(href="#") Ответственность. Ограничение ответственности
+                    +e.item
+                      a(href="#") Авторские права
+                    +e.item
+                      a(href="#") Порядок изменений данных Правил
+                +e.item
+                  a(href="#") Рекламодателям
+                +e.item
+                  a(href="#") Контакты
+                +e.item
+                  a(href="#") Помощь
+              +b.mobile-trigger
+
+            +b.page-main-content
+              +b.text-page
+                h2 Вопросы и ответы
+
+                +b('ol').expand-list.num-list-inherit
+                  +e('li').item
+                    +b('ol').item-title
+                      h3 Общие положения
+                      +b('li').item-body
+                        p Сайт Soys.by, размещенный по адресу #[a(href="#") www.soys.by] (далее — Сайт) — коммерческий ресурс Общества с ограниченной ответственностью «Soys.by», на котором размещаются статьи, фото- и видеоинформация, рекламная и другая информация от имени Администрации, а также предоставляется гражданам возможность целевого общения путем размещения в открытом доступе разнообразных сообщений для ознакомления с ними других посетителей.
+                      +b('li').item-body
+                        p Термины и определения, применяемые в настоящих Правилах, имеют следующее значение:
+                        +b('ol')
+                          +e('li') Пользователь — физическое лицо, использующее Сайт и соглашающееся с настоящими Правилами.
+                          +e('li') Ник — имя пользователя, под которым он зарегистрирован, отображаемое на экране в сообщениях данного пользователя Сайта.
+                          +e('li') Юзерпик— картинка, отображаемая под ником пользователя и сопровождающая все сообщения пользователя.
+                          +e('li') Администрация — Общество с ограниченной ответственностью «Онлайнер».
+                          +e('li') Модератор — уполномоченное Администрацией лицо, занимающееся Модерацией.
+                          +e('li') Модерация — действия Модератора, направленные на соблюдение пользователями правил пользования Сайтом.
+                          +e('li') Информация — любые данные, тексты, графические изображения, фотоизображения, программное обеспечение, базы данных или данные из баз данных в любом объеме, аудио- и видеоинформация.
+                      +b('li').item-body
+                        p Согласие с настоящими Правилами может выражаться в том, что:
+                        +b('ol')
+                          +e('li') Вы в процессе регистрации в качестве Пользователя на Сайте ставите галочку «Я согласен с правилами» либо
+                          +e('li') Вы размещаете сообщение на Сайте.
+                          +e('li') Вы посещаете Сайт. В этом случае Вы понимаете и соглашаетесь с тем, что Администрация будет расценивать факт пользования Вами Сайтом как согласие с Правилами с соответствующего момента времени.
+                          +e('li') Незнание Правил пользования Сайтом не только не освобождает вас от ответственности за их нарушение, но и само по себе является нарушением и отягчающим вину обстоятельством.
+
+                  +e('li').item
+                    +b.item-title
+                      h3 Права и обязанности
+                    +b.item-body
+                      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio molestiae libero tempore quis cupiditate aut ipsum nisi iusto cum delectus porro vero expedita nam harum fugit, vitae accusantium doloremque, aliquam.
+
+                  +e('li').item
+                    +b.item-title
+                      h3 Требования по использованию Сайта
+
+                    +b.item-body
+                      p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio molestiae libero tempore quis cupiditate aut ipsum nisi iusto cum delectus porro vero expedita nam harum fugit, vitae accusantium doloremque, aliquam.
+
+                  +e('li').item
+                    +b.item-title
+                      h3 Модерация
+
+                    +b.item-body
+                      p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, neque inventore deleniti optio facere minima cumque consequatur quidem non in aspernatur dolorum nam esse, illo, impedit obcaecati adipisci quibusdam accusamus.
+
+                  +e('li').item
+                    +b.item-title
+                      h3 Ответственность. Ограничение ответственности
+
+                    +b.item-body
+                      p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, neque inventore deleniti optio facere minima cumque consequatur quidem non in aspernatur dolorum nam esse, illo, impedit obcaecati adipisci quibusdam accusamus.
+
+                  +e('li').item
+                    +b.item-title
+                      h3 Авторские права
+
+                    +b.item-body
+                      p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, neque inventore deleniti optio facere minima cumque consequatur quidem non in aspernatur dolorum nam esse, illo, impedit obcaecati adipisci quibusdam accusamus.
+
+                  +e('li').item
+                    +b.item-title
+                      h3 Порядок изменений данных Правил
+
+                    +b.item-body
+                      p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, neque inventore deleniti optio facere minima cumque consequatur quidem non in aspernatur dolorum nam esse, illo, impedit obcaecati adipisci quibusdam accusamus.
+
+
+
+        include ../templates/partials/page-footer/footer
+
+  block scripts
+    script(src='assets/scripts/vendor/jquery-2.2.4.min.js')
+    script(src='assets/scripts/tools.js')
+    script(src='assets/scripts/vendor/slick.min.js')
+    script(src='assets/scripts/vendor/selectize.min.js')
+    script(src='assets/scripts/vendor/jquery-ui.min.js')

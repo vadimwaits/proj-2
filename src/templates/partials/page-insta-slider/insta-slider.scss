@@ -1,0 +1,41 @@
+.slider-insta {
+  & .slider-list {
+    & .slick-track {
+      margin-left: $insta-slider-offset;
+      @media #{$M_XS} {
+        margin-left: auto;
+      }
+    }
+    &__item {
+      position: relative;
+      height: auto;
+      width: $insta-slide-width;
+      margin: 0 18px;
+      @media #{$M_SMX} {
+        margin: 0 15px;
+      }
+      &:hover {
+        & a {
+          &:before {
+            background-color: rgba(0,0,0,0.6);
+          }
+        }
+      }
+      & a {
+        display: block;
+        height: 100%;
+        width: 100%;
+        &:before {
+          position: absolute;
+          display: block;
+          content: '';
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 2;
+        }
+      }
+    }
+  }
+}

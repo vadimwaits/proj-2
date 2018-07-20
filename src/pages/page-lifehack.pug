@@ -1,0 +1,106 @@
+doctype html
+include ../templates/vendor/bemto/bemto
+
+html(lang='ru')
+  head
+    include ../templates/partials/head/head
+  body
+    +b.popup-wr
+      include ../templates/partials/page-popups/authorization-popup
+          
+    +b.page-wrapper
+      +b.A.bg-link(href="#")
+      include ../templates/partials/page-anchor/anchor
+
+      +b.page-inner-wr
+        include ../templates/partials/page-header/header
+        include ../templates/partials/page-search-toolbar/search-toolbar
+
+        +b.page-body
+          +b(style="background-image: url(./assets/images/lifehack-head.png);").page-title-main.bg-pic
+            h2 Лайфхаки от шефа
+
+          +b.lifehack-descr
+            +e.inner
+              p Хотите научиться готовить такие же вкусные и аппетитные блюда, как те, которые сооружают на своих кухнях лучшие шеф-повара? Тогда этот список из лучших лайфаков вам точно понравится!
+
+          +b.lifehack-list
+            +e.item
+              +e(style="background-image: url(./temp/lifehack-pic-1.png);").item-pic
+              +e.main
+                +e.item-title Спасите пересоленный суп
+                +e.item-text
+                  p Пересолили суп? Не спешите выбрасывать блюдо. Его можно попробовать спасти. Есть сразу несколько эффективных способов, которые помогут убрать излишки соли. Однако самый действенный — окунуть в него марлю с крупой и проварить. Каша поможет ликвидировать соленый вкус.
+
+            +e.item
+              +e(style="background-image: url(./temp/lifehack-pic-2.png);").item-pic
+              +e.main
+                +e.item-title Придайте пикантную нотку овощным салатам
+                +e.item-text
+                  p Шеф-повара знают отличный и незаезженный способ приготовить вкусный и по-особенному пикантный овощной салат. Достаточно добавить в него небольшое количество ванили. Это отличная специя, которая идеально сочетается с любыми овощами. 
+
+            +e.item
+              +e(style="background-image: url(./temp/lifehack-pic-3.png);").item-pic
+              +e.main
+                +e.item-title Добавьте соль в кофе
+                +e.item-text
+                  p Некоторые люди просто не представляют себе утро без чашечки ароматного и бодрящего кофе. Как сделать этот напиток еще вкуснее? Просто добавьте в молотый кофе щепотку соли и наслаждайтесь потрясающе вкусным напитком.
+
+            +e.item
+              +e(style="background-image: url(./temp/lifehack-pic-4.png);").item-pic
+              +e.main
+                +e.item-title Варите белоснежный рис
+                +e.item-text
+                  p Хотите приготовить белоснежный рассыпчатый рис как на картинке? Это не так уж и сложно. Известные шеф-повара добавляют во время варки небольшое количество уксуса. Он помогает добиться максимально аппетитного и вкусного съедобного результата.
+
+            +e.item
+              +e(style="background-image: url(./temp/lifehack-pic-5.png);").item-pic
+              +e.main
+                +e.item-title Маринуйте в пиве
+                +e.item-text 
+                  p Лето — это идеальное время для обедов и ужинов на природе. Самым популярным блюдом заслуженно остается мясной шашлык, приготовленный на гриле или с помощью мангала. Попробуйте новый оригинальный вкус: смешайте светлое пиво с соевым соусом, солью и перцем по вкусу или используйте темное пиво.
+
+            +e.item
+              +e(style="background-image: url(./temp/lifehack-pic-6.png);").item-pic
+              +e.main
+                +e.item-title Используйте чеснок
+                +e.item-text
+                  p Чеснок представляет собой отличное противовирусное средство и помогает держать иммунитет в тонусе. Этот ингредиент способен придать любому блюду интересный вкус и заставить его заиграть по-новому. Натрите зубчиком чеснока тарелку, а затем выложите на нее салат или гарнир. 
+
+                  p Неравнодушны к мясу с хрустящей румяной корочкой? Такое можно приготовить не только в ресторане, но и дома. Воспользуйтесь советами опытных шеф-поваров: перед тем как поместить блюдо в духовку, смажьте его сверху вкусным и, что самое главное, удачным маринадом. Это может быть гранатовый сок и мед, разведенное сухое вино, коньяк или вода.  
+
+            +e.item
+              +e(style="background-image: url(./temp/lifehack-pic-7.png);").item-pic
+              +e.main
+                +e.item-title Добавьте в суп свежий овощной сок
+                +e.item-text
+                  p Не спешите снимать суп с огня. На финальных стадиях приготовления добавьте в первое блюдо свежевыжатый овощной сок. Это поможет усилить вкус и обогатить ваше блюдо витаминами, минералами и другими полезными веществами. Для этой цели отлично подойдет капустный, морковный или томатный сок.
+
+            +e.item
+              +e(style="background-image: url(./temp/lifehack-pic-8.png);").item-pic
+              +e.main
+                +e.item-title Готовьте вкусную шарлотку
+                +e.item-text
+                  p Яблочный пирог — это отличный десерт к чаю. Побалуйте своих домашних и приготовьте по-настоящему вкусную шарлотку. Чтобы яблоки не опустились на дно формы, обваляйте их перед приготовлением в муке.
+
+            +e.item
+              +e(style="background-image: url(./temp/lifehack-pic-9.png);").item-pic
+              +e.main
+                +e.item-title Смазывайте сыр сливочным маслом
+                +e.item-text
+                  p Отрезали небольшой кусочек сыра, а остальное отправили обратно в холодильник? Чтобы сыр не засыхал с обрезанной стороны, смажьте его небольшим количеством сливочного масла. 
+
+          +b.section-bottom
+            +b.sub-title
+              a(href="#") Загрузить еще
+              +b.border
+
+          
+        include ../templates/partials/page-footer/footer
+
+  block scripts
+    script(src='assets/scripts/vendor/jquery-2.2.4.min.js')
+    script(src='assets/scripts/tools.js')
+    script(src='assets/scripts/vendor/slick.min.js')
+    script(src='assets/scripts/vendor/selectize.min.js')
+    script(src='assets/scripts/vendor/jquery-ui.min.js')

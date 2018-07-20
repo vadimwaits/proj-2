@@ -1,0 +1,562 @@
+.page-recipe-author-top {
+  margin-bottom: 46px;
+  padding-bottom: 45px;
+  border-bottom: 1px solid $gray-E8;
+  &__head {
+    position: relative;
+    display: flex;
+    height: auto;
+    min-height: 80px;
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 140px;
+    font-family: $font-secondary;
+    font-size: 14px;
+    @media #{$M_XS} {
+     flex-wrap: wrap;
+    }
+    @media #{$M_X3S} {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  &__body {
+    margin-top: 17px;
+    font-family: $font-secondary-light;
+    font-size: 16px;
+    line-height: 26px;
+    & .author-about {
+      margin-bottom: 39px;
+      @media #{$M_X3S} {
+        font-size: 14px;
+      }
+    }
+    & .btn {
+      padding: 0 23px;
+      height: 42px;
+      line-height: 40px;
+    }
+  }
+  &__pic {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    top: 0;
+    left: 0;
+    @include border-radius($full-round);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+    @media #{$M_X3S} {
+      position: relative;
+    }
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+  &__main {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    margin-left: 17px;
+    @media #{$M_X3S} {
+      margin-left: 15px;
+      width: calc(100% - 100px);
+    }
+    & strong {
+      font-family: $font-secondary-bold;
+    }
+    & .username,
+    & .date { width: 100%;}
+    & .date {
+      margin-top: 6px;
+    }
+    & .username {
+      overflow: hidden;
+      white-space: nowrap;
+      & a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &__aside {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    align-items: flex-start;
+    margin-left: auto;
+    @media #{$M_X3S} {
+      position: relative;
+      margin-left: 18px;
+    }
+    & .comments,
+    & .views {
+      display: inline-block;
+      position: relative;
+      padding-left: 25px;
+      &:before {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    & .comments {
+      &:before {
+        top: 3px;
+        content: svg-load('../images/icon_comment.svg', fill = $black-20);
+      }
+    }
+    & .views {
+      margin-left: 15px;
+      &:before {
+        content: svg-load('../images/icon_eye.svg', fill = $black-20);
+      }
+    }
+  }
+}
+.recipe-features {
+  display: flex;
+  align-content: flex-end;
+  flex-wrap: wrap;
+  height: 40px;
+  margin-top: 20px;
+  &__item {
+    display: flex;
+    align-items: flex-end;
+    align-content: flex-end;
+    height: 100%;
+    margin-right: 65px;
+    padding-bottom: 8px;
+    font-family: $font-secondary;
+    font-size: 16px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    color: $gray-A8;
+    @media #{$M_X3S} {
+      margin-right: 30px;
+      margin-bottom: 10px;
+      padding-bottom: 4px;
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+    &.portions {
+      padding-left: 58px;
+      background-image: svg-load('../images/icon_recipe-cook.svg', fill = $gray-A8);
+    }
+    &.time {
+      padding-left: 43px;
+      background-image: svg-load('../images/icon_recipe-stopwatch.svg', fill = $gray-A8);
+    }
+    & .val {
+      padding-right: 5px;
+    }
+  }
+}
+.btn-row-recipes {
+  display: flex;
+  margin-top: 40px;
+  @media #{$M_X3S} {
+    flex-wrap: wrap;
+  }
+  & .btn {
+    margin-left: 20px;
+    padding: 0 20px;
+    @media #{$M_X3S} {
+      margin: 10px 10px 0;
+    }
+    &:first-of-type {
+      margin-left: 0;
+      @media #{$M_X3S} {
+        margin-left: 10px;
+      }
+    }
+    &:before {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+    &.add-book {
+      padding-left: 45px;
+      &:before {
+        content:'';
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 22px;
+        height: 15px;
+        width: 1px;
+        margin: auto 0;
+        background-color: $black-20;
+      }
+      &:after {
+        content:'';
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 14px;
+        height: 1px;
+        width: 15px;
+        margin: auto 0;
+        background-color: $black-20;
+      }
+      &:hover,
+      &:active {
+        &:before,
+        &:after {
+          background-color: $white;
+        }
+      }
+    }
+    &.print {
+      padding-left: 52px;
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 18px;
+        width: 18px;
+        left: 15px;
+        background-image: svg-load('../images/icon_print.svg', fill = $black-20);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+      }
+      &:hover,
+      &:active {
+        &:before {
+          background-image: svg-load('../images/icon_print.svg', fill = $white);
+        }
+      }
+    }
+  }
+}
+.page-recipe-description {
+  width: 100%;
+  margin-top: 20px;
+  line-height: 1.5em;
+  font-family: $font-secondary;
+  font-size: 18px;
+  & p {
+    margin-top: 20px;
+  }
+  @media #{$M_XS} {
+    font-size: 16px;
+  }
+  @media #{$M_X3S} {
+    font-size: 14px;
+  }
+}
+.page-recipe-calc {
+  height: auto;
+  margin: 0 auto;
+  padding: 43px 140px;
+  background-color: $gray-F7;
+  @media #{$M_XS} {
+    padding: 43px 40px;
+  }
+  &__top {
+    display: flex;
+    @media #{$M_X3S} {
+      flex-wrap: wrap;
+    }
+    & .title {
+      @media #{$M_X3S} {
+        width: 100%;
+      }
+    }
+    & .calc {
+      display: flex;
+      margin-left: auto;
+      @media #{$M_XS} {
+        align-items: flex-end;
+        padding-bottom: 15px;
+      }
+      @media #{$M_X3S} {
+        width: 100%;
+      }
+      & .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+        &.minus {
+          &:before {
+            content:'';
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            height: 1px;
+            width: 15px;
+            margin: auto 0;
+            background-color: $black-20;
+            transition: 0.2s;
+          }
+          &:hover {
+            &:before {
+              width: 19px;
+            }
+          }
+        }
+        &.plus {
+          &:before {
+            content:'';
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: 15px;
+            width: 1px;
+            margin: auto 0;
+            background-color: $black-20;
+            transition: 0.2s;
+          }
+          &:after {
+            content:'';
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            height: 1px;
+            width: 15px;
+            margin: auto 0;
+            background-color: $black-20;
+            transition: 0.2s;
+          }
+          &:hover {
+            &:before {
+              height: 19px;
+            }
+            &:after {
+              width: 19px;
+            }
+          }
+        }
+        &.plus,
+        &.minus {
+          &:active {
+            &:before,
+            &:after {
+              background-color: $gray-8F;
+            }
+          }
+        }
+      }
+      & .input {
+        display: block;
+        height: 50px;
+        width: 50px;
+        background-color: $white;
+        @include border-radius(3px);
+        border: 1px solid $gray-B3;
+        overflow: hidden;
+        cursor: pointer;
+        & input {
+          display: block;
+          height: 100%;
+          width: 100%;
+          border: none;
+          outline: none;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+.calc-table {
+  height: auto;
+  width: 100%;
+  @media #{$M_X3S} {
+    font-size: 12px;
+  }
+  & .table-head {
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-family: $font-secondary-bold;
+    @media #{$M_XS} {
+      margin-bottom: 22px;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    line-height: 1;
+    font-family: $font-secondary;
+    @media #{$M_XS} {
+      margin-bottom: 20px;
+    }
+    & .name {
+      flex-grow: 0;
+    }
+    & .dots {
+      flex-grow: 8;
+      margin: 0 5px;
+      border-bottom: 1px dotted;
+    }
+    & .count {
+      display: flex;
+      flex-grow: 0;
+      & span {
+        padding-right: 5px;
+      }
+    }
+  }
+}
+.recipe-steps {
+  width: 770px;
+  margin: 50px auto 0;
+  @media #{$M_SMX} {
+    width: 100%;
+    padding: 0 20px;
+  }
+  &.expert-recipe {
+    & .recipe-section-title {
+      margin-bottom: 15px;
+    }
+    & .row {
+      flex-flow: column wrap;
+      &__text {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 1.2em;
+        font-family: $font-secondary-light;
+        @media #{$M_X3S} {
+          font-size: 14px;
+        }
+      }
+    }
+    & .recipe-pic {
+      height: auto;
+      width: 100%;
+      max-height: 392px;
+    }
+  }
+  &__section {
+    margin-bottom: 60px;
+    @media #{$M_X3S} {
+      margin-bottom: 30px;
+    }
+    & .recipe-section-title {
+      margin-bottom: 35px;
+    }
+    & .row {
+      display: flex;
+      margin-bottom: 30px;
+      @media #{$M_X2S} {
+        flex-wrap: wrap;
+      }
+      &__quote {
+        width: 100%;
+        margin: 40px 0;
+        padding-left: 25px;
+        font-size: 20px;
+        font-family: $font-secondary-lightItalic;
+        line-height: 1.3em;
+        border-left: 4px solid $black-20;
+        @media #{$M_X3S} {
+          margin: 20px 0;
+          font-size: 16px;
+        }
+      }
+      & .Lcol {
+        width: 39%;
+        padding-right: 20px;
+        @media #{$M_X2S} {
+          width: 100%;
+        }
+        & .calc-table {
+          &__text {
+            line-height: 1.4em;
+            font-size: 16px;
+            font-family: $font-secondary-light;
+            & p {
+              margin-bottom: 20px;
+              &:first-of-type {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+      & .Rcol {
+        width: 61%;
+        @media #{$M_X2S} {
+          margin-top: 15px;
+        }
+        @media #{$M_X2S} {
+          width: 100%;
+        }
+        & .recipe-pic {
+          position: relative;
+          margin-top: 30px;
+          cursor: pointer;
+          @media #{$M_X2S} {
+            text-align: center;
+          }
+          &:hover {
+            &:after,
+            &:before {
+              display: block;
+            }
+          }
+          &:before {
+            content:'';
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            background-color: rgba(0,0,0,0.3);
+          }
+          &:after {
+            content:'';
+            display: none;
+            position: absolute;
+            top: 14px;
+            right: 15px;
+            height: 21px;
+            width: 29px;
+            background-image: svg-load('../images/icon_zoom.svg', fill = $white);
+            background-repeat: none;
+            background-position: 0 0;
+            z-index: 3;
+          }
+          &:first-of-type {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+  & .btn-row-recipes {
+    justify-content: center;
+    padding-top: 24px;
+    border-top: 1px solid $gray-8F;
+    @media #{$M_X3S} {
+      flex-wrap: wrap;
+      & .btn {
+        margin: 10px 15px 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,185 @@
+.recipes-wr {
+  & .features-bl {
+    margin-top: 35px;
+    padding: 0 40px;
+    @media #{$M_X2SS} {
+      padding: 0 20px;
+    }
+  }
+  & .recipe-section-wr {
+    margin-top: 20px;
+  }
+  & .recipe-section {
+    @media #{$M_SM} {
+      justify-content: space-between;
+      margin-right: 0;
+      padding: 0 10px;
+    }
+    & .section-bl {
+      height: 300px;
+      padding-bottom: 0;
+      @media #{$M_SMX} {
+        height: auto;
+        padding-bottom: 32%;
+      }
+      &.bl-min {
+        width: 300px;
+        @media #{$M_SMX} {
+          width: 32%;
+        }
+        @media #{$M_XS} {
+          width: 100%;
+          padding-bottom: 45%;
+        }
+        @media #{$M_X2SS} {
+          & .inner {
+            & h2 {
+              font-size: 24px;
+              line-height: 24px;
+            }
+          }
+        }
+        @media #{$M_X3S} {
+          width: 100%;
+          padding-bottom: 100%;
+          & .inner {
+            & h2 {
+              font-size: 40px;
+              line-height: 40px;
+            }
+          }
+        }
+      }
+      &.bl-lrg {
+        width: 635px;
+        @media #{$M_SMX} {
+          width: 66%;
+        }
+        @media #{$M_XS} {
+          width: 100%;
+          padding-bottom: 45%;
+        }
+        @media #{$M_X2SS} {
+          & .inner {
+            & h2 {
+              font-size: 24px;
+              line-height: 24px;
+            }
+          }
+        }
+        @media #{$M_X3S} {
+          width: 100%;
+          padding-bottom: 100%;
+          & .inner {
+            & h2 {
+              font-size: 40px;
+              line-height: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.filter-bl {
+  display: flex;
+  height: auto;
+  width: 100%;
+  padding: 0 40px 14px;
+  background-color: $gray-9F;
+  @media #{$M_X2SS} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px 14px;
+    flex-wrap: wrap;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    @media #{$M_X2SS} {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+    @media #{$M_X2SS} {
+      display: flex;
+      justify-content: center;
+      flex-flow: column wrap;
+      align-items: center;
+    }
+  }
+  &__item {
+    position: relative;
+    margin-top: 14px;
+    margin-right: 30px;
+    padding-right: 23px;
+    font-family: $font-secondary;
+    font-size: 14px;
+    color: $black-20;
+    cursor: pointer;
+    @media #{$M_X2SS} {
+      max-width: 200px;
+      width: 100%;
+      text-align: left;
+      margin-top: 20px;
+      margin-right: 0;
+    }
+    &:hover {
+      color: $white;
+      & .closer {
+        &:before,
+        &:after {
+          background-color: $white;
+        }
+      }
+    }
+    &.clear {
+      min-width: 120px;
+      color: $white;
+      &:hover {
+        color: $black-20;
+        & .closer {
+          &:before,
+          &:after {
+            background-color: $black-20;
+          }
+        }
+      }
+      & i {
+        &:after,
+        &:before {
+          background-color: $white;
+        }
+      }
+    }
+  }
+  & .closer {
+    display: block;
+    position: absolute;
+    height: 11px;
+    width: 11px;
+    top: 2px;
+    right: 0;
+    &:after,
+    &:before {
+      content:'';
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background-color: $black-20;
+    }
+    &:after {
+      @include transform-rotate(-45deg);
+    }
+    &:before {
+      @include transform-rotate(45deg);
+    }
+  }
+}

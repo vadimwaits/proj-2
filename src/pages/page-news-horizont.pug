@@ -1,0 +1,248 @@
+doctype html
+include ../templates/vendor/bemto/bemto
+
+html(lang='ru')
+  head
+    include ../templates/partials/head/head
+  body
+    +b.popup-wr
+      include ../templates/partials/page-popups/authorization-popup
+          
+    +b.page-wrapper
+      +b.A.bg-link(href="#")
+      include ../templates/partials/page-anchor/anchor
+
+      +b.page-inner-wr
+        include ../templates/partials/page-header/header
+        include ../templates/partials/page-search-toolbar/search-toolbar
+
+        +b.page-body
+          +b.page-title-main
+            h2 Новости
+
+          +b.news-toolbar
+            +e.title Поиск новости по названию:
+
+            +b('label').search-bar.search-bar-default
+              input(type="search" placeholder="Введите слово или название новости")
+              i.icon
+
+          +b.news-wr
+            +b.features-bl
+              +b.items-all
+                span.title Найдено рецептов:
+                span.val 4567
+
+              +b.sort-bar
+                +b.sort-list
+                  +b.title Сортировать:
+                  +b.dropdown-list
+                    select
+                      option по популярности
+                      option по хронологии
+                      option по просмотрам
+
+                +b.sort-grid
+                  +b.title Вид:
+                  +b.grid-option
+                  +b.row-option.active-type
+                    span
+
+            +b.news-horizont-list
+              +e.item
+                +e(style="background-image: url(./temp/news-horizont-pic-1.png);").item-pic
+                  +e.item-date 14 июля 2017
+                +e.main
+                  +e.item-title Шведская экспедиция
+                  +e.item-text
+                    p Этим летом насладиться изысканной едой за «столиком для одного» смогут гурманы из Лондона, Нью-Йорка и Берлина. В планах учредителей Eenmaal находится открытие постоянных мест, поскольку дебют ресторана «для одиночек» был на ура воспринят общественностью.
+                  
+                  +e('ul').item-toolbar
+                    +e.toolbar-item.views 808
+                    +e.toolbar-item.comments
+                      a(href="#") 56
+                    +e.toolbar-item.likes 543
+
+              +e.item
+                +e(style="background-image: url(./temp/news-horizont-pic-2.png);").item-pic
+                  +e.item-date 14 июля 2017
+                +e.main
+                  +e.item-title Снимай как «Soys.by», готовь как Шеф-повар с Gorenje!
+                  +e.item-text
+                    p Компания работает над расширением своего бренда путем создания продуктов  «для одного». Первым «детищем» стала шампанское Eenmaal.
+                  
+                  +e('ul').item-toolbar
+                    +e.toolbar-item.views 808
+                    +e.toolbar-item.comments
+                      a(href="#") 56
+                    +e.toolbar-item.likes 543  
+
+              +e.item
+                +e(style="background-image: url(./temp/news-horizont-pic-3.png);").item-pic
+                  +e.item-date 14 июля 2017
+                +e.main
+                  +e.item-title 5 главных ресторанов Мальмё
+                  +e.item-text
+                    p Eenmaal в переводе с голландского означает «однажды, один раз». И это полностью отражает концепцию заведения – «один заказ от одного посетителя».
+                  
+                  +e('ul').item-toolbar
+                    +e.toolbar-item.views 808
+                    +e.toolbar-item.comments
+                      a(href="#") 56
+                    +e.toolbar-item.likes 543
+
+              +e.item
+                +e(style="background-image: url(./temp/news-horizont-pic-4.png);").item-pic
+                  +e.item-date 14 июля 2017
+                +e.main
+                  +e.item-title Микаэль Мёльстад
+                  +e.item-text
+                    p Шеф-поваром ресторана является Лесли Дронкер, отдающий предпочтение исключительно органическим ингредиентам. Стоимость меню (включая напитки) составляет $50.
+                  
+                  +e('ul').item-toolbar
+                    +e.toolbar-item.views 808
+                    +e.toolbar-item.comments
+                      a(href="#") 56
+                    +e.toolbar-item.likes 543
+
+              +e.item
+                +e(style="background-image: url(./temp/news-horizont-pic-5.png);").item-pic
+                  +e.item-date 14 июля 2017
+                +e.main
+                  +e.item-title Шведский стол
+                  +e.item-text 
+                    p Заведение почти каждый месяц переезжает с места на место. Учредитель всегда выбирает скромное местечко с большими широкими окнами, где нет Wi-Fi, вычурных украшений и рекламных роликов. 
+                  
+                  +e('ul').item-toolbar
+                    +e.toolbar-item.views 808
+                    +e.toolbar-item.comments
+                      a(href="#") 56
+                    +e.toolbar-item.likes 543
+
+              +e.item
+                +e(style="background-image: url(./temp/news-horizont-pic-6.png);").item-pic
+                  +e.item-date 14 июля 2017
+                +e.main
+                  +e.item-title Семь верст не крюк
+                  +e.item-text
+                    p Я вспомнила этот случай в шведском городе Мальмё за ужином из двух десятков подач в мишленовском ресторане Vollmers. Одно из основных блюд называлось там Bokskogen, что значит в переводе «Буковый лес».   
+                  
+                  +e('ul').item-toolbar
+                    +e.toolbar-item.views 808
+                    +e.toolbar-item.comments
+                      a(href="#") 56
+                    +e.toolbar-item.likes 543
+
+              +e.item
+                +e(style="background-image: url(./temp/news-horizont-pic-7.png);").item-pic
+                  +e.item-date 14 июля 2017
+                +e.main
+                  +e.item-title Готовим с детьми» - курс Виталия Тихонова
+                  +e.item-text
+                    p Виталий Тихонов – адепт скандинавской и северной кухни, и в этом курсе он учит готовить, например, шведский гравлакс и эстонскую запеканку пиккпойс.
+                  
+                  +e('ul').item-toolbar
+                    +e.toolbar-item.views 808
+                    +e.toolbar-item.comments
+                      a(href="#") 56
+                    +e.toolbar-item.likes 543 
+
+              +e.item
+                +e(style="background-image: url(./temp/news-horizont-pic-8.png);").item-pic
+                  +e.item-date 14 июля 2017
+                +e.main
+                  +e.item-title Суздальская экспедиция «Soys.by»
+                  +e.item-text
+                    p По нашей традиции, которая возникла не так давно, но уже устоялась, мы привозим из наших региональных экспедиций не только гиды по городам и весям, но и видеоролики.
+                  
+                  +e('ul').item-toolbar
+                    +e.toolbar-item.views 808
+                    +e.toolbar-item.comments
+                      a(href="#") 56
+                    +e.toolbar-item.likes 543 
+
+              +e.item
+                +e(style="background-image: url(./temp/news-horizont-pic-9.png);").item-pic
+                  +e.item-date 14 июля 2017
+                +e.main
+                  +e.item-title Пьет — значит, любит
+                  +e.item-text
+                    p Иногда для того, чтобы твои представления о чем-то изменились кардинальным образом, достаточно оказаться в изоляции. Например, в бельгийской деревне, жизнь в которой бьется медленно, как пульс у лошади.
+                  
+                  +e('ul').item-toolbar
+                    +e.toolbar-item.views 808
+                    +e.toolbar-item.comments
+                      a(href="#") 56
+                    +e.toolbar-item.likes 543  
+
+          +b.section-bottom
+            +b.sub-title
+              a(href="#") Загрузить еще
+              +b.border
+
+          +b.slider-event.slider-default
+            +b.section-title
+              h2
+                a(href="#") Популярные новости
+            +b('ul').slider-list
+              +e.item
+                img(src="./temp/event-slide1.png")
+                a(href="#")
+                  +b.inner
+                    +b.date 19 июля 2017
+                    +b.title
+                      h4 5 дней шаурмы. Фестиваль уличной еды в Минске.
+              +e.item
+                img(src="./temp/event-slide2.png")
+                a(href="#")
+                  +b.inner
+                    +b.date 19 июля 2017
+                    +b.title
+                      h4 Снимай как «Soys.by», готовь как Шеф-повар с Gorenje!
+              +e.item
+                img(src="./temp/event-slide3.png")
+                a(href="#")
+                  +b.inner
+                    +b.date 19 июля 2017
+                    +b.title
+                      h4 5 дней шаурмы. Фестиваль уличной еды в Минске.
+              +e.item
+                img(src="./temp/event-slide4.png")
+                a(href="#")
+                  +b.inner
+                    +b.date 19 июля 2017
+                    +b.title
+                      h4 Снимай как «Soys.by», готовь как Шеф-повар с Gorenje!
+              +e.item
+                img(src="./temp/event-slide1.png")
+                a(href="#")
+                  +b.inner
+                    +b.date 19 июля 2017
+                    +b.title
+                      h4 5 дней шаурмы. Фестиваль уличной еды в Минске.
+              +e.item
+                img(src="./temp/event-slide2.png")
+                a(href="#")
+                  +b.inner
+                    +b.date 19 июля 2017
+                    +b.title
+                      h4 Снимай как «Soys.by», готовь как Шеф-повар с Gorenje!
+            +b.section-bottom
+              +b.sub-title
+                a(href="#")
+                +b.border
+              +b.custom-controls
+                +b.custom-prev
+                  span
+                +b.custom-next
+                  span
+
+          
+        include ../templates/partials/page-footer/footer
+
+  block scripts
+    script(src='assets/scripts/vendor/jquery-2.2.4.min.js')
+    script(src='assets/scripts/tools.js')
+    script(src='assets/scripts/vendor/slick.min.js')
+    script(src='assets/scripts/vendor/selectize.min.js')
+    script(src='assets/scripts/vendor/jquery-ui.min.js')

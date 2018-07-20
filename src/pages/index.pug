@@ -1,0 +1,36 @@
+doctype html
+include ../templates/vendor/bemto/bemto
+
+html(lang='ru')
+  head
+    include ../templates/partials/head/head
+  body
+    +b.popup-wr
+      include ../templates/partials/page-popups/authorization-popup
+      include ../templates/partials/page-popups/restore-password-popup
+          
+    +b.page-wrapper
+      +b.A.bg-link(href="#")
+      include ../templates/partials/page-anchor/anchor
+
+      +b.page-inner-wr
+        include ../templates/partials/page-header/header
+        include ../templates/partials/page-search-toolbar/search-toolbar
+
+        +b.page-body
+          include ../templates/partials/page-recipe-slider/recipe-slider
+          include ../templates/partials/page-recipe-section/recipe-section
+          include ../templates/partials/page-news-preview/news-preview
+          include ../templates/partials/page-event-slider/event-slider
+          include ../templates/partials/page-tips-slider/tips-slider
+          include ../templates/partials/page-insta-slider/insta-slider
+          include ../templates/partials/page-tags-section/tags-section
+          
+        include ../templates/partials/page-footer/footer
+
+  block scripts
+    script(src='assets/scripts/vendor/jquery-2.2.4.min.js')
+    script(src='assets/scripts/tools.js')
+    script(src='assets/scripts/vendor/slick.min.js')
+    script(src='assets/scripts/vendor/selectize.min.js')
+    script(src='assets/scripts/vendor/jquery-ui.min.js')

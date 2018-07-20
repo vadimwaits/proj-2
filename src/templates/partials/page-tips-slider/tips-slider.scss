@@ -1,0 +1,215 @@
+.slider-tips {
+  position: relative;
+  margin-top: 70px;
+  overflow-y: visible;
+  overflow-x: hidden;
+  & .slider-list {
+    width: 100%;
+    padding-bottom: 30px;
+    &:before {
+      content:'';
+      display: block;
+      position: absolute;
+      width: 300px;
+      top: -30px;
+      right: 90px;
+      bottom: 30px;
+      background-image: url(../images/tips-slider-bg.png);
+      background-repeat: no-repeat;
+      background-position: 86% 100%;
+      z-index: 4;
+      @media #{$M_SMX} {
+        right: 70px;
+      }
+      @media #{$M_XS} {
+        display: none;
+      }
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 40%;
+      top: 0;
+      right: 0;
+      bottom: 30px;
+      background-color: $gray-2B;
+      z-index: 3;
+      @media #{$M_XS} {
+        display: none;
+      }
+    }
+    &__item {
+      position: relative;
+      height: 430px;
+      background-color: $gray-2B;
+      color: $white;
+      @media #{$M_SMX} {
+        height: 420px;
+      }
+      & .inner {
+        position: absolute;
+        top: 75px;
+        left: 140px;
+        width: 100%;
+        max-width: 42%;
+        @media #{$M_SMX} {
+          left: 75px;
+          max-width: 39%;
+        }
+        @media #{$M_XS} {
+          right: 75px;
+          max-width: none;
+          width: auto;
+        }
+        @media #{$M_X3S} {
+          right: 30px;
+          left: 30px;
+        }
+        & .text {
+          height: auto;
+          border-bottom: 1px solid $black-1F;
+          margin-top: 35px;
+          padding-bottom: 55px;
+          line-height: 1.5em;
+          font-size: 16px;
+          font-family: $font-secondary-light;
+          color: $gray-B1;
+          @media #{$M_SMX} {
+            margin-top: 25px;
+            font-size: 14px;
+          }
+          @media #{$M_XS} {
+            padding-bottom: 35px;
+          }
+        }
+        & .link {
+          display: inline-block;
+          margin-top: 15px;
+          font-size: 20px;
+          border-bottom: 1px solid transparent;
+          &:hover {
+            border-bottom: 1px solid;
+          }
+          a {
+            font-size: inherit;
+            color: inherit;
+          }
+        }
+      }
+    }
+    & .slick-track {
+      overflow-y: visible;
+    }
+    & .slick-list {
+      overflow: visible;
+    }
+    & .slick-prev,
+    & .slick-next {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      height: 140px;
+      width: 140px;
+      z-index: 9;
+      font-size: 0;
+      background-color: $black-1D;
+      background-repeat: no-repeat;
+      background-position: 0 50%;
+      @include border-radius($full-round);
+      overflow: hidden;
+      color: transparent;
+      @media #{$M_SMX} {
+        height: 120px;
+        width: 120px;
+      }
+      @media #{$M_X3S} {
+        display: none !important;
+      }
+      &:after,
+      &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 14px;
+        background-color: $gray-34;
+        z-index: 2;
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    & button.slick-disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+    & .slick-prev {
+      left: $tips-arrow-offset;
+      &:after,
+      &:before {
+        right: 28px;
+        @media #{$M_SMX} {
+          right: 20px;
+        }
+      }
+      &:before {
+        @include transform-rotate(-45deg);
+        top: $tips-arrow-position;
+      }
+      &:after {
+        @include transform-rotate(45deg);
+        bottom: $tips-arrow-position;
+      }
+    }
+    & .slick-next {
+      right: $tips-arrow-offset;
+      &:after,
+      &:before {
+        left: 28px;
+        @media #{$M_SMX} {
+          left: 20px;
+        }
+      }
+      &:before {
+        @include transform-rotate(45deg);
+        top: $tips-arrow-position;
+      }
+      &:after {
+        @include transform-rotate(-45deg);
+        bottom: $tips-arrow-position;
+      }
+    }
+    & .slick-dots {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      text-align: center;
+      z-index: 9;
+      & li {
+        display: inline-block;
+        height: 8px;
+        width: 8px;
+        margin: 0 8px;
+        &.slick-active {
+          & button {
+            background-color: $gray-75;
+          }
+        }
+        & button {
+          display: block;
+          height: 100%;
+          width: 100%;
+          font-size: 0;
+          background-color: $gray-D3;
+          @include border-radius($full-round);
+          overflow: hidden;
+          color: transparent;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,395 @@
+doctype html
+include ../templates/vendor/bemto/bemto
+
+html(lang='ru')
+  head
+    include ../templates/partials/head/head
+  body
+    +b.popup-wr
+      include ../templates/partials/page-popups/authorization-popup
+          
+    +b.page-wrapper
+      +b.A.bg-link(href="#")
+      include ../templates/partials/page-anchor/anchor
+
+      +b.page-inner-wr
+        include ../templates/partials/page-header/header
+        include ../templates/partials/page-search-toolbar/search-toolbar
+
+        +b.page-body
+          +b.page-title-main
+            h2 Рецепты
+            +b.breadcrumbs
+              +e.item
+                a(href="#") Главная
+              +e.item
+                a(href="#") Рецепты
+              +e.item
+                a(href="#") Все рецепты
+
+          +b.news-toolbar
+            +e.title Добавить/исключить ингредиент:
+
+            +b('label').add-bar.search-bar-custom
+              i
+              select(placeholder="Введите название").select-custom
+                option(value="") Введите название
+                option Пирожки
+                option Капкейк
+                option Крем
+                option Тесто для пирожков
+                option Куличи
+                option Манник
+                option Хачапури
+                option Рогалики
+                option Коржики
+                option Котлеты
+                option Пюре
+                option Лазанья
+            +b('label').remove-bar.search-bar-custom
+              i
+              select(placeholder="Введите название").select-custom
+                option(value="") Введите название
+                option Пирожки
+                option Капкейк
+                option Крем
+                option Тесто для пирожков
+                option Куличи
+                option Манник
+                option Хачапури
+                option Рогалики
+                option Коржики
+                option Котлеты
+                option Пюре
+                option Лазанья
+
+          +b.filter-bl
+            +e.item.clear Очистить все
+              i.closer
+            +e.list
+              +e.item
+                span Завтраки
+                i.closer
+              +e.item
+                span Салаты
+                i.closer
+              +e.item.include
+                span.pre Включает: 
+                |
+                span лук
+                i.closer
+              +e.item.remove
+                span.pre Без: 
+                |
+                span морковь
+                i.closer
+              +e.item.remove
+                span.pre Без: 
+                |
+                span огурец
+                i.closer
+
+
+          +b.recipes-wr
+            +b.features-bl
+              +b.items-all
+                span.title Найдено рецептов:
+                span.val 4567
+
+              +b.sort-bar
+                +b.sort-list
+                  +b.title Сортировать:
+                  +b.dropdown-list
+                    select
+                      option по популярности
+                      option по рейтингу
+                      option по просмотрам
+
+                +b.sort-grid
+                  +b.title Вид:
+                  +b.grid-option
+                  +b.row-option
+                    span
+
+            +b.recipe-list-body
+              +b.recipe-section-wr
+                +b.recipe-section
+
+                  +b(style="background-image: url(./temp/recipe-1.png);").section-bl.bl-min.bar
+                    +b.overflow-wr
+                      +b.category Барная карта
+                      +b.overlay
+                      +b.inner
+                        +b.title
+                          h2 Арбузный лимонад с базиликом
+                        +e.info
+                          +b.author
+                            strong Автор: 
+                            |
+                            a(href="#") Soys.by
+                          +b.date 19 августа 2017
+                          +b.row
+                            +b.views 563
+                            +b.comments 923
+                            +b.likes 123
+
+                  +b(style="background-image: url(./temp/recipe-lrg1.png);").section-bl.bl-lrg.street-food
+                    +b.overflow-wr
+                      +b.category Уличная еда
+                      +b.overlay
+                      +b.inner
+                        +b.title
+                          h2 Весенний сливочный суп
+                        +e.info
+                          +b.author
+                            strong Автор: 
+                            |
+                            a(href="#") Soys.by
+                          +b.date 19 августа 2017
+                          +b.row
+                            +b.views 563
+                            +b.comments 923
+                            +b.likes 123
+
+                  +b(style="background-image: url(./temp/recipe-2.png);").section-bl.bl-min.home-food
+                    +b.overflow-wr
+                      +b.overlay
+                      +b.category Домашняя кухня
+                      +b.inner
+                        +b.title
+                          h2 Свиная вырезка с овощами и лапшой рамен 
+                        +e.info
+                          +b.author
+                            strong Автор: 
+                            |
+                            a(href="#") Soys.by
+                          +b.date 19 августа 2017
+                          +b.row
+                            +b.views 563
+                            +b.comments 923
+                            +b.likes 123
+
+                  +b(style="background-image: url(./temp/recipe-3.png);").section-bl.bl-min.restaurant-food
+                    +b.overflow-wr
+                      +b.overlay
+                      +b.category Ресторанное меню
+                      +b.inner
+                        +b.title
+                          h2 Фаршированная курица по-итальянски 
+                        +e.info
+                          +b.author
+                            strong Автор: 
+                            |
+                            a(href="#") Soys.by
+                          +b.date 19 августа 2017
+                          +b.row
+                            +b.views 563
+                            +b.comments 923
+                            +b.likes 123
+
+                  +b(style="background-image: url(./temp/recipe-4.png);").section-bl.bl-min.bar
+                    +b.overflow-wr
+                      +b.overlay
+                      +b.category Барная карта
+                      +b.inner
+                        +b.title
+                          h2 Глинтвейн на темном пиве 
+                        +e.info
+                          +b.author
+                            strong Автор: 
+                            |
+                            a(href="#") Soys.by
+                          +b.date 19 августа 2017
+                          +b.row
+                            +b.views 563
+                            +b.comments 923
+                            +b.likes 123
+
+                  +b(style="background-image: url(./temp/recipe-lrg2.png);").section-bl.bl-lrg.restaurant-food
+                    +b.overflow-wr
+                      +b.category Ресторанное меню
+                      +b.overlay
+                      +b.inner
+                        +b.title
+                          h2 Печеночные колбаски с рисом
+                        +e.info
+                          +b.author
+                            strong Автор: 
+                            |
+                            a(href="#") Soys.by
+                          +b.date 19 августа 2017
+                          +b.row
+                            +b.views 563
+                            +b.comments 923
+                            +b.likes 123
+
+                  +b(style="background-image: url(./temp/recipe-5.png);").section-bl.bl-min.home-food
+                    +b.overflow-wr
+                      +b.overlay
+                      +b.category Домашняя кухня
+                      +b.inner
+                        +b.title
+                          h2 Рыба под маринадом эскабече
+                        +e.info
+                          +b.author
+                            strong Автор: 
+                            |
+                            a(href="#") Soys.by
+                          +b.date 19 августа 2017
+                          +b.row
+                            +b.views 563
+                            +b.comments 923
+                            +b.likes 123
+
+                  +b(style="background-image: url(./temp/recipe-6.png);").section-bl.bl-min.bar
+                    +b.overflow-wr
+                      +b.overlay
+                      +b.category Барная карта
+                      +b.inner
+                        +b.title
+                          h2 Глёг с миндалем, изюмом и пряностями 
+                        +e.info
+                          +b.author
+                            strong Автор: 
+                            |
+                            a(href="#") Soys.by
+                          +b.date 19 августа 2017
+                          +b.row
+                            +b.views 563
+                            +b.comments 923
+                            +b.likes 123
+
+                  +b(style="background-image: url(./temp/recipe-7.png);").section-bl.bl-min.street-food
+                    +b.overflow-wr
+                      +b.overlay
+                      +b.category Уличная еда
+                      +b.inner
+                        +b.title
+                          h2 Мини-чизкейки с томатным мармеладом 
+                        +e.info
+                          +b.author
+                            strong Автор: 
+                            |
+                            a(href="#") Soys.by
+                          +b.date 19 августа 2017
+                          +b.row
+                            +b.views 563
+                            +b.comments 923
+                            +b.likes 123
+
+                  +b(style="background-image: url(./temp/recipe-8.png);").section-bl.bl-min.bar
+                    +b.overflow-wr
+                      +b.overlay
+                      +b.category Барная карта
+                      +b.inner
+                        +b.title
+                          h2 Коктейль «Бьянко тоник» 
+                        +e.info
+                          +b.author
+                            strong Автор: 
+                            |
+                            a(href="#") Soys.by
+                          +b.date 19 августа 2017
+                          +b.row
+                            +b.views 563
+                            +b.comments 923
+                            +b.likes 123
+
+                  +b(style="background-image: url(./temp/recipe-9.png);").section-bl.bl-min.bar
+                    +b.overflow-wr
+                      +b.overlay
+                      +b.category Барная карта
+                      +b.inner
+                        +b.title
+                          h2 Красный смузи с ягодами и свеклой
+                        +e.info
+                          +b.author
+                            strong Автор: 
+                            |
+                            a(href="#") Soys.by
+                          +b.date 19 августа 2017
+                          +b.row
+                            +b.views 563
+                            +b.comments 923
+                            +b.likes 123
+
+                  +b(style="background-image: url(./temp/recipe-lrg3.png);").section-bl.bl-lrg.street-food
+                    +b.overflow-wr
+                      +b.category Ресторанное меню
+                      +b.overlay
+                      +b.inner
+                        +b.title
+                          h2 Шоколадно-карамельный торт
+                        +e.info
+                          +b.author
+                            strong Автор: 
+                            |
+                            a(href="#") Soys.by
+                          +b.date 19 августа 2017
+                          +b.row
+                            +b.views 563
+                            +b.comments 923
+                            +b.likes 123
+
+
+
+          include ../templates/partials/page-pagination/pagination
+
+          +b.slider-event.slider-default
+            +b.section-title
+              h2
+                a(href="#") Популярные рецепты
+            +b('ul').slider-list
+              +e.item
+                img(src="./temp/recipe-pic1.png")
+                a(href="#")
+                  +b.inner
+                    +b.title
+                      h4 Мини-чизкейки с томатным мармеладом
+              +e.item
+                img(src="./temp/recipe-pic2.png")
+                a(href="#")
+                  +b.inner
+                    +b.title
+                      h4 Фаршированная курица по-итальянски
+              +e.item
+                img(src="./temp/recipe-pic3.png")
+                a(href="#")
+                  +b.inner
+                    +b.title
+                      h4 Печеночные колбаски с рисом
+              +e.item
+                img(src="./temp/recipe-pic4.png")
+                a(href="#")
+                  +b.inner
+                    +b.title
+                      h4 Свиная вырезка с овощами и лапшой рамен 
+              +e.item
+                img(src="./temp/recipe-pic1.png")
+                a(href="#")
+                  +b.inner
+                    +b.title
+                      h4 Снимай как «Soys.by», готовь как Шеф-повар с Gorenje!
+              +e.item
+                img(src="./temp/recipe-pic2.png")
+                a(href="#")
+                  +b.inner
+                    +b.title
+                      h4 Мини-чизкейки с томатным мармеладом
+            +b.section-bottom
+              +b.sub-title
+                +b.border
+              +b.custom-controls
+                +b.custom-prev
+                  span
+                +b.custom-next
+                  span
+          
+        include ../templates/partials/page-footer/footer
+
+  block scripts
+    script(src='assets/scripts/vendor/jquery-2.2.4.min.js')
+    script(src='assets/scripts/tools.js')
+    script(src='assets/scripts/vendor/slick.min.js')
+    script(src='assets/scripts/vendor/selectize.min.js')
+    script(src='assets/scripts/vendor/jquery-ui.min.js')

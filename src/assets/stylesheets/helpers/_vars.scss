@@ -1,0 +1,125 @@
+/*Colors*/
+$black: #000;
+$black-0F: #0f0f0f;
+$black-1D: #1d1d1d;
+$black-1F: #1f1f1f;
+$black-2B: #2b2b2b;
+$black-20: #202021;
+$blue-66: #66a5bf;
+$white: #FFF;
+
+$gray-BC: #bcbcbc;
+$gray-A8: #a8a8a8;
+$gray-B1: #b1b1b1;
+$gray-B3B3: #b3b3b3;
+$gray-B3: #b3b4b5;
+$gray-B6: #b6b6b6;
+$gray-DC: #dcdcdc;
+$gray-DF: #dfdfdf;
+$gray-D3: #d3d3d3;
+$gray-D8: #d8d8d8;
+$gray-E0: #e0e0e0;
+$gray-E2: #e2e2e2;
+$gray-EA: #eaeaea;
+$gray-E8: #e8e8e8;
+$gray-FA: #fafafa;
+$gray-FC: #fcfcfc;
+$gray-F0: #f0f0f0;
+$gray-F6: #f6f6f6;
+$gray-F7: #f7f7f7;
+$gray-F9: #f9f9f9;
+$gray-2B: #2b2b2b;
+$gray-6D: #6d6d6d;
+$gray-8F: #8f8f90;
+$gray-9F: #9f9f9f;
+$gray-24: #242424;
+$gray-34: #343434;
+$gray-39: #393939;
+$gray-42: #424242;
+$gray-52: #525252;
+$gray-69: #696969;
+$gray-75: #757575;
+$gray-77: #777;
+$gray-82: #828282;
+
+$green-87: #87a934;
+
+$orange-FC: #fc6540;
+$orange-E8: #e8980d;
+
+$purple-97: #97295d;
+
+$red-A5: #a50c0c;
+$red-AA: #aa100b;
+$red-D4: #d40000;
+
+/*Links*/
+$link: $black;
+$link-hover: $black;
+
+/*Typography*/
+$font-base: 'Cuprum-Regular','Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-base-bold: 'Cuprum-Bold','Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-secondary: 'OpenSans-Regular', $font-base;
+$font-secondary-bold: 'OpenSans-Bold', $font-base;
+$font-secondary-light: 'OpenSans-Light', $font-base;
+$font-secondary-lightItalic: 'OpenSans-LightItalic', $font-base;
+
+
+$font-size-root: 10px;
+$font-size: 1.5rem;
+
+$text: $black-2B;
+
+$light: 300;
+$normal: 400;
+$semibold: 600;
+$bold: 700;
+
+/*Paths*/
+$font-img-path: '../images';
+
+/*Media-queries*/
+$M_X4S: 'screen and (max-width: 319px)'; // (srv)
+$M_X3S: 'screen and (max-width: 479px)'; // (srv)
+$M_X2S: 'screen and (max-width: 639px)'; // (srv)
+$M_XS: 'screen and (max-width: 767px)'; // phones
+$M_XSM: 'screen and (max-width: 869px)';
+$M_SM: 'screen and (max-width: 991px)'; // tablets
+$M_SMX: 'screen and (max-width: 1023px)';
+$M_SM2X: 'screen and (max-width: 1099px)';
+$M_SM3X: 'screen and (max-width: 1149px)';
+$M_MD: 'screen and (max-width: 1199px)'; // medium desktop
+$M_LG: 'screen and (min-width: 1200px)'; // large desktop
+$M_XLG: 'screen and (max-width: 1399px)'; // extra-large desktop
+
+$M_SM4X: 'screen and (max-width: 1046px)';
+$M_SM5X: 'screen and (max-width: 1060px)';
+$M_XSMS: 'screen and (max-width: 979px)';
+$M_840: 'screen and (max-width: 840px)';
+$M_X2SS: 'screen and (max-width: 540px)';
+$M_400: 'screen and (max-width: 400px)';
+$M_1050: 'screen and (max-width: 1050px)';
+
+/*Border-radius*/
+$full-round: 100%;
+$btn-default: 36px;
+
+/*Recipe-section*/
+$recipe-bl-offset: 30px;
+
+/*Event-slider offset*/
+$event-slide-width: 270px;
+$event-slider-offset: calc( -#{$event-slide-width} / 4.5);
+
+/*Insta-slider offset*/
+$insta-slide-width: 170px;
+$insta-slider-offset: calc( -#{$insta-slide-width} / 2);
+
+/*Tips-slider arrow fix*/
+$tips-arrow-width: 140px;
+$tips-arrow-offset: calc( -#{$tips-arrow-width} / 2);
+$tips-arrow-position: calc(50% - 5px);
+
+/*Aside width*/
+$aside-width: 240px;;

@@ -1,0 +1,257 @@
+doctype html
+include ../templates/vendor/bemto/bemto
+
+html(lang='ru')
+  head
+    include ../templates/partials/head/head
+  body
+    +b.popup-wr
+      include ../templates/partials/page-popups/authorization-popup
+          
+    +b.page-wrapper
+      +b.A.bg-link(href="#")
+      include ../templates/partials/page-anchor/anchor
+
+      +b.page-inner-wr
+        include ../templates/partials/page-header/header
+        include ../templates/partials/page-search-toolbar/search-toolbar
+
+        +b.page-body
+          +b.page-title-main
+            h2 Новый рецепт
+          +b('form').addrecipe-form
+            +e.cover-add
+              +e.cover-inner
+                +b.icon
+                +b.title Добавить изображение обложки
+                +b.text Для добавления файла просто кликните по данной области. #[br] Загружать можно файлы в форматах .jpg или .png. Размер загружаемого изображения не должен превышать 1Мб.
+
+            +e.inner-wr
+              +e('label').input-row
+                +e('p').input-label.required Название вашего рецепта
+                +e('input')(type="text" placeholder="Введите название вашего рецепта" required="required").input-body
+            
+            +e.inner-wr
+              +e.dropdown-counter-section
+                +e.dropdown-counter
+                  +e.dropdown-counter-title.required.portions Количество порций*
+                  +e.dropdown-counter-body
+                    +e.dropdown-counter-item-wr
+                      +b.prev
+                      +b.next
+                      +e('select').dropdown-counter-item
+                        option(value="") 1
+                        option(value="") 2
+                        option(value="") 3
+                        option(value="") 4
+                        option(value="") 5
+                        option(value="") 6
+                        option(value="") 7
+                        option(value="") 8
+                        option(value="") 9
+                        option(value="") 10
+                        option(value="") 11
+                        option(value="") 12
+                        option(value="") 13
+                        option(value="") 14
+                        option(value="") 15
+
+                +e.dropdown-counter
+                  +e.dropdown-counter-title.required.cooktime Время приготовления*
+                  +e.dropdown-counter-body
+                    +e.dropdown-counter-item-wr
+                      +b.name Часы
+                      +b.prev
+                      +b.next
+                      +e('select').dropdown-counter-item
+                        option(value="") 1
+                        option(value="") 2
+                        option(value="") 3
+                        option(value="") 4
+                        option(value="") 5
+                        option(value="") 6
+                        option(value="") 7
+                        option(value="") 8
+                        option(value="") 9
+                        option(value="") 10
+                        option(value="") 11
+                        option(value="") 12
+                        option(value="") 13
+                        option(value="") 14
+                        option(value="") 15
+
+                    +e.dropdown-counter-item-wr
+                      +b.name Минуты
+                      +b.prev
+                      +b.next
+                      +e('select').dropdown-counter-item
+                        option(value="") 1
+                        option(value="") 2
+                        option(value="") 3
+                        option(value="") 4
+                        option(value="") 5
+                        option(value="") 6
+                        option(value="") 7
+                        option(value="") 8
+                        option(value="") 9
+                        option(value="") 10
+                        option(value="") 11
+                        option(value="") 12
+                        option(value="") 13
+                        option(value="") 14
+                        option(value="") 15
+
+
+            +e.inner-wr
+              +e('label').input-row
+                +e('p').input-label Описание к вашему рецепту
+                +e('textarea').input-body.textarea
+
+
+            +e.ingredients-calc
+              +e.inner-wr
+                +e.ingredients-calc-title.required Ингредиенты*
+                +e.ingredients-calc-row
+                  +e('input')(placeholder="Название ингредиента").ingredients-calc-row-item.name
+                  +e('input').ingredients-calc-row-item.num
+                  +e('select').ingredients-calc-row-item.dropdown
+                    option(value="") Чайная ложка (ч.л.)
+                    option(value="") Зубчик
+                    option(value="") Грамм
+                  +e('button').remove-btn Удалить
+
+                +e.ingredients-calc-row
+                  +e('input')(placeholder="Название ингредиента").ingredients-calc-row-item.name
+                  +e('input').ingredients-calc-row-item.num
+                  +e('select').ingredients-calc-row-item.dropdown
+                    option(value="") Чайная ложка (ч.л.)
+                    option(value="") Зубчик
+                    option(value="") Грамм
+                  +e('button').remove-btn Удалить
+
+                +e.ingredients-calc-row
+                  +e('input')(placeholder="Название ингредиента").ingredients-calc-row-item.name
+                  +e('input').ingredients-calc-row-item.num
+                  +e('select').ingredients-calc-row-item.dropdown
+                    option(value="") Чайная ложка (ч.л.)
+                    option(value="") Зубчик
+                    option(value="") Грамм
+                  +e('button').remove-btn Удалить
+
+                +e.ingredients-calc-add
+                  +b('div').btn-add-row Добавить ингредиент
+
+            +e.inner-wr
+              +e('h1').main-title Приготовление
+
+            +e.step-constructor
+              +e.inner-wr
+                +e('label').step-constructor-header
+                  +b('div').name Шаг 1.
+                  +b('input')(type="text" placeholder="Добавьте краткое название для шага. Например: “Тесто”.").name-input
+                  +b('button').remove Удалить шаг
+
+                +e.step-constructor-body
+                  +e.step-constructor-col.pic-col
+                    +b.title Фотографии
+                    +e.constructor-pic-item(style="background-image: url(./temp/recipe-step1.png);")
+                      +b.row
+                        +e('a')(href="#").item.change-photo
+                          +b('i').icon
+                          +b('span').text Сменить фото
+                        +e('a')(href="#").item.remove
+                          +b('i').icon
+                          +b('span').text Удалить
+
+                      +b.overlay
+
+                    +e.constructor-pic-item.add-overlay-btn
+                      +b.add-pic
+                      +b.add-title Добавить изображение
+                      +b.add-text Загружать можно файлы в форматах .jpg или .png и размером до 1Мб
+
+                  +e.step-constructor-col.text-col
+                    +b.title Опишите процесс приготовления
+                    +b('textarea').text-bl
+
+            +e.step-constructor
+              +e.inner-wr
+                +e('label').step-constructor-header
+                  +b('div').name Шаг 2.
+                  +b('input')(type="text" placeholder="Добавьте краткое название для шага. Например: “Тесто”.").name-input
+                  +b('button').remove Удалить шаг
+
+                +e.step-constructor-body
+                  +e.step-constructor-col.pic-col
+                    +b.title Фотографии
+                    +e.constructor-pic-item(style="background-image: url(./temp/recipe-step5.png);")
+                      +b.row
+                        +e('a')(href="#").item.change-photo
+                          +b('i').icon
+                          +b('span').text Сменить фото
+                        +e('a')(href="#").item.remove
+                          +b('i').icon
+                          +b('span').text Удалить
+
+                      +b.overlay
+
+                    +e.constructor-pic-item(style="background-image: url(./temp/recipe-step6.png);")
+                      +b.row
+                        +e('a')(href="#").item.change-photo
+                          +b('i').icon
+                          +b('span').text Сменить фото
+                        +e('a')(href="#").item.remove
+                          +b('i').icon
+                          +b('span').text Удалить
+
+                      +b.overlay
+
+                    +e.constructor-pic-item.add-overlay-btn
+                      +b.add-pic
+                      +b.add-title Добавить изображение
+                      +b.add-text Загружать можно файлы в форматах .jpg или .png и размером до 1Мб
+
+                  +e.step-constructor-col.text-col
+                    +b.title Опишите процесс приготовления
+                    +b('textarea').text-bl
+
+            +e.step-constructor
+              +e.inner-wr
+                +e('label').step-constructor-header
+                  +b('div').name Шаг 3.
+                  +b('input')(type="text" placeholder="Добавьте краткое название для шага. Например: “Тесто”.").name-input
+                  +b('button').remove Удалить шаг
+
+                +e.step-constructor-body
+                  +e.step-constructor-col.pic-col
+                    +b.title Фотографии
+
+                    +e.constructor-pic-item.add-overlay-btn
+                      +b.add-pic
+                      +b.add-title Добавить изображение
+                      +b.add-text Загружать можно файлы в форматах .jpg или .png и размером до 1Мб
+
+                  +e.step-constructor-col.text-col
+                    +b.title Опишите процесс приготовления
+                    +b('textarea').text-bl
+
+            +e.step-constructor-add-btn
+              +b('a')(href="#").inner Добавить следующий шаг
+
+            +e.btn-row
+              +b('button').btn.btn-default Опубликовать рецепт
+              +b('button').btn.btn-secondary.icon Предпросмотр
+
+            +e.step-constructor-remove-btn
+              +b('a')(href="#").inner Удалить рецепт
+
+
+          
+        include ../templates/partials/page-footer/footer
+
+  block scripts
+    script(src='assets/scripts/vendor/jquery-2.2.4.min.js')
+    script(src='assets/scripts/tools.js')
+    script(src='assets/scripts/vendor/slick.min.js')
+    script(src='assets/scripts/vendor/selectize.min.js')
+    script(src='assets/scripts/vendor/jquery-ui.min.js')

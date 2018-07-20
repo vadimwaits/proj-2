@@ -1,0 +1,162 @@
+doctype html
+include ../templates/vendor/bemto/bemto
+
+html(lang='ru')
+  head
+    include ../templates/partials/head/head
+  body
+    +b.popup-wr
+      include ../templates/partials/page-popups/addbook-popup
+          
+    +b.page-wrapper
+      +b.A.bg-link(href="#")
+      include ../templates/partials/page-anchor/anchor
+
+      +b.page-inner-wr
+        include ../templates/partials/page-header/header--logged
+        include ../templates/partials/page-search-toolbar/search-toolbar
+
+        +b.page-body
+          +b.page-profile
+            +b(style="background-image: url(./temp/page-top-bg.png);").page-top
+              +e.user-info
+                +e.user-pic
+                  img(src="./temp/user-pic3.png")
+
+                +e.user-main
+                  +e.user-name Света Светикова
+                    +b.mobile-trigger
+                  +e.user-status Эксперт
+
+            +b.page-aside
+              +e.list
+                +e.item
+                  a(href="#") Мой профиль
+                +e.item.cookbook
+                  a(href="#") Кулинарная книга
+                +e.item
+                  a(href="#") Мои рецепты
+                +e.item.likes
+                  a(href="#") Мне нравится
+                +e.item.notifications.active
+                  a(href="#") Уведомления
+                    span (3)
+                +e.item
+                  a(href="#") Выход
+              +b.mobile-trigger
+
+            +b.page-main-content
+              +b.profile-section-wr
+                +b.notification-result
+                  span Новых уведомлений: 
+                  |
+                  span.val 73
+
+                +b.profile-sort-toolbar.mail-sort
+                  +b('label').mail-checkbox
+                    input(type="checkbox")
+                    i
+                    +b.label-text Отметить как прочитанные
+                  
+                  +b.sort-list
+                    +b.title Сортировать:
+                    +b.dropdown-list
+                      select
+                        option Сперва непрочитанные
+                        option Сперва новые
+                        option Сперва прочитанные
+
+                +b.books-result-wr
+                  +b.mail-inbox
+                    +e.item
+                      +b.Lcol
+                        +b('label').mail-checkbox
+                          input(type="checkbox")
+                          i
+                        +b.item-pic(style="background-image: url(./temp/mail-logo-pic.png);")
+                      +b.Rcol
+                        +b.mail-top
+                          +e.A(href="#").title Помогите «Soys.by» стать лучше!
+                          +e.date
+                            span 26 апреля 2017 
+                            |
+                            span.time 15:44
+                        +b.mail-body
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio a eos, voluptatibus? Amet eum praesentium, corrupti ab ipsum placeat totam fugiat non inventore libero nihil, voluptatum voluptatem omnis quos laborum.
+
+                    +e.item
+                      +b.Lcol
+                        +b('label').mail-checkbox
+                          input(type="checkbox")
+                          i
+                        +b.item-pic(style="background-image: url(./temp/mail-logo-pic.png);")
+                      +b.Rcol
+                        +b.mail-top
+                          +e.A(href="#").title Новый раздел на сайте «Кулинарная книга»
+                          +e.date
+                            span 20 февраля 2017 
+                            |
+                            span.time 13:34
+                        +b.mail-body
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio a eos, voluptatibus? Amet eum praesentium, corrupti ab ipsum placeat totam fugiat non inventore libero nihil, voluptatum voluptatem omnis quos laborum.
+
+                    +e.item.active
+                      +b.Lcol
+                        +b('label').mail-checkbox
+                          input(type="checkbox")
+                          i
+                        +b.item-pic(style="background-image: url(./temp/mail-logo-pic.png);")
+                      +b.Rcol
+                        +b.mail-top
+                          +e.A(href="#").title Конкурс рецептов
+                          +e.date
+                            span 26 апреля 2017 
+                            |
+                            span.time 15:44
+                        +b.mail-body
+                          p Команда Soys.by напоминает — на сайте идет конкурс рецептов «Конкурс рецептов «Яркая осень с ТМ SICILIA». Не забудьте принять участие!
+
+                    +e.item.visited
+                      +b.Lcol
+                        +b('label').mail-checkbox
+                          input(type="checkbox")
+                          i
+                        +b.item-pic(style="background-image: url(./temp/mail-logo-pic.png);")
+                      +b.Rcol
+                        +b.mail-top
+                          +e.A(href="#").title Кокурс  «Планета вкусов: готовим по-новому»
+                          +e.date
+                            span 26 апреля 2017
+                            |
+                            span.time 15:44
+                        +b.mail-body
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel optio ullam ipsa, reiciendis cum, amet harum. Labore architecto debitis, veniam velit deleniti impedit saepe delectus minima, libero, numquam excepturi magni.
+                          
+                    +e.item.visited
+                      +b.Lcol
+                        +b('label').mail-checkbox
+                          input(type="checkbox")
+                          i
+                        +b.item-pic(style="background-image: url(./temp/mail-logo-pic.png);")
+                      +b.Rcol
+                        +b.mail-top
+                          +e.A(href="#").title Конкурс рецептов от VICI «С крабом круче!».
+                          +e.date
+                            span 26 апреля 2017
+                            |
+                            span.time 15:44
+                        +b.mail-body
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel optio ullam ipsa, reiciendis cum, amet harum. Labore architecto debitis, veniam velit deleniti impedit saepe delectus minima, libero, numquam excepturi magni.
+
+
+
+
+
+        include ../templates/partials/page-footer/footer
+
+  block scripts
+    script(src='assets/scripts/vendor/jquery-2.2.4.min.js')
+    script(src='assets/scripts/tools.js')
+    script(src='assets/scripts/vendor/slick.min.js')
+    script(src='assets/scripts/vendor/selectize.min.js')
+    script(src='assets/scripts/vendor/jquery-ui.min.js')

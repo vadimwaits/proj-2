@@ -1,0 +1,119 @@
+.shef-recipes {
+  margin-top: 60px;
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    margin: 0 -15px;
+    @media #{$M_X2SS} {
+      flex-wrap: wrap;
+    }
+    @media #{$M_X2SS} {
+      padding-top: 0;
+    }
+  }
+  &__item {
+    position: relative;
+    height: 460px;
+    width: 370px;
+    margin: 0 15px;
+    text-align: center;
+    border: 1px solid $gray-DF;
+    box-sizing: border-box;
+    @media #{$M_X2S} {
+      height: 380px;
+    }
+    @media #{$M_X2SS} {
+      height: 380px;
+      width: 100%;
+      margin-top: 70px;
+    }
+  }
+  &__item-pic {
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    top: -60px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+    z-index: 2;
+    overflow: hidden;
+    @media #{$M_X2S} {
+      height: 100px;
+      width: 100px;
+      top: -50px;
+    }
+  }
+  &__item-title {
+    position: absolute;
+    top: 85px;
+    font-size: 24px;
+    font-family: $font-base-bold;
+    left: 20px;
+    right: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @media #{$M_X2S} {
+      top: 65px;
+    }
+  }
+  &__item-subtitle {
+    position: absolute;
+    top: 115px;
+    left: 35px;
+    right: 35px;
+    font-size: 16px;
+    font-family: $font-secondary;
+    line-height: 1.2em;
+    @media #{$M_X2S} {
+      top: 95px;
+      font-size: 14px;
+    }
+  }
+  &__item-recipe {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 256px;
+    width: 100%;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    & .title {
+      position: absolute;
+      top: 65px;
+      left: 40px;
+      right: 40px;
+      bottom: 10px;
+      text-align: left;
+      line-height: 1.2em;
+      font-family: $font-base-bold;
+      font-size: 30px;
+      color: $white;
+      @media #{$M_X2S} {
+        top: 20%;
+        left: 20px;
+        font-size: 24px;
+      }
+      @media #{$M_X2SS} {
+        right: 20%;
+      }
+    }
+    @media #{$M_X2S} {
+      height: auto;
+      padding-bottom: 80%;
+    }
+    @media #{$M_X2SS} {
+      height: 200px;
+      padding-bottom: 0;
+    }
+  }
+}

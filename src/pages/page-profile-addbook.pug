@@ -1,0 +1,67 @@
+doctype html
+include ../templates/vendor/bemto/bemto
+
+html(lang='ru')
+  head
+    include ../templates/partials/head/head
+  body
+    +b.popup-wr
+      include ../templates/partials/page-popups/addbook-popup
+          
+    +b.page-wrapper
+      +b.A.bg-link(href="#")
+      include ../templates/partials/page-anchor/anchor
+
+      +b.page-inner-wr
+        include ../templates/partials/page-header/header--logged
+        include ../templates/partials/page-search-toolbar/search-toolbar
+
+        +b.page-body
+          +b.page-profile
+            +b(style="background-image: url(./temp/page-top-bg.png);").page-top
+              +e.user-info
+                +e.user-pic
+                  img(src="./temp/user-pic3.png")
+
+                +e.user-main
+                  +e.user-name Света Светикова
+                    +b.mobile-trigger
+                  +e.user-status Эксперт
+
+            +b.page-aside
+              +e.list
+                +e.item
+                  a(href="#") Мой профиль
+                +e.item.cookbook.active
+                  a(href="#") Кулинарная книга
+                +e.item
+                  a(href="#") Мои рецепты
+                +e.item.likes
+                  a(href="#") Мне нравится
+                +e.item.notifications
+                  a(href="#") Уведомления
+                +e.item
+                  a(href="#") Выход
+              +b.mobile-trigger
+
+            +b.page-main-content
+              +b.profile-section-wr
+                +b.search-result
+                  span Найдено: 
+                  |
+                  span.val 0 книг
+
+                +b.add-btn.addbook-btn
+                  +b.inner-wr
+                    +b.icon
+                    +b.title Создать книгу
+                    +b.text Добавьте кулинарную книгу и сохраняйте в ней все самые интересные рецепты.
+
+        include ../templates/partials/page-footer/footer
+
+  block scripts
+    script(src='assets/scripts/vendor/jquery-2.2.4.min.js')
+    script(src='assets/scripts/tools.js')
+    script(src='assets/scripts/vendor/slick.min.js')
+    script(src='assets/scripts/vendor/selectize.min.js')
+    script(src='assets/scripts/vendor/jquery-ui.min.js')

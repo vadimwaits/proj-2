@@ -1,0 +1,42 @@
++b.report-popup.popup
+  +b.popup-title
+    h3 Сообщить об ошибке или пожаловаться
+  +b.popup-text
+    p Если вы нашли ошибку в тексте, сообщите нам о ней. Если вам кажется, что в тексте  использована ненормативная лексика и/или непристойности, просьба, также сообщить об этом факте редакции ресурса.
+  +b.report-type
+    +b.Lcol
+      +b.title В чем проблема?
+    +b.Rcol
+      +b.radio-list
+        label(for="report-radio1").item
+          input(type="checkbox" id="report-radio1" name="report-radio-list")
+          i
+          p Орфографическая или грамматическая ошибка
+        label(for="report-radio2").item
+          input(type="checkbox" id="report-radio2" name="report-radio-list")
+          i
+          p Ненормативная лексика
+        label(for="report-radio3").item
+          input(type="checkbox" id="report-radio3" name="report-radio-list")
+          i
+          p Неточность / ошибка в описании
+        label(for="report-radio4").item
+          input(type="checkbox" id="report-radio4" name="report-radio-list")
+          i
+          p Нарушение авторских прав
+        label(for="report-radio5").item
+          input(type="checkbox" id="report-radio5" name="report-radio-list")
+          i
+          p Пожаловаться на фотографию
+        label(for="report-radio6").item
+          input(type="checkbox" id="report-radio6" name="report-radio-list")
+          i
+          p Техническая ошибка
+  +b.comment-bl
+    +b.title Ваш комментарий:
+    +b.text-bl
+      textarea(placeholder="Текст вашего сообщения" )
+    +b.btn-row
+      button(type="submit").btn.btn-default Отправить сообщение
+      button(type="reset").btn.closer Отменить
+

@@ -1,0 +1,47 @@
+/*Core*/
+@import 'helpers/vars';
+@import 'helpers/mixins';
+
+/*Reset*/
+@import 'base/reset';
+
+/*Typography*/
+@import 'base/fonts';
+
+/*Scaffold*/
+@import 'base-scaffold/scaffold';
+
+/*Blocks*/
+@import '../../templates/partials/page-header/header';
+@import '../../templates/partials/page-footer/footer';
+@import '../../templates/partials/page-search-toolbar/search-toolbar';
+@import '../../templates/partials/page-recipe-slider/recipe-slider';
+@import '../../templates/partials/page-tags-section/tags-section';
+@import '../../templates/partials/page-insta-slider/insta-slider';
+@import '../../templates/partials/page-recipe-section/recipe-section';
+@import '../../templates/partials/page-news-preview/news-preview';
+@import '../../templates/partials/page-event-slider/event-slider';
+@import '../../templates/partials/page-tips-slider/tips-slider';
+@import '../../templates/partials/page-anchor/anchor';
+@import '../../templates/partials/page-newsopen/newsopen';
+@import '../../templates/partials/page-popups/popups';
+@import '../../templates/partials/page-profile/page-profile';
+@import '../../templates/partials/page-pagination/pagination';
+@import '../../templates/partials/page-news/news';
+@import '../../templates/partials/page-recipes/recipes';
+@import '../../templates/partials/page-recipe-open/recipe-open';
+@import '../../templates/partials/page-addrecipe/page-addrecipe';
+@import '../../templates/partials/page-text/page-text';
+@import '../../templates/partials/page-voting/page-voting';
+@import '../../templates/partials/page-shef-recipes/page-shef-recipes';
+@import '../../templates/partials/page-lifehack/page-lifehack';
+@import '../../templates/partials/page-news-horizont/page-news-horizont';
+
+/*General*/
+@import 'custom/general';
+
+/*Slider*/
+@import 'custom/slick';
+
+/*Slider*/
+@import 'custom/selectize';

@@ -1,0 +1,235 @@
+doctype html
+include ../templates/vendor/bemto/bemto
+
+html(lang='ru')
+  head
+    include ../templates/partials/head/head
+  body
+    +b.popup-wr
+      include ../templates/partials/page-popups/report-popup
+
+    +b.page-wrapper
+      +b.A.bg-link(href="#")
+      include ../templates/partials/page-anchor/anchor
+
+      +b.page-inner-wr
+        include ../templates/partials/page-header/header
+        include ../templates/partials/page-search-toolbar/search-toolbar
+
+        +b.page-body
+          +b.newsopen-section
+            +b(style="background-image: url(./temp/article-top.png);").article-top
+              +b.inner
+                +b.Lcol
+                  +b.author
+                    strong Автор: 
+                    |
+                    a(href="#") Soys.by
+                  +b.date 19 августа 2017
+                +b.Rcol
+                  +b.A(href="#comments-section").comments 932
+                  +b.views 563
+
+            +b.article-inner
+              +b.article-inner-wr
+                +b.title-main
+                  h2 Свидание с самим собой, или 5 причин посетить Eenmaal
+                  +b.social
+                    +e.item.facebook
+                      i
+                      span 3456
+                    +e.item.vk
+                      i
+                      span 436
+                    +e.item.ok
+                      i
+                      span 38
+
+                p Жизнь полна стереотипов. И выход в ресторан не исключение. Посещение заведения с хорошей кухней чаще всего ассоциируется с общением, но ни в коем случае не с тишиной и одиночеством. Но в Амстердаме нарушили еще одно табу жизни в большом городе и открыли эксклюзивный ресторан Eenmaal. Мы решили разобраться, в чем «необычность» этого заведения и чем оно так привлекает европейских посетителей.
+
+              +b.full-width-pic
+                img(src="./temp/pic-lrg2.png")
+                +b.author
+                  strong Фото: 
+                  |
+                  span eenmaal.com
+
+              +b.article-inner-wr
+                h3 Натуральная еда по доступной цене
+
+                p Eenmaal в переводе с голландского означает «однажды, один раз». И это полностью отражает концепцию заведения – «один заказ от одного посетителя». Шеф-поваром ресторана является Лесли Дронкер, отдающий предпочтение исключительно органическим ингредиентам. Стоимость меню (включая напитки) составляет $50.
+
+                +b(style="background-image: url(./temp/article-pic1.png);").post-pic
+                  +b.author
+                    strong Фото: 
+                    |
+                    span eenmaal.com
+
+                +b.quote Здесь размещено только 10 маленьких столиков, каждый из которых рассчитан исключительно на одного человека. Поэтому можно не переживать, что рядом подсядет незнакомец: для него просто не останется места.
+
+                +b(style="background-image: url(./temp/article-pic2.png);").post-pic
+                  +b.author
+                    strong Фото: 
+                    |
+                    span eenmaal.com
+
+                h3 Тишина и одиночество
+
+                p По площади Eenmaal совсем небольшой. Здесь размещено только 10 маленьких столиков, каждый из которых рассчитан исключительно на одного человека. Поэтому можно не переживать, что рядом подсядет незнакомец: для него просто не останется места.
+
+              +b.full-width-pic
+                img(src="./temp/pic-lrg1.png")
+                +b.author
+                  strong Фото: 
+                  |
+                  span eenmaal.com
+              +b.article-inner-wr
+                h3 Отсутствие постоянной прописки
+
+                p У Eenmaal нет определенного адреса. Заведение почти каждый месяц переезжает с места на место. Учредитель всегда выбирает скромное местечко с большими широкими окнами, где нет Wi-Fi и вычурных украшений, рекламных роликов и умных смартфонов. Только тихая спокойная музыка, традиционные газеты, журналы и книги.
+
+                h3 Производство продуктов «для одного»
+
+                p Компания работает над расширением своего бренда путем создания продуктов  «для одного». Первым «детищем» стала шампанское Eenmaal Bauchet: в бутылке всего то 375 мл. В ближайшее время планируется появление шоколада и чайной продукции.
+
+                +b(style="background-image: url(./temp/article-pic3.png);").post-pic
+                  +b.author
+                    strong Фото: 
+                    |
+                    span eenmaal.com
+
+                h3 Выход на международный уровень
+
+                p Этим летом насладиться изысканной едой за «столиком для одного» смогут гурманы из Лондона, Нью-Йорка и Берлина. В планах учредителей Eenmaal находится открытие постоянных мест, поскольку дебют ресторана «для одиночек» был на ура воспринят общественностью.
+
+            +b.pics-bl
+              +e(style="background-image: url(./temp/pic1.png);").item.sm
+              +e(style="background-image: url(./temp/pic2.png);").item.md
+              +e(style="background-image: url(./temp/pic3.png);").item.lrg
+
+              +b.sub-text.report-popup-trigger Заметили ошибку или опечатку в статье – выделите её и нажмите Ctrl+Enter
+
+            +b.slider-event.slider-default
+              +b.section-title
+                h2
+                  a(href="#") Популярные новости
+              +b('ul').slider-list
+                +e.item
+                  img(src="./temp/event-slide1.png")
+                  a(href="#")
+                    +b.inner
+                      +b.date 19 июля 2017
+                      +b.title
+                        h4 5 дней шаурмы. Фестиваль уличной еды в Минске.
+                +e.item
+                  img(src="./temp/event-slide2.png")
+                  a(href="#")
+                    +b.inner
+                      +b.date 19 июля 2017
+                      +b.title
+                        h4 Снимай как «Soys.by», готовь как Шеф-повар с Gorenje!
+                +e.item
+                  img(src="./temp/event-slide3.png")
+                  a(href="#")
+                    +b.inner
+                      +b.date 19 июля 2017
+                      +b.title
+                        h4 5 дней шаурмы. Фестиваль уличной еды в Минске.
+                +e.item
+                  img(src="./temp/event-slide4.png")
+                  a(href="#")
+                    +b.inner
+                      +b.date 19 июля 2017
+                      +b.title
+                        h4 Снимай как «Soys.by», готовь как Шеф-повар с Gorenje!
+                +e.item
+                  img(src="./temp/event-slide1.png")
+                  a(href="#")
+                    +b.inner
+                      +b.date 19 июля 2017
+                      +b.title
+                        h4 5 дней шаурмы. Фестиваль уличной еды в Минске.
+                +e.item
+                  img(src="./temp/event-slide2.png")
+                  a(href="#")
+                    +b.inner
+                      +b.date 19 июля 2017
+                      +b.title
+                        h4 Снимай как «Soys.by», готовь как Шеф-повар с Gorenje!
+              +b.section-bottom.short
+                +b.sub-title
+                  a(href="#") Все новости
+                  +b.border
+                +b.custom-controls
+                  +b.custom-prev
+                    span
+                  +b.custom-next
+                    span
+
+          +b.comments-section#comments-section
+            +b.inner
+              +b.title
+                a(href="#")
+                  h2 Обсуждение
+                  span (10)
+              +b.comment-wr
+                +b.user-comment-head Ваш комментарий
+                +b.user-comment-bl
+                  textarea(maxlength="200").counter-textarea
+                  +b.counter-bl
+                    span.val 200
+                    span /200
+
+                +b.btn-row
+                  button(type="submit").btn.btn-default Опубликовать
+                  button.btn.comment-clear Стереть комментарий
+
+              +b.comment-feed
+                +b.comment
+                  +e.pic
+                    img(src="./temp/user-pic1.png")
+
+                  +e.head
+                    +b.username Ольга
+                    +b.date 11 августа 2017
+
+                  +e.body Мне больше нравится система питания LCHF, в которой углеводы должны практически отсутствовать. Хоть простые, хоть сложные. Я давно заметила, что от любых углеводов потом хочется есть и есть.
+
+                  +e.bottom
+                    +b.likes 53
+
+                    +b.options
+                      +e.item.reply Ответить
+                      +e.item.quote Цитировать
+
+                +b.comment
+                  +e.pic
+                    img(src="./temp/user-pic2.png")
+
+                  +e.head
+                    +b.username Ольга
+                    +b.date 11 августа 2017
+
+                  +e.body Мне больше нравится система питания LCHF, в которой углеводы должны практически отсутствовать. Хоть простые, хоть сложные. Я давно заметила, что от любых углеводов потом хочется есть и есть.
+
+                  +e.bottom
+                    +b.likes.active 53
+
+                    +b.options
+                      +e.item.reply Ответить
+                      +e.item.quote Цитировать
+
+              +b.section-bottom
+                +b.sub-title
+                  a(href="#") Все комментарии
+                  +b.border
+
+
+        include ../templates/partials/page-footer/footer
+
+  block scripts
+    script(src='assets/scripts/vendor/jquery-2.2.4.min.js')
+    script(src='assets/scripts/tools.js')
+    script(src='assets/scripts/vendor/slick.min.js')
+    script(src='assets/scripts/vendor/selectize.min.js')
+    script(src='assets/scripts/vendor/jquery-ui.min.js')

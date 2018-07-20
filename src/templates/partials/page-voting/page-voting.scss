@@ -1,0 +1,374 @@
+.vote-intro {
+  width: 100%;
+  max-width: 835px;
+  margin: 48px auto 0;
+  padding: 0 20px;
+  text-align: center;
+  line-height: 1.4em;
+  @media #{$M_XS} {
+    max-width: 570px;
+  }
+  &__title {
+    font-size: 40px;
+    font-family: $font-base-bold;
+    line-height: 40px;
+    @media #{$M_XS} {
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
+  &__text {
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 28px;
+    font-family: $font-secondary;
+    @media #{$M_XS} {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+}
+
+.vote-main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 55px;
+  padding: 60px 40px 0;
+  justify-content: space-between;
+  @media #{$M_XS} {
+    justify-content: center;
+    padding: 30px 20px 0;
+  }
+  &.street-food {
+    & .vote-main__item-rating {
+      &.rate-1 {
+        & .vote-main__rating-list {
+          & .vote-main__rating-btn:first-child {
+            background-image: svg-load('../images/icon_star.svg', fill = $green-87);
+          }
+        }
+      }
+      &.rate-2 {
+        & .vote-main__rating-list {
+          & .vote-main__rating-btn:nth-child(-n+2) {
+            background-image: svg-load('../images/icon_star.svg', fill = $green-87);
+          }
+        }
+      }
+      &.rate-3 {
+        & .vote-main__rating-list {
+          & .vote-main__rating-btn:nth-child(-n+3) {
+            background-image: svg-load('../images/icon_star.svg', fill = $green-87);
+          }
+        }
+      }
+      &.rate-4 {
+        & .vote-main__rating-list {
+          & .vote-main__rating-btn:nth-child(-n+4) {
+            background-image: svg-load('../images/icon_star.svg', fill = $green-87);
+          }
+        }
+      }
+      &.rate-5 {
+        & .vote-main__rating-list {
+          & .vote-main__rating-btn {
+            background-image: svg-load('../images/icon_star.svg', fill = $green-87);  
+          }
+        }
+      }
+    }
+  }
+  &.hm-food {
+    & .vote-main__item-rating {
+      &.rate-1 {
+        & .vote-main__rating-list {
+          & .vote-main__rating-btn:first-child {
+            background-image: svg-load('../images/icon_star.svg', fill = $red-A5);
+          }
+        }
+      }
+      &.rate-2 {
+        & .vote-main__rating-list {
+          & .vote-main__rating-btn:nth-child(-n+2) {
+            background-image: svg-load('../images/icon_star.svg', fill = $red-A5);
+          }
+        }
+      }
+      &.rate-3 {
+        & .vote-main__rating-list {
+          & .vote-main__rating-btn:nth-child(-n+3) {
+            background-image: svg-load('../images/icon_star.svg', fill = $red-A5);
+          }
+        }
+      }
+      &.rate-4 {
+        & .vote-main__rating-list {
+          & .vote-main__rating-btn:nth-child(-n+4) {
+            background-image: svg-load('../images/icon_star.svg', fill = $red-A5);
+          }
+        }
+      }
+      &.rate-5 {
+        & .vote-main__rating-list {
+          & .vote-main__rating-btn {
+            background-image: svg-load('../images/icon_star.svg', fill = $red-A5);  
+          }
+        }
+      }
+    }
+  }
+  &.bar {
+    & .vote-main__item-rating {
+      &.rate-1 {
+        & .vote-main__rating-list {
+          & .vote-main__rating-btn:first-child {
+            background-image: svg-load('../images/icon_star.svg', fill = $orange-E8);
+          }
+        }
+      }
+      &.rate-2 {
+        & .vote-main__rating-list {
+          & .vote-main__rating-btn:nth-child(-n+2) {
+            background-image: svg-load('../images/icon_star.svg', fill = $orange-E8);
+          }
+        }
+      }
+      &.rate-3 {
+        & .vote-main__rating-list {
+          & .vote-main__rating-btn:nth-child(-n+3) {
+            background-image: svg-load('../images/icon_star.svg', fill = $orange-E8);
+          }
+        }
+      }
+      &.rate-4 {
+        & .vote-main__rating-list {
+          & .vote-main__rating-btn:nth-child(-n+4) {
+            background-image: svg-load('../images/icon_star.svg', fill = $orange-E8);
+          }
+        }
+      }
+      &.rate-5 {
+        & .vote-main__rating-list {
+          & .vote-main__rating-btn {
+            background-image: svg-load('../images/icon_star.svg', fill = $orange-E8);  
+          }
+        }
+      }
+    }
+  }
+  &.restaurant-food {
+    & .vote-main__item-rating {
+      &.rate-1 {
+        & .vote-main__rating-list {
+          & .vote-main__rating-btn:first-child {
+            background-image: svg-load('../images/icon_star.svg', fill = $purple-97);
+          }
+        }
+      }
+      &.rate-2 {
+        & .vote-main__rating-list {
+          & .vote-main__rating-btn:nth-child(-n+2) {
+            background-image: svg-load('../images/icon_star.svg', fill = $purple-97);
+          }
+        }
+      }
+      &.rate-3 {
+        & .vote-main__rating-list {
+          & .vote-main__rating-btn:nth-child(-n+3) {
+            background-image: svg-load('../images/icon_star.svg', fill = $purple-97);
+          }
+        }
+      }
+      &.rate-4 {
+        & .vote-main__rating-list {
+          & .vote-main__rating-btn:nth-child(-n+4) {
+            background-image: svg-load('../images/icon_star.svg', fill = $purple-97);
+          }
+        }
+      }
+      &.rate-5 {
+        & .vote-main__rating-list {
+          & .vote-main__rating-btn {
+            background-image: svg-load('../images/icon_star.svg', fill = $purple-97);  
+          }
+        }
+      }
+    }
+  }
+  &__item {
+    position: relative;
+    height: 480px;
+    width: 300px;
+    text-align: center;
+    border: 1px solid $gray-DF;
+    box-sizing: border-box;
+    @media #{$M_SMX} {
+      width: 32%;
+    }
+    @media #{$M_XS} {
+      width: 48%;
+      margin: 0 1% 70px;
+    }
+    @media #{$M_X2SS} {
+      width: 100%;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  &__item-pic {
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    top: -60px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+    z-index: 2;
+    overflow: hidden;
+    @media #{$M_XS} {
+      height: 100px;
+      width: 100px;
+      top: -50px;
+    }
+  }
+  &__item-title {
+    position: absolute;
+    top: 85px;
+    font-size: 24px;
+    font-family: $font-base-bold;
+    left: 20px;
+    right: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    @media #{$M_XSM} {
+      font-size: 22px;
+    }
+  }
+  &__item-subtitle {
+    position: absolute;
+    top: 115px;
+    left: 35px;
+    right: 35px;
+    font-size: 16px;
+    font-family: $font-secondary;
+    line-height: 1.2em;
+    @media #{$M_XSM} { 
+      font-size: 14px;
+    }
+  }
+  &__vote-btn {
+    width: calc(100% - 80px);
+    position: absolute !important;
+    top: 183px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    @media #{$M_XS} {
+      width: calc(100% - 20px);
+    }
+  }
+  &__item-rating {
+    position: absolute;
+    top: 182px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    &.rate-1 {
+      & .vote-main__rating-list {
+        & .vote-main__rating-btn:first-child {
+          background-image: svg-load('../images/icon_star.svg', fill = $orange-E8);
+        }
+      }
+    }
+    &.rate-2 {
+      & .vote-main__rating-list {
+        & .vote-main__rating-btn:nth-child(-n+2) {
+          background-image: svg-load('../images/icon_star.svg', fill = $orange-E8);
+        }
+      }
+    }
+    &.rate-3 {
+      & .vote-main__rating-list {
+        & .vote-main__rating-btn:nth-child(-n+3) {
+          background-image: svg-load('../images/icon_star.svg', fill = $orange-E8);
+        }
+      }
+    }
+    &.rate-4 {
+      & .vote-main__rating-list {
+        & .vote-main__rating-btn:nth-child(-n+4) {
+          background-image: svg-load('../images/icon_star.svg', fill = $orange-E8);
+        }
+      }
+    }
+    &.rate-5 {
+      & .vote-main__rating-list {
+        & .vote-main__rating-btn {
+          background-image: svg-load('../images/icon_star.svg', fill = $orange-E8);  
+        }
+      }
+    }
+  }
+  &__rating-list {
+    
+  }
+  &__rating-btn {
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    margin: 0 4px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: svg-load('../images/icon_star.svg', fill = $gray-DF);
+    cursor: pointer;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  &__rating-stat {
+    font-family: $font-secondary;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 5px;
+    & .val {
+      display: inline;
+    }
+  }
+  &__item-recipe {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 220px;
+    width: 100%;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    & .title {
+      position: absolute;
+      top: 65px;
+      left: 40px;
+      right: 40px;
+      bottom: 10px;
+      text-align: left;
+      line-height: 1.2em;
+      font-family: $font-base-bold;
+      font-size: 30px;
+      color: $white;
+      @media #{$M_XSM} {
+        top: 40px;
+        left: 20px;
+        right: 20%;
+        font-size: 24px;
+      }
+    }
+  }
+}

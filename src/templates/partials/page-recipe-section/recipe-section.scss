@@ -1,0 +1,349 @@
+.recipe-section-wr {
+  margin-top: 60px;
+  padding: 0 40px;
+  @media #{$M_XS} {
+    margin-top: 30px;
+  }
+  @media #{$M_SMX} {
+    padding: 0 20px;
+  }
+}
+.recipe-section {
+  display: flex;
+  flex-flow: row wrap;
+  height: auto;
+  & .section-bl {
+    position: relative;
+    display: table;
+    padding-bottom: 31%;
+    margin: 0 auto;
+    margin-top: 35px;
+    font-family: $font-secondary;
+    color: $white;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+    }
+    &:hover {
+      & .overlay {
+        display: block;
+      }
+      & .inner {
+        transition: 0.2s ease-out;
+        top: 85px;
+        @media #{$M_SMX} {
+
+        }
+      }
+      &.bar {
+        & .category {
+          &:before {
+            content: svg-load('../images/icon_food-bar.svg', fill = $white);
+          }
+        }
+      }
+      &.street-food {
+        & .category {
+          &:before {
+            content: svg-load('../images/icon_food-street.svg', fill = $white);
+          }
+        }
+      }
+      &.restaurant-food {
+        & .category {
+          &:before {
+            content: svg-load('../images/icon_food-restaurant.svg', fill = $white);
+          }
+        }
+      }
+      &.home-food {
+        & .category {
+          &:before {
+            content: svg-load('../images/icon_food-home.svg', fill = $white);
+          }
+        }
+      }
+    }
+    &.bl-min {
+      width: 30.928%;
+      max-width: 300px;
+      @media #{$M_XS} {
+        max-width: 325px;
+        width: 100%;
+        margin-top: 20px;
+        padding-bottom: 45%;
+      }
+      @media #{$M_X2SS} {
+        max-width: 80%;
+        padding-bottom: 80%;
+      }
+      @media #{$M_X3S} {
+        max-width: 100%;
+        padding-bottom: 100%;
+      }
+      & .inner {
+        & h2 {
+          font-size: 30px;
+          line-height: 30px;
+          @media #{$M_XS} {
+            font-size: 30px;
+            line-height: 30px;
+          }
+          @media #{$M_X2SS} {
+            font-size: 40px;
+            line-height: 40px;
+          }
+          @media #{$M_400} {
+            font-size: 30px;
+            line-height: 30px;
+          }
+        }
+      }
+
+    }
+    &.bl-lrg {
+      width: 64.464%;
+      max-width: 635px;
+      @media #{$M_XS} {
+        max-width: 325px;
+      }
+      @media #{$M_XS} {
+        width: 100%;
+        padding-bottom: 45%;
+        margin-top: 20px;
+      }
+      @media #{$M_X2SS} {
+        max-width: 80%;
+        padding-bottom: 80%;
+      }
+      @media #{$M_X3S} {
+        max-width: 100%;
+        padding-bottom: 100%;
+      }
+      & .inner {
+        h2 {
+          @media #{$M_XS} {
+            font-size: 30px;
+            line-height: 30px;
+          }
+          @media #{$M_X2SS} {
+            font-size: 40px;
+            line-height: 40px;
+          }
+          @media #{$M_400} {
+            font-size: 30px;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+    & .overflow-wr {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+    & .category {
+      position: absolute;
+      top: 0;
+      left: $recipe-bl-offset;
+      right: $recipe-bl-offset;
+      top: $recipe-bl-offset;
+      padding-left: 40px;
+      font-size: 14px;
+      background-position: 0 50%;
+      background-repeat: no-repeat;
+      z-index: 1;
+      & i {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        width: 28px;
+        height: 30px;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+      }
+      &:before {
+        display: block;
+        position: absolute;
+        top: -4px;
+        left: 0;
+        height: 20px;
+        width: 20px;
+      }
+    }
+    & .overlay {
+      display: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0.9;
+      transition: 0.2s;
+    }
+    &.bar {
+      &:after {
+        background-color: $orange-E8;
+      }
+      & .overlay {
+        background-color: $orange-E8;
+      }
+      & .category {
+        &:before {
+          content: svg-load('../images/icon_food-bar.svg', fill = $orange-E8);
+        }
+      }
+    }
+    &.street-food {
+      &:after {
+        background-color: $green-87;
+      }
+      & .overlay {
+        background-color: $green-87;
+      }
+      & .category {
+          &:before {
+            width: 25px;
+            content: svg-load('../images/icon_food-street.svg', fill = $green-87);
+          }
+      }
+    }
+    &.restaurant-food {
+      &:after {
+        background-color: $purple-97;
+      }
+      & .overlay {
+        background-color: $purple-97;
+      }
+      & .category {
+          &:before {
+            width: 28px;
+            content: svg-load('../images/icon_food-restaurant.svg', fill = $purple-97);
+          }
+      }
+    }
+    &.home-food {
+      &:after {
+        background-color: $red-AA;
+      }
+      & .overlay {
+        background-color: $red-AA;
+      }
+      & .category {
+          &:before {
+            width: 28px;
+            content: svg-load('../images/icon_food-home.svg', fill = $red-AA);
+          }
+      }
+    }
+    & .inner {
+      position: absolute;
+      top: 175px;
+      left: $recipe-bl-offset;
+      right: $recipe-bl-offset;
+      z-index: 2;
+      @media #{$M_SMX} {
+        top: 42%;
+      }
+      @media #{$M_X3S} {
+        top: initial;
+        bottom: 60px;
+      }
+      & .title {
+        max-height: 100px;
+        font-size: 14px;
+        overflow: hidden;
+        @media #{$M_SMX} {
+          max-height: initial;
+        }
+      }
+      &__info {
+        position: absolute;
+        top: 125px;
+        left: 0;
+        right: 0;
+        @media #{$M_1050} {
+          top: 120px;
+        }
+        @media #{$M_SMX} {
+          display: none;
+        }
+        & .author {
+          font-size: 14px;
+          color: $white;
+          & strong {
+            font-family: $font-secondary-bold;
+          }
+          & a {
+            font-size: inherit;
+            color: inherit;
+          }
+        }
+        & .date {
+          margin-top: 5px;
+          padding-bottom: 15px;
+        }
+        & .row {
+          display: flex;
+          width: 100%;
+          padding-top: 12px;
+          border-top: 1px solid $white;
+          & .views,
+          & .comments,
+          & .likes {
+            position: relative;
+            &:before {
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+          }  
+          & .views {
+            padding-left: 28px;
+            &:before {
+              content: svg-load('../images/icon_eye.svg', fill = $white);
+            }
+          }
+          & .comments {
+            margin-left: 25px;
+            padding-left: 22px;
+            &:before {
+              content: svg-load('../images/icon_comment.svg', fill = $white);
+            }
+          }
+          & .likes {
+            margin-left: auto;
+            padding-left: 21px;
+            &:before {
+              display: block;
+              height: 14px;
+              width: 14px;
+              content: svg-load('../images/icon_like.svg', fill = $white);
+            }
+            &:hover,
+            &.active {
+              &:before {
+                content: svg-load('../images/icon_like-filled.svg', fill = $white);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

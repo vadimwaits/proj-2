@@ -1,0 +1,134 @@
+.news-preview-section-wr {
+  margin-top: 70px;
+}
+.news-preview-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  &__list {
+    
+  }
+  &__item {
+    position: relative;
+    height: auto;
+    width: 35.239%;
+    padding-bottom: 20.191%;
+    color: $white;
+    background-color: rgba(255,255,255,0.1);
+    overflow: hidden;
+    z-index: 2;
+    @include transition-all(0.2s);
+    @media #{$M_XS} {
+      width: 50%;
+      padding-bottom: 26%;
+    }
+    @media #{$M_X2S} {
+      width: 70%;
+      background-position: 50% 50%;
+    }
+    @media #{$M_X3S} {
+      width: 100%;
+      padding-bottom: 0;
+      height: 150px;
+    }
+    &:hover {
+      background-color: rgba(255,255,255,0.3);
+      color: $black-20;
+      & .inner {
+        & .item-head {
+          opacity: 1;
+          color: $black-20;
+          & .likes {
+            &:before {
+              content: svg-load('../images/icon_eye.svg', fill = $black-20);
+            }
+          }
+        }
+      }
+    }
+    & a {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      font-size: inherit;
+      color: inherit;
+    }
+    & .inner {
+      position: absolute;
+      top: 15px;
+      left: 40px;
+      right: 30px;
+      bottom: 37px;
+      & .item-head {
+        display: flex;
+        justify-content: space-between;
+        font-family: $font-secondary;
+        font-size: 14px;
+        opacity: 0;
+        @media #{$M_SMX} {
+          opacity: 1;
+        }
+        & .likes {
+          position: relative;
+          padding-left: 25px;
+          &:before {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+          @media #{$M_SMX} {
+            &:before {
+              content: svg-load('../images/icon_eye.svg', fill = $white);
+            }
+          }
+        }
+      }
+      & .title {
+        margin-top: 20px;
+        max-height: 64px;
+        font-family: $font-base-bold;
+        overflow: hidden;
+      }
+      & .text {
+        margin-top: 21px;
+        line-height: 1.5em;
+        font-size: 16px;
+        font-family: $font-secondary-light;
+        @media #{$M_SMX} {
+          display: none;
+        }
+      }
+    }
+  }
+  & .widget-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    &__item {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      -webkit-background-size: cover;
+      background-size: cover;
+      overflow: hidden;
+      &.active {
+        display: block;
+      }
+      @media #{$M_X2S} {
+        background-position: 50% 50%;
+      }
+    }
+  }
+}

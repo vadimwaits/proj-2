@@ -1,0 +1,104 @@
+@mixin clearfix {
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin visually-hidden {
+	margin: -1px;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	clip: rect(0, 0, 0, 0);
+	position: absolute;
+}
+
+@mixin font-smoothing($value: on) {
+	@if $value == on {
+		font-smoothing: antialiased;
+		-webkit-font-smoothing: antialiased;
+		-moz-font-smoothing: antialiased;
+		-ms-font-smoothing: antialiased;
+		-o-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	} @else if $value == off {
+		font-smoothing: none;
+		-webkit-font-smoothing: none;
+		-moz-font-smoothing: none;
+		-ms-font-smoothing: none;
+		-o-font-smoothing: none;
+		-moz-osx-font-smoothing: unset;
+	} @else {
+		font-smoothing: subpixel-antialiased;
+		-webkit-font-smoothing: subpixel-antialiased;
+		-moz-font-smoothing: subpixel-antialiased;
+		-ms-font-smoothing: subpixel-antialiased;
+		-o-font-smoothing: subpixel-antialiased;
+		-moz-osx-font-smoothing: auto;
+	}
+}
+
+@mixin absolute($top: auto, $right: auto, $bottom: auto, $left: auto) {
+	position: absolute;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
+@mixin fixed($top: auto, $right: auto, $bottom: auto, $left: auto) {
+	position: fixed;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
+@mixin transition-all($time) {
+	-webkit-transition: $time;
+	-moz-transition: $time;
+	-o-transition: $time;
+	transition: $time;
+}
+@mixin transform-rotate($angle) {
+  -moz-transform: rotate($angle);
+  -ms-transform: rotate($angle);
+  -webkit-transform: rotate($angle);
+  -o-transform: rotate($angle);
+  transform: rotate($angle);
+}
+@mixin transform-translateY($value) {
+  -moz-transform: translateY($value);
+  -ms-transform: translateY($value);
+  -webkit-transform: translateY($value);
+  -o-transform: translateY($value);
+  transform: translateY($value);
+}
+@mixin transform-translateX($value) {
+  -moz-transform: translateX($value);
+  -ms-transform: translateX($value);
+  -webkit-transform: translateX($value);
+  -o-transform: translateX($value);
+  transform: translateX($value);
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius:  $radius;
+    -moz-border-radius:     $radius;
+    -o-border-radius:       $radius;
+    border-radius:          $radius;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}  
+}

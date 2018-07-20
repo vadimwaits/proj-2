@@ -1,0 +1,77 @@
+doctype html
+include ../templates/vendor/bemto/bemto
+
+html(lang='ru')
+  head
+    include ../templates/partials/head/head
+  body
+    +b.popup-wr
+      include ../templates/partials/page-popups/authorization-popup
+          
+    +b.page-wrapper
+      +b.A.bg-link(href="#")
+      include ../templates/partials/page-anchor/anchor
+
+      +b.page-inner-wr
+        include ../templates/partials/page-header/header--logged
+        include ../templates/partials/page-search-toolbar/search-toolbar
+
+        +b.page-body
+          +b.page-profile
+            +b(style="background-image: url(./temp/page-top-bg2.png);").page-top
+              +e.user-info
+                +e.user-pic
+                  img(src="./assets/images/soys-about-logo.png")
+
+                +e.user-main
+                  +e.user-name.menu Меню
+                    +b.mobile-trigger
+
+            +b.page-aside
+              +e.list
+                +e.item.active
+                  a(href="#") О проекте
+                +e.item
+                  a(href="#") Правила
+                +e.item
+                  a(href="#") Рекламодателям
+                +e.item
+                  a(href="#") Контакты
+                +e.item
+                  a(href="#") Помощь
+              +b.mobile-trigger
+
+            +b.page-main-content
+              +b.text-page
+                h2 Что такое «Soys.by»
+
+                +b.site-about
+                  p Soys.by — это проект, который помогает улучшить жизнь. #[br] Здесь вы найдете множество новых #[a(href="#") кулинарных идей], станете автором собственной #[a(href="#") кулинарной книги], встретите друзей-единомышленников и сможете поболтать обо всем на свете!
+
+                +b.article
+                  h3 О чём мы пишем
+
+                  p Cайт, посвящённ искусству приготовления пищи дома, где собраны лучшие рецепты кулинарных блюд с фотографиями и подробными пошаговыми инструкциями, специально, чтобы вы могли приготовить любое, даже самое сложное блюдо в домашних условиях.
+
+                h3 На нашем сайте можно:
+
+                +b('ul').list-dotted
+                  +e.item #[a(href="#") Искать рецепты] по каталогу, ингредиентам и другим параметрам.
+                  +e.item #[a(href="#") Публиковать свои рецепты] и фотографии блюд.
+                  +e.item Оценивать чужие рецепты и выставлять собственные на голосование.
+                  +e.item Подписываться на сообщения о новых публикациях пользователей.
+                  +e.item Оставлять сообщения другим кулинарам нашего сайта и общаться с ними лично или в тематических раздела.
+                  +e.item Вступать в существующие тематические группы и организовывать новые.
+                  +e.item #[a(href="#") Создать собственную Кулинарную книгу], добавлять в нее понравившиеся рецепты с нашего сайта, разделять их на удобные группы.
+                  +e.item Получать полезные советы. На основании ваших интересов и предпочтений, получать рецепты блюд, которые могут быть вам по вкусу.
+
+
+
+        include ../templates/partials/page-footer/footer
+
+  block scripts
+    script(src='assets/scripts/vendor/jquery-2.2.4.min.js')
+    script(src='assets/scripts/tools.js')
+    script(src='assets/scripts/vendor/slick.min.js')
+    script(src='assets/scripts/vendor/selectize.min.js')
+    script(src='assets/scripts/vendor/jquery-ui.min.js')

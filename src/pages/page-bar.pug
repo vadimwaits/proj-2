@@ -1,0 +1,282 @@
+doctype html
+include ../templates/vendor/bemto/bemto
+
+html(lang='ru')
+  head
+    include ../templates/partials/head/head
+  body
+    +b.popup-wr
+      include ../templates/partials/page-popups/authorization-popup
+          
+    +b.page-wrapper
+      +b.A.bg-link(href="#")
+      include ../templates/partials/page-anchor/anchor
+
+      +b.page-inner-wr
+        +b('header')#header.header
+          +b.btn-header-mobile
+            +b.inner
+              span
+              span
+              span
+          +e.logo
+            a(href="#")
+          +e.nav-wr
+            +e('nav').nav-main
+              +b('ul').nav-main-list
+                +e.item
+                  a(href="#") Рецепты
+                +e.item
+                  a(href="#") Новости
+                +e.item
+                  a(href="#") События
+                +e.item
+                  a(href="#") Лайфхаки
+              +b.log-in.desktop
+                a(href="#").login-trigger Вход
+            +e.nav-category
+              +b('ul').nav-category-list
+                +e.item.hm-food
+                  a(href="#") Домашняя кухня
+                +e.item.s-food
+                  a(href="#") Уличная еда
+                +e.item.r-food
+                  a(href="#") Ресторанное меню
+                +e.item.bar.item-active
+                  a(href="#") Барная карта
+          +b.log-in.mobile
+            a(href="#").login-trigger Вход
+
+        include ../templates/partials/page-search-toolbar/search-toolbar
+
+        +b.page-body
+          +b(style="background-image: url(./assets/images/bar-head.png);").page-title-main.bg-pic
+            h2 Барная карта
+
+          +b.vote-intro
+            +e('h2').title Голосуйте за наших экспертов
+            +e.text Если для киноактеров самая высокая награда – Оскар, для спортсменов – медали Олимпийских игр, то для мастеров высокой кухни – это победа в кулинарном сражении «Soys.by». Статуэтку повара мечтает получить каждый, но для большинства участников это так и остается мечтой.
+
+          +b.vote-main.bar
+            +e.item
+              +e(style="background-image: url(./temp/participant-4.png);").item-pic
+              +e.item-title Ярослав Акулов
+              +e.item-subtitle Бармен ресторана «Дюк-Дюк»
+              +e('button')(style="display: none;").vote-btn.btn.btn-secondary Голосовать за участника
+              +e.item-rating.rate-2
+                +e('ul').rating-list
+                  +e.rating-btn
+                  +e.rating-btn
+                  +e.rating-btn
+                  +e.rating-btn
+                  +e.rating-btn
+                +e.rating-stat
+                  | Голосов: 
+                  +b.val 4353
+              +e(style="background-image: url(./temp/participant-bar-1.png);").item-recipe
+                +b.title Коктейль «Бьянко тоник»
+
+            +e.item
+              +e(style="background-image: url(./temp/participant-5.png);").item-pic
+              +e.item-title Александр Груздев
+              +e.item-subtitle Бармен ресторана «Прага»
+              +e('button')(style="display: none;").vote-btn.btn.btn-secondary Голосовать за участника
+              +e.item-rating.rate-1
+                +e('ul').rating-list
+                  +e.rating-btn
+                  +e.rating-btn
+                  +e.rating-btn
+                  +e.rating-btn
+                  +e.rating-btn
+                +e.rating-stat
+                  | Голосов: 
+                  +b.val 5245
+              +e(style="background-image: url(./temp/participant-bar-2.png);").item-recipe
+                +b.title Горячий шоколад с маршмеллоу
+
+            +e.item
+              +e(style="background-image: url(./temp/participant-6.png);").item-pic
+              +e.item-title Феликс Хлебников
+              +e.item-subtitle Бармен московской сети «Кофемания»
+              +e('button')(style="display: none;").vote-btn.btn.btn-secondary Голосовать за участника
+              +e.item-rating.rate-3
+                +e('ul').rating-list
+                  +e.rating-btn
+                  +e.rating-btn
+                  +e.rating-btn
+                  +e.rating-btn
+                  +e.rating-btn
+                +e.rating-stat
+                  | Голосов: 
+                  +b.val 54674
+              +e(style="background-image: url(./temp/participant-bar-3.png);").item-recipe
+                +b.title Настойка из сливы
+
+          +b.recipe-section-wr
+            +b.section-title
+              h2
+                a(href="#") Рецепты барной карты
+
+
+            +b.recipe-section
+              +b(style="background-image: url(./temp/bar-1.png);").section-bl.bl-min.bar
+                +b.overflow-wr
+                  +b.category Барная карта
+                  +b.overlay
+                  +b.inner
+                    +b.title
+                      h2 Глинтвейн с мандаринами на ягодном соке
+
+                    +e.info
+                      +b.author
+                        strong Автор: 
+                        |
+                        a(href="#") Soys.by
+                      +b.date 19 августа 2017
+                      +b.row
+                        +b.views 563
+                        +b.comments 923
+                        +b.likes 123
+
+              +b(style="background-image: url(./temp/bar-2.png);").section-bl.bl-lrg.bar
+                +b.overflow-wr
+                  +b.category Барная карта
+                  +b.overlay
+                  +b.inner
+                    +b.title
+                      h2 Безалкогольный клюквенный пунш
+                    +e.info
+                      +b.author
+                        strong Автор: 
+                        |
+                        a(href="#") Soys.by
+                      +b.date 19 августа 2017
+                      +b.row
+                        +b.views 563
+                        +b.comments 923
+                        +b.likes 123
+
+              +b(style="background-image: url(./temp/bar-3.png);").section-bl.bl-min.bar
+                +b.overflow-wr
+                  +b.overlay
+                  +b.category Барная карта
+                  +b.inner
+                    +b.title
+                      h2 Лимонад с клубникой и базиликом
+                    +e.info
+                      +b.author
+                        strong Автор: 
+                        |
+                        a(href="#") Soys.by
+                      +b.date 19 августа 2017
+                      +b.row
+                        +b.views 563
+                        +b.comments 923
+                        +b.likes 123
+
+              +b(style="background-image: url(./temp/bar-4.png);").section-bl.bl-min.bar
+                +b.overflow-wr
+                  +b.overlay
+                  +b.category Барная карта
+                  +b.inner
+                    +b.title
+                      h2 Коктейль из дыни, винограда и киви
+                    +e.info
+                      +b.author
+                        strong Автор: 
+                        |
+                        a(href="#") Soys.by
+                      +b.date 19 августа 2017
+                      +b.row
+                        +b.views 563
+                        +b.comments 923
+                        +b.likes 123
+
+              +b(style="background-image: url(./temp/bar-5.png);").section-bl.bl-min.bar
+                +b.overflow-wr
+                  +b.overlay
+                  +b.category Барная карта
+                  +b.inner
+                    +b.title
+                      h2 Молочный коктейль с манго 
+                    +e.info
+                      +b.author
+                        strong Автор: 
+                        |
+                        a(href="#") Soys.by
+                      +b.date 19 августа 2017
+                      +b.row
+                        +b.views 563
+                        +b.comments 923
+                        +b.likes 123
+                        
+            +b.section-bottom
+              +b.sub-title
+                a(href="#") Больше рецептов
+                +b.border
+
+          +b.slider-event.slider-default
+            +b.section-title
+              h2
+                a(href="#") Последние новости
+            +b('ul').slider-list
+              +e.item
+                img(src="./temp/event-slide1.png")
+                a(href="#")
+                  +b.inner
+                    +b.date 19 июля 2017
+                    +b.title
+                      h4 5 дней шаурмы. Фестиваль уличной еды в Минске.
+              +e.item
+                img(src="./temp/event-slide2.png")
+                a(href="#")
+                  +b.inner
+                    +b.date 19 июля 2017
+                    +b.title
+                      h4 Снимай как «Soys.by», готовь как Шеф-повар с Gorenje!
+              +e.item
+                img(src="./temp/event-slide3.png")
+                a(href="#")
+                  +b.inner
+                    +b.date 19 июля 2017
+                    +b.title
+                      h4 5 дней шаурмы. Фестиваль уличной еды в Минске.
+              +e.item
+                img(src="./temp/event-slide4.png")
+                a(href="#")
+                  +b.inner
+                    +b.date 19 июля 2017
+                    +b.title
+                      h4 Снимай как «Soys.by», готовь как Шеф-повар с Gorenje!
+              +e.item
+                img(src="./temp/event-slide1.png")
+                a(href="#")
+                  +b.inner
+                    +b.date 19 июля 2017
+                    +b.title
+                      h4 5 дней шаурмы. Фестиваль уличной еды в Минске.
+              +e.item
+                img(src="./temp/event-slide2.png")
+                a(href="#")
+                  +b.inner
+                    +b.date 19 июля 2017
+                    +b.title
+                      h4 Снимай как «Soys.by», готовь как Шеф-повар с Gorenje!
+            +b.section-bottom
+              +b.sub-title
+                a(href="#") Все события
+                +b.border
+              +b.custom-controls
+                +b.custom-prev
+                  span
+                +b.custom-next
+                  span
+          
+        include ../templates/partials/page-footer/footer
+
+  block scripts
+    script(src='assets/scripts/vendor/jquery-2.2.4.min.js')
+    script(src='assets/scripts/tools.js')
+    script(src='assets/scripts/vendor/slick.min.js')
+    script(src='assets/scripts/vendor/selectize.min.js')
+    script(src='assets/scripts/vendor/jquery-ui.min.js')

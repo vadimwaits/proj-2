@@ -1,0 +1,39 @@
++b.addbook-popup.popup.popup-default
+  +b.closer
+  +b.inner
+    +b.title Новая книга
+    +b('label').bookname.alert
+      input(type="text" placeholder="Введите название книги*")
+      p.alert-msg Поле, обязательное для заполнения
+
+    +b.main
+      +b.sub-title Выберите цвет обложки
+
+      p Разноцветные обложки помогут упорядочить ваши любимые рецепты, особенно когда книг будет несколько.
+
+      +b.color-row
+        label(style="background-color: #4e2904;" for="addbook-color1").item
+          input(type="radio" name="addbook-color" id="addbook-color1")
+          i
+
+        label(style="background-color: #97295d;" for="addbook-color2").item
+          input(type="radio" name="addbook-color" id="addbook-color2")
+          i
+
+        label(style="background-color: #cc3813;" for="addbook-color3").item
+          input(type="radio" name="addbook-color" id="addbook-color3")
+          i
+
+        label(style="background-color: #e8980d;" for="addbook-color4").item
+          input(type="radio" name="addbook-color" id="addbook-color4")
+          i
+
+        label(style="background-color: #87a934;" for="addbook-color5").item
+          input(type="radio" name="addbook-color" id="addbook-color5")
+          i
+
+        label(style="background-color: #31b063;" for="addbook-color6").item
+          input(type="radio" name="addbook-color" id="addbook-color6")
+          i
+
+      button.btn.btn-secondary(type="submit") Создать книгу

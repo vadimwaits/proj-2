@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="imagetoolbar" content="no">
+    <meta name="msthemecompatible" content="no">
+    <meta name="cleartype" content="on">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/images/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/images/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/images/favicon/apple-touch-icon-152x152.png">
+    <meta name="application-name" content="&amp;nbsp;">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="mstile-144x144.png">
+    <meta name="apple-mobile-web-app-title">
+    <meta name="application-name">
+    <meta property="og:title">
+    <meta property="og:site_name">
+    <meta property="og:title">
+    <meta property="og:description">
+    <link href="assets/stylesheets/style.css" type="text/css" rel="stylesheet"><!-- [if gte IE 9]
+    <style>
+      .gradient {
+        filter: none;
+      }
+    </style>![endif]-->
+  </head>
+  <body>
+    <div class="popup-wr">
+      <div class="addbook-popup popup popup-default">
+        <div class="closer">
+        </div>
+        <div class="inner">
+          <div class="title">Новая книга
+          </div>
+          <label class="bookname alert">
+            <input type="text" placeholder="Введите название книги*">
+            <p class="alert-msg">Поле, обязательное для заполнения</p>
+          </label>
+          <div class="main">
+            <div class="sub-title">Выберите цвет обложки
+            </div>
+            <p>Разноцветные обложки помогут упорядочить ваши любимые рецепты, особенно когда книг будет несколько.</p>
+            <div class="color-row">
+              <label class="item" style="background-color: #4e2904;" for="addbook-color1">
+                <input type="radio" name="addbook-color" id="addbook-color1"><i></i>
+              </label>
+              <label class="item" style="background-color: #97295d;" for="addbook-color2">
+                <input type="radio" name="addbook-color" id="addbook-color2"><i></i>
+              </label>
+              <label class="item" style="background-color: #cc3813;" for="addbook-color3">
+                <input type="radio" name="addbook-color" id="addbook-color3"><i></i>
+              </label>
+              <label class="item" style="background-color: #e8980d;" for="addbook-color4">
+                <input type="radio" name="addbook-color" id="addbook-color4"><i></i>
+              </label>
+              <label class="item" style="background-color: #87a934;" for="addbook-color5">
+                <input type="radio" name="addbook-color" id="addbook-color5"><i></i>
+              </label>
+              <label class="item" style="background-color: #31b063;" for="addbook-color6">
+                <input type="radio" name="addbook-color" id="addbook-color6"><i></i>
+              </label>
+            </div>
+            <button class="btn btn-secondary" type="submit">Создать книгу</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-wrapper"><a class="bg-link" href="#"></a>
+      <div class="anchor-btn"><a href="#"></a>
+      </div>
+      <div class="page-inner-wr">
+        <header class="header" id="header">
+          <div class="btn-header-mobile">
+            <div class="inner"><span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="header__logo"><a href="#"></a>
+          </div>
+          <div class="header__nav-wr">
+            <nav class="header__nav-main">
+              <ul class="nav-main-list">
+                <li class="nav-main-list__item"><a href="#">Рецепты</a>
+                </li>
+                <li class="nav-main-list__item"><a href="#">Новости</a>
+                </li>
+                <li class="nav-main-list__item"><a href="#">События</a>
+                </li>
+                <li class="nav-main-list__item"><a href="#">Лайфхаки</a>
+                </li>
+              </ul>
+              <div class="log-in desktop">
+                <div class="user-logged dropdown">
+                  <div class="user-logged__wr dropdown-btn">
+                    <div class="user-pic" style="background-image: url(./temp/user-pic3.png);">
+                      <div class="notification">3
+                      </div>
+                    </div>
+                    <div class="user-name">Света Светикова
+                    </div>
+                  </div>
+                  <div class="dropdown-list">
+                    <div class="dropdown-list__item"><a href="#">Мой профиль</a>
+                    </div>
+                    <div class="dropdown-list__item cookbook"><a href="#">Кулинарная книга</a>
+                    </div>
+                    <div class="dropdown-list__item"><a href="#">Мои рецепты</a>
+                    </div>
+                    <div class="dropdown-list__item likes"><a href="#">Мне нравится</a>
+                    </div>
+                    <div class="dropdown-list__item notifications active"><a href="#">
+                        Уведомления
+                        <span>(3)</span></a>
+                    </div>
+                    <div class="dropdown-list__item logout-btn"><a href="#">Выход</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+            <div class="header__nav-category">
+              <ul class="nav-category-list">
+                <li class="nav-category-list__item"><a href="#">Домашняя кухня</a>
+                </li>
+                <li class="nav-category-list__item"><a href="#">Уличная еда</a>
+                </li>
+                <li class="nav-category-list__item"><a href="#">Ресторанное меню</a>
+                </li>
+                <li class="nav-category-list__item"><a href="#">Барная карта</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="log-in mobile">
+            <div class="user-logged dropdown">
+              <div class="user-logged__wr dropdown-btn">
+                <div class="user-pic" style="background-image: url(./temp/user-pic3.png);">
+                  <div class="notification">3
+                  </div>
+                </div>
+                <div class="user-name">Света Светикова
+                </div>
+              </div>
+              <div class="dropdown-list">
+                <div class="dropdown-list__item"><a href="#">Мой профиль</a>
+                </div>
+                <div class="dropdown-list__item cookbook"><a href="#">Кулинарная книга</a>
+                </div>
+                <div class="dropdown-list__item"><a href="#">Мои рецепты</a>
+                </div>
+                <div class="dropdown-list__item likes"><a href="#">Мне нравится</a>
+                </div>
+                <div class="dropdown-list__item notifications active"><a href="#">
+                    Уведомления
+                    <span>(3)</span></a>
+                </div>
+                <div class="dropdown-list__item logout-btn"><a href="#">Выход</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="search-toolbar">
+          <div class="closer-wr">
+            <div class="closer"><span>Свернуть поиск</span><span class="hidden">Подобрать рецепт</span><i></i>
+            </div>
+          </div>
+          <div class="search-toolbar__row">
+            <div class="search-toolbar__wr">
+              <div class="search-toolbar__col dropdown">
+                <div class="dropdown-btn"><span>Выбрать раздел<i class="dropdown-arrow"></i></span>
+                </div>
+                <div class="dropdown-wr">
+                  <div class="dropdown-list">
+                    <div class="dropdown-list__item">
+                      <label>
+                        <input type="checkbox"><i></i>Любой раздел
+                      </label>
+                    </div>
+                    <div class="dropdown-list__item">
+                      <label>
+                        <input type="checkbox"><i></i>Домашняя кухня
+                      </label>
+                    </div>
+                    <div class="dropdown-list__item">
+                      <label>
+                        <input type="checkbox"><i></i>Уличная еда
+                      </label>
+                    </div>
+                    <div class="dropdown-list__item">
+                      <label>
+                        <input type="checkbox"><i></i>Ресторанное меню
+                      </label>
+                    </div>
+                    <div class="dropdown-list__item">
+                      <label>
+                        <input type="checkbox"><i></i>Барная карта
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="search-toolbar__col dropdown">
+                <div class="dropdown-btn"><span>Выбрать категорию<i class="dropdown-arrow"></i></span>
+                </div>
+                <div class="dropdown-wr">
+                  <div class="dropdown-list">
+                    <div class="dropdown-list__item">
+                      <label>
+                        <input type="checkbox"><i></i>Любая категория
+                      </label>
+                    </div>
+                    <div class="dropdown-list__item">
+                      <label>
+                        <input type="checkbox"><i></i>Заготовки
+                      </label>
+                    </div>
+                    <div class="dropdown-list__item">
+                      <label>
+                        <input type="checkbox"><i></i>Выпечка и десерты
+                      </label>
+                    </div>
+                    <div class="dropdown-list__item">
+                      <label>
+                        <input type="checkbox"><i></i>Основные блюда
+                      </label>
+                    </div>
+                    <div class="dropdown-list__item">
+                      <label>
+                        <input type="checkbox"><i></i>Завтраки
+                      </label>
+                    </div>
+                    <div class="dropdown-list__item">
+                      <label>
+                        <input type="checkbox"><i></i>Салаты
+                      </label>
+                    </div>
+                    <div class="dropdown-list__item">
+                      <label>
+                        <input type="checkbox"><i></i>Супы
+                      </label>
+                    </div>
+                    <div class="dropdown-list__item">
+                      <label>
+                        <input type="checkbox"><i></i>Паста и пицца
+                      </label>
+                    </div>
+                    <div class="dropdown-list__item">
+                      <label>
+                        <input type="checkbox"><i></i>Закуски
+                      </label>
+                    </div>
+                    <div class="dropdown-list__item">
+                      <label>
+                        <input type="checkbox"><i></i>Сэндвичи
+                      </label>
+                    </div>
+                    <div class="dropdown-list__item">
+                      <label>
+                        <input type="checkbox"><i></i>Ризотто
+                      </label>
+                    </div>
+                    <div class="dropdown-list__item">
+                      <label>
+                        <input type="checkbox"><i></i>Напитки
+                      </label>
+                    </div>
+                    <div class="dropdown-list__item">
+                      <label>
+                        <input type="checkbox"><i></i>Соусы и маринады
+                      </label>
+                    </div>
+                    <div class="dropdown-list__item">
+                      <label>
+                        <input type="checkbox"><i></i>Бульоны
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="search-toolbar__col dropdown">
+                <div class="dropdown-btn"><span>Выбрать меню<i class="dropdown-arrow"></i></span>
+                </div>
+                <div class="dropdown-wr">
+                  <div class="dropdown-list">
+                    <div class="dropdown-list__item">
+                      <label>
+                        <input type="checkbox"><i></i>Любое меню
+                      </label>
+                    </div>
+                    <div class="dropdown-list__item">
+                      <label>
+                        <input type="checkbox"><i></i>Вегетерианское
+                      </label>
+                    </div>
+                    <div class="dropdown-list__item">
+                      <label>
+                        <input type="checkbox"><i></i>Детское
+                      </label>
+                    </div>
+                    <div class="dropdown-list__item">
+                      <label>
+                        <input type="checkbox"><i></i>Низкокалорийное
+                      </label>
+                    </div>
+                    <div class="dropdown-list__item">
+                      <label>
+                        <input type="checkbox"><i></i>Постная еда
+                      </label>
+                    </div>
+                    <div class="dropdown-list__item">
+                      <label>
+                        <input type="checkbox"><i></i>Меню при диабете
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="search-toolbar__col search">
+                <div class="search-transform">
+                  <label class="search-wr">
+                    <input type="search" placeholder="Поиск рецепта"><span class="icon"></span>
+                  </label><span class="search-close"></span>
+                </div>
+              </div>
+              <div class="search-toolbar__col submit">
+                <button class="btn" type="submit">Подобрать рецепт</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-body">
+          <div class="page-profile">
+            <div class="page-top" style="background-image: url(./temp/page-top-bg.png);">
+              <div class="page-top__user-info">
+                <div class="page-top__user-pic"><img src="./temp/user-pic3.png">
+                </div>
+                <div class="page-top__user-main">
+                  <div class="page-top__user-name">Света Светикова
+                    <div class="mobile-trigger">
+                    </div>
+                  </div>
+                  <div class="page-top__user-status">Эксперт
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="page-aside">
+              <div class="page-aside__list">
+                <div class="page-aside__item"><a href="#">Мой профиль</a>
+                </div>
+                <div class="page-aside__item cookbook"><a href="#">Кулинарная книга</a>
+                </div>
+                <div class="page-aside__item"><a href="#">Мои рецепты</a>
+                </div>
+                <div class="page-aside__item likes active"><a href="#">Мне нравится</a>
+                </div>
+                <div class="page-aside__item notifications"><a href="#">Уведомления</a>
+                </div>
+                <div class="page-aside__item"><a href="#">Выход</a>
+                </div>
+              </div>
+              <div class="mobile-trigger">
+              </div>
+            </div>
+            <div class="page-main-content">
+              <div class="profile-section-wr">
+                <div class="search-result"><span>Найдено: </span><span class="val">73 рецепта</span>
+                </div>
+                <div class="profile-sort-toolbar">
+                  <label class="profile-sort-toolbar__search-bar search-bar-default">
+                    <input type="search" placeholder="Поиск по названию книги"><i class="icon"></i>
+                  </label>
+                  <div class="sort-list">
+                    <div class="title">Сортировать:
+                    </div>
+                    <div class="dropdown-list">
+                      <select>
+                        <option>Сначала новые</option>
+                        <option>Сначала популярные</option>
+                        <option>Сначала старые</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="books-result-wr">
+                  <div class="recipe-section">
+                    <div class="section-bl bl-lrg street-food" style="background-image: url(./temp/recipe-lrg1.png);">
+                      <div class="overflow-wr">
+                        <div class="category">Барная карта
+                        </div>
+                        <div class="overlay">
+                        </div>
+                        <div class="inner">
+                          <div class="title">
+                            <h2>Арбузный лимонад с базиликом</h2>
+                          </div>
+                          <div class="inner__info">
+                            <div class="author"><strong>Автор: </strong><a href="#">Soys.by</a>
+                            </div>
+                            <div class="date">19 августа 2017
+                            </div>
+                            <div class="row">
+                              <div class="views">563
+                              </div>
+                              <div class="comments">923
+                              </div>
+                              <div class="likes active">123
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="section-bl bl-min bar" style="background-image: url(./temp/recipe-1.png);">
+                      <div class="overflow-wr">
+                        <div class="category">Барная карта
+                        </div>
+                        <div class="overlay">
+                        </div>
+                        <div class="inner">
+                          <div class="title">
+                            <h2>Арбузный лимонад с базиликом</h2>
+                          </div>
+                          <div class="inner__info">
+                            <div class="author"><strong>Автор: </strong><a href="#">Soys.by</a>
+                            </div>
+                            <div class="date">19 августа 2017
+                            </div>
+                            <div class="row">
+                              <div class="views">563
+                              </div>
+                              <div class="comments">923
+                              </div>
+                              <div class="likes active">123
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="section-bl bl-min home-food" style="background-image: url(./temp/recipe-1.png);">
+                      <div class="overflow-wr">
+                        <div class="overlay">
+                        </div>
+                        <div class="category">Барная карта
+                        </div>
+                        <div class="inner">
+                          <div class="title">
+                            <h2>Арбузный лимонад с базиликом</h2>
+                          </div>
+                          <div class="inner__info">
+                            <div class="author"><strong>Автор: </strong><a href="#">Soys.by</a>
+                            </div>
+                            <div class="date">19 августа 2017
+                            </div>
+                            <div class="row">
+                              <div class="views">563
+                              </div>
+                              <div class="comments">923
+                              </div>
+                              <div class="likes active">123
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="section-bl bl-lrg restaurant-food" style="background-image: url(./temp/recipe-lrg2.png);">
+                      <div class="overflow-wr">
+                        <div class="category">Барная карта
+                        </div>
+                        <div class="overlay">
+                        </div>
+                        <div class="inner">
+                          <div class="title">
+                            <h2>Арбузный лимонад с базиликом</h2>
+                          </div>
+                          <div class="inner__info">
+                            <div class="author"><strong>Автор: </strong><a href="#">Soys.by</a>
+                            </div>
+                            <div class="date">19 августа 2017
+                            </div>
+                            <div class="row">
+                              <div class="views">563
+                              </div>
+                              <div class="comments">923
+                              </div>
+                              <div class="likes active">123
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="section-bl bl-lrg restaurant-food" style="background-image: url(./temp/recipe-lrg2.png);">
+                      <div class="overflow-wr">
+                        <div class="category">Барная карта
+                        </div>
+                        <div class="overlay">
+                        </div>
+                        <div class="inner">
+                          <div class="title">
+                            <h2>Арбузный лимонад с базиликом</h2>
+                          </div>
+                          <div class="inner__info">
+                            <div class="author"><strong>Автор: </strong><a href="#">Soys.by</a>
+                            </div>
+                            <div class="date">19 августа 2017
+                            </div>
+                            <div class="row">
+                              <div class="views">563
+                              </div>
+                              <div class="comments">923
+                              </div>
+                              <div class="likes active">123
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><a class="banner item-sm item" href="#" style="background-image: url(./temp/banner2.png);"></a>
+                  </div>
+                </div>
+                <div class="pagination no-border">
+                  <div class="title"><a class="item" href="#">1</a><a class="item" href="#">2</a><a class="item" href="#">3</a><a class="item" href="#">...</a><a class="item" href="#">26</a>
+                    <div class="border">
+                    </div>
+                  </div>
+                  <div class="controls">
+                    <div class="arrow-prev"><span></span>
+                    </div>
+                    <div class="arrow-next"><span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="footer-top">
+            <p>Территория вкуса Soys.by создана для тех, кто любит готовить и пробовать новые блюда. Мы знакомим вас с лучшими поварами и заведениями мира и уверяем, что каждый может сделать кулинарный шедевр на своей кухне!</p>
+          </div>
+          <div class="footer-bottom">
+            <div class="footer-bottom__Lcol">
+              <div class="footer-logo"><a href="#"></a>
+              </div>
+              <div class="footer-text">Здесь вы найдете множество новых кулинарных идей, станете автором собственной Кулинарной книги, встретите друзей-единомышленников и сможете поболтать обо всем на свете!
+              </div>
+            </div>
+            <div class="footer-bottom__Mcol">
+              <div class="subscription">
+                <form>
+                  <label>
+                    <input type="text" placeholder="Подписаться на нашу рассылку">
+                    <input type="submit">
+                  </label>
+                </form>
+              </div>
+              <div class="footer-nav">
+                <ul class="footer-category-nav">
+                  <li class="footer-category-nav__item"><a href="#">Домашняя кухня</a>
+                  </li>
+                  <li class="footer-category-nav__item"><a href="#">Уличная еда</a>
+                  </li>
+                  <li class="footer-category-nav__item"><a href="#">Ресторанное меню</a>
+                  </li>
+                  <li class="footer-category-nav__item"><a href="#">Барная карта</a>
+                  </li>
+                </ul>
+                <ul class="footer-main-nav">
+                  <li class="footer-main-nav__item"><a href="#">На главную</a>
+                  </li>
+                  <li class="footer-main-nav__item"><a href="#">О проекте</a>
+                  </li>
+                  <li class="footer-main-nav__item"><a href="#">Рецепты</a>
+                  </li>
+                  <li class="footer-main-nav__item"><a href="#">Правила</a>
+                  </li>
+                  <li class="footer-main-nav__item"><a href="#">Новости</a>
+                  </li>
+                  <li class="footer-main-nav__item"><a href="#">Помощь</a>
+                  </li>
+                  <li class="footer-main-nav__item"><a href="#">Лайфхаки</a>
+                  </li>
+                  <li class="footer-main-nav__item"><a href="#">Статьи</a>
+                  </li>
+                </ul>
+                <div class="Rcol">
+                  <ul class="sub-nav">
+                    <li class="sub-nav__item"><a href="#">Рекламодателям</a>
+                    </li>
+                    <li class="sub-nav__item"><a href="#">Контакты</a>
+                    </li>
+                  </ul>
+                  <ul class="social">
+                    <li class="social__item"><a class="instagram" href="#"></a>
+                    </li>
+                    <li class="social__item"><a class="facebook" href="#"></a>
+                    </li>
+                    <li class="social__item"><a class="ok" href="#"></a>
+                    </li>
+                    <li class="social__item"><a class="vk" href="#"></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="legal">
+            <div class="copyright">© 2017 ООО «Soys.by» — территория вкуса. Все права защищены
+            </div>
+            <div class="author">Произведено в <a href="#">Oj Group Production</a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+  <script src="assets/scripts/vendor/jquery-2.2.4.min.js"></script>
+  <script src="assets/scripts/tools.js"></script>
+  <script src="assets/scripts/vendor/slick.min.js"></script>
+  <script src="assets/scripts/vendor/selectize.min.js"></script>
+  <script src="assets/scripts/vendor/jquery-ui.min.js"></script>
+</html>

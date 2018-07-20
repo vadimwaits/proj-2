@@ -1,0 +1,33 @@
++b('header')#header.header
+  +b.btn-header-mobile
+    +b.inner
+      span
+      span
+      span
+  +e.logo
+    a(href="#")
+  +e.nav-wr
+    +e('nav').nav-main
+      +b('ul').nav-main-list
+        +e.item
+          a(href="#") Рецепты
+        +e.item
+          a(href="#") Новости
+        +e.item
+          a(href="#") События
+        +e.item
+          a(href="#") Лайфхаки
+      +b.log-in.desktop
+        a(href="#").login-trigger Вход
+    +e.nav-category
+      +b('ul').nav-category-list
+        +e.item.hm-food
+          a(href="#") Домашняя кухня
+        +e.item.s-food
+          a(href="#") Уличная еда
+        +e.item.r-food
+          a(href="#") Ресторанное меню
+        +e.item.bar
+          a(href="#") Барная карта
+  +b.log-in.mobile
+    a(href="#").login-trigger Вход

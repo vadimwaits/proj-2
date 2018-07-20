@@ -1,0 +1,351 @@
+doctype html
+include ../templates/vendor/bemto/bemto
+
+html(lang='ru')
+  head
+    include ../templates/partials/head/head
+  body
+    +b.popup-wr
+      include ../templates/partials/page-popups/recipe-popup
+
+    +b.page-wrapper
+      +b.A.bg-link(href="#")
+      include ../templates/partials/page-anchor/anchor
+
+      +b.page-inner-wr
+        include ../templates/partials/page-header/header
+        include ../templates/partials/page-search-toolbar/search-toolbar
+
+        +b.page-body
+          +b.newsopen-section
+            +b(style="background-image: url(./temp/article-top2.png);").article-top
+
+            +b(itemscope="" itemtype="http://schema.org/HowTo").article-inner
+              +b.article-inner-wr
+                
+                +b.page-recipe-author-top
+                  +e.head
+                    +e.A( style="background-image: url(./temp/user-pic1.png);" href="#").pic
+                    +e.main
+                      +b.username
+                        strong Автор: 
+                        | 
+                        a(href="#")(itemprop="author") Света Светикова
+                      +b(itemprop="datePublished").date 25 июня 2017
+                    +e.aside
+                      +b.A(href="#comments-section").comments 10
+                      +b.views 307
+                    +b.social
+                      +e.item.facebook
+                        i
+                        span 3456
+                      +e.item.vk
+                        i
+                        span 436
+                      +e.item.ok
+                        i
+                        span 38
+
+                +b.title-main
+                  h2 Слоеные булочки с ветчиной
+
+                +b.recipe-features
+                  +e(itemprop="recipeYield").item.portions
+                    span.val 5 
+                    | 
+                    span порций
+                  +e(itemprop="totalTime").item.time
+                    span.val 40 
+                    | 
+                    span минут
+                +b.page-recipe-description
+                  p Schweinsohren (нем.) — смешное, но справедливое название этой замечательной выпечки из слоеного теста. Мне кажется, что булочки по своей форме напоминают свиные уши. Больше всего мне понравилось «кино», которое я наблюдала в духовке во время выпечки. Это чудо — наблюдать за тонкой полоской теста, которая на твоих глазах растет, дышит и превращается великолепную пышную булочку.
+
+                  +b.btn-row-recipes
+                    +b.btn.btn-secondary.add-book В кулинарную книгу
+                    +b.btn.btn-secondary.print Распечатать рецепт
+
+            +b.page-recipe-calc
+              +e.top
+                +b.title
+                  h3 Количество порций
+                +b.calc
+                  +b.button.minus
+                  +b('label').input
+                    input(type="text" value="0")
+                  +b.button.plus
+              +b.calc-table
+                +b.table-head Ингредиенты
+                +e(itemprop="recipeIngredient").item
+                  +b.name Ветчина
+                  +b.dots
+                  +b.count
+                    span 500 
+                    | 
+                    | г.
+                +e(itemprop="recipeIngredient").item
+                  +b.name Сыр
+                  +b.dots
+                  +b.count
+                    span 100 
+                    | 
+                    | г.
+                +e(itemprop="recipeIngredient").item
+                  +b.name Укроп свежий
+                  +b.dots
+                  +b.count
+                    span 1 
+                    | 
+                    | шт.
+                +e(itemprop="recipeIngredient").item
+                  +b.name Яйца куриные
+                  +b.dots
+                  +b.count
+                    span 1 
+                    | 
+                    | шт.
+                +e(itemprop="recipeIngredient").item
+                  +b.name Тесто слоеное дрожжевое
+                  +b.dots
+                  +b.count
+                    span 500 
+                    | 
+                    | г.
+
+          +b.recipe-steps
+            +e(itemprop="steps" itemscope="" itemtype="http://schema.org/HowToSection").section
+              +b.row
+                +b.Lcol
+                  +b.recipe-section-title
+                    h3 Шаг 1. Тесто 
+                  +b.calc-table
+                    +b.table-head Ингредиенты
+                    +e(itemprop="recipeIngredient").item
+                      +b.name Мука
+                      +b.dots
+                      +b.count
+                        span 250
+                        | 
+                        | г.
+                    +e(itemprop="recipeIngredient").item
+                      +b.name Соль
+                      +b.dots
+                      +b.count
+                        span 0,5
+                        | 
+                        | ч. л.
+                    +e(itemprop="recipeInstructions").text
+                      p Просеиваем муку и добавляем щепотку соли.
+                +b.Rcol
+                  +b.recipe-pic
+                    img(src="./temp/recipe-step1.png")
+
+              +b.row
+                +b.Lcol
+                  +b.calc-table
+                    +b.table-head Ингредиенты
+                    +e.item
+                      +b(itemprop="recipeIngredient").name Дрожжи свежие
+                      +b.dots
+                      +b.count
+                        span 30
+                        | 
+                        | г.
+                    +e.item
+                      +b(itemprop="recipeIngredient").name Вода
+                      +b.dots
+                      +b.count
+                        span 0,5
+                        | 
+                        | ч. л.
+                    +e(itemprop="recipeInstructions").text
+                      p В теплой воде размешиваем дрожжи (можно добавить щепотку сахара, но я просто жду пару минут, до появления маленьких пузырей).
+                +b.Rcol
+                  +b.recipe-pic
+                    img(src="./temp/recipe-step2.png")
+
+              +b.row
+                +b.Lcol
+                  +b.calc-table
+                    +b.table-head Ингредиенты
+                    +e.item
+                      +b(itemprop="recipeIngredient").name Оливковое масло
+                      +b.dots
+                      +b.count
+                        span 1
+                        | 
+                        | ст. л.
+                    +e(itemprop="recipeInstructions").text
+                      p Выливаем смесь в муку, помешиваем и добавляем ложку оливкового масла. Тщательно вымешиваем. Если сильно липнет, сверху просейте еще грамм 30-50 муки. На ровную поверхность насыпаем горку муки, солим, делаем в ней углубление и вливаем половину воды, уксус и растительное масло. Замешиваем тесто, добавляя понемногу оставшуюся воду. Тесто получается крутым. Заворачиваем его в пищевую пленку и убираем на час в холодильник.
+                      p Отдохнувшее тесто делим на 5-6 частей.
+                +b.Rcol
+                  +b.recipe-pic
+                    img(src="./temp/recipe-step3.png")
+                  +b.recipe-pic
+                    img(src="./temp/recipe-step4.png")
+
+            +e(itemprop="steps" itemscope="" itemtype="http://schema.org/HowToSection").section
+              +b.row
+                +b.Lcol
+                  +b.recipe-section-title
+                    h3 Шаг 2. Начинка
+                  +b.calc-table
+                    +e(itemprop="recipeInstructions").text
+                      p На слегка посыпанной мукой поверхности раскатайте тесто в прямоугольник толщиной 5 мм. Сверху разложите ветчину.
+                +b.Rcol
+                  +b.recipe-pic
+                    img(src="./temp/recipe-step5.png")
+
+              +b.row
+                +b.Lcol
+                  +b.calc-table
+                    +e(itemprop="recipeInstructions").text
+                      p Ветчину режем тонкими кружочками и перерезаем пополам. Далее ее выкладываем так, чтобы было видно кружочки сверху полосок, а снизу ничего не торчало.На ветчину положите зелень. Это может быть салат, базилик, руккола или молодой шпинат. Слоеное тесто немного раскатываем и режем на полоски приблизительно 3 см.
+                +b.Rcol
+                  +b.recipe-pic
+                    img(src="./temp/recipe-step6.png")
+
+              +b.row
+                +b.Lcol
+                  +b.calc-table
+                    +e(itemprop="recipeInstructions").text
+                      p На ветчину положите зелень. Это может быть салат, базилик, руккола или молодой шпинат. Слоеное тесто раскатываем и режем на полоски приблизительно 3 см.
+                +b.Rcol
+                  +b.recipe-pic
+                    img(src="./temp/recipe-step7.png")
+
+            +e(itemprop="steps" itemscope="" itemtype="http://schema.org/HowToSection").section
+              +b.row
+                +b.Lcol
+                  +b.recipe-section-title
+                    h3 Шаг 3. Выпечка
+                  +b.calc-table
+                    +e.text
+                      p Сверните тесто рулетом, закручивая с меньшей стороны прямоугольника. После этого ставим выпекать в духовку на 10 мин. при 180°С.
+                +b.Rcol
+                  +b.recipe-pic
+                    img(src="./temp/recipe-step8.png")
+
+            +e(itemprop="steps" itemscope="" itemtype="http://schema.org/HowToSection").section
+              +b.row
+                +b.Lcol
+                  +b.recipe-section-title
+                    h3 Приятного аппетита!
+                +b.Rcol
+                  +b.recipe-pic
+                    img(src="./temp/recipe-step9.png")
+
+            +b.btn-row-recipes
+              +b.btn.btn-secondary.add-book В кулинарную книгу
+              +b.btn.btn-secondary.print Распечатать рецепт
+
+
+          +b.slider-event.slider-default
+            +b.section-title
+              h2
+                a(href="#") Похожие рецепты
+            +b('ul').slider-list
+              +e.item
+                img(src="./temp/recipe-pic1.png")
+                a(href="#")
+                  +b.inner
+                    +b.title
+                      h4 Мини-чизкейки с томатным мармеладом
+              +e.item
+                img(src="./temp/recipe-pic2.png")
+                a(href="#")
+                  +b.inner
+                    +b.title
+                      h4 Фаршированная курица по-итальянски
+              +e.item
+                img(src="./temp/recipe-pic3.png")
+                a(href="#")
+                  +b.inner
+                    +b.title
+                      h4 Печеночные колбаски с рисом
+              +e.item
+                img(src="./temp/recipe-pic4.png")
+                a(href="#")
+                  +b.inner
+                    +b.title
+                      h4 Свиная вырезка с овощами и лапшой рамен 
+              +e.item
+                img(src="./temp/recipe-pic1.png")
+                a(href="#")
+                  +b.inner
+                    +b.title
+                      h4 Снимай как «Soys.by», готовь как Шеф-повар с Gorenje!
+              +e.item
+                img(src="./temp/recipe-pic2.png")
+                a(href="#")
+                  +b.inner
+                    +b.title
+                      h4 Мини-чизкейки с томатным мармеладом
+            +b.section-bottom.short
+              +b.sub-title
+                a(href="#") Все рецепты
+                +b.border
+              +b.custom-controls
+                +b.custom-prev
+                  span
+                +b.custom-next
+                  span
+
+          +b.comments-section#comments-section
+            +b.inner
+              +b.title
+                a(href="#")
+                  h2 Обсуждение
+                  span (10)
+              +b.comment-wr-logout
+                p Чтобы оставить свое мнение, необходимо #[a(href="#") войти] или #[a(href="#") зарегистрироваться]
+
+              +b.comment-feed
+                +b.comment
+                  +e.pic
+                    img(src="./temp/user-pic1.png")
+
+                  +e.head
+                    +b.username Ольга
+                    +b.date 11 августа 2017
+
+                  +e.body Мне больше нравится система питания LCHF, в которой углеводы должны практически отсутствовать. Хоть простые, хоть сложные. Я давно заметила, что от любых углеводов потом хочется есть и есть.
+
+                  +e.bottom
+                    +b.likes 53
+
+                    +b.options
+                      +e.item.reply Ответить
+                      +e.item.quote Цитировать
+
+                +b.comment
+                  +e.pic
+                    img(src="./temp/user-pic2.png")
+
+                  +e.head
+                    +b.username Ольга
+                    +b.date 11 августа 2017
+
+                  +e.body Мне больше нравится система питания LCHF, в которой углеводы должны практически отсутствовать. Хоть простые, хоть сложные. Я давно заметила, что от любых углеводов потом хочется есть и есть.
+
+                  +e.bottom
+                    +b.likes.active 53
+
+                    +b.options
+                      +e.item.reply Ответить
+                      +e.item.quote Цитировать
+
+              +b.section-bottom
+                +b.sub-title
+                  a(href="#") Все комментарии
+                  +b.border
+
+
+        include ../templates/partials/page-footer/footer
+
+  block scripts
+    script(src='assets/scripts/vendor/jquery-2.2.4.min.js')
+    script(src='assets/scripts/tools.js')
+    script(src='assets/scripts/vendor/slick.min.js')
+    script(src='assets/scripts/vendor/selectize.min.js')
+    script(src='assets/scripts/vendor/jquery-ui.min.js')

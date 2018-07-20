@@ -1,0 +1,552 @@
+.newsopen-section {
+  font-family: $font-secondary-light;
+  line-height: 1.4em;
+  & h3 {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    @media #{$M_X3S} {
+      margin-top: 0;
+    }
+  }
+  & .article-top {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-bottom: 36.572%;
+    background-position: 0 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+    & .inner {
+      position: absolute;
+      bottom: 20px;
+      left: 37px;
+      right: 37px;
+      font-family: $font-secondary;
+      color: $white;
+
+      & .Lcol {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        font-size: 14px;
+        color: $white;
+        & a {
+          color: inherit;
+          font-size: inherit;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      & .Rcol {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        right: 0;
+        bottom: 0;
+        font-size: 13px;
+        & .comments,
+        & .views {
+          position: relative;
+          margin-left: 25px;
+          line-height: 1;
+          color: inherit;
+          &:before {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+        & .comments {
+          padding-left: 22px;
+          &:before {
+            content: svg-load('../images/icon_comment.svg', fill = $white);
+          }
+        }
+        & .views {
+          padding-left: 27px;
+          &:before {
+            content: svg-load('../images/icon_eye.svg', fill = $white);
+          }
+        }
+      }
+    }
+  }
+  & .social {
+    position: absolute;
+    left: -120px;
+    top: 3px;
+    @media #{$M_XS} {
+      position: relative;
+      width: 100%;
+      left: 10px;
+      display: flex;
+      top: initial;
+      bottom: 0;
+      margin-top: 30px;
+    }
+    &__item {
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 13px;
+      @media #{$M_XS} {
+        margin-bottom: 0;
+        margin-right: 10px;
+      }
+      &:hover {
+        & span {
+          background-color: $black-20;
+          border-color: $black-20;
+          color: $white;
+          &:before,
+          &:after {
+            border-color: transparent transparent $black-20 transparent;
+          }
+        }
+        &.facebook i {
+          background-image: svg-load('../images/icon_facebook-social.svg', fill = $black-20);
+        }
+        &.vk i {
+          background-image: svg-load('../images/icon_vk-social.svg', fill = $black-20);
+        }
+        &.ok i {
+          background-image: svg-load('../images/icon_ok-social.svg', fill = $black-20);
+        }
+      }
+      &:active {
+        & span {
+          background-color: $gray-D3;
+          border-color: $gray-D3;
+          color: $white;
+          &:before,
+          &:after {
+            border-color: transparent transparent $gray-D3 transparent;
+          }
+        }
+        &.facebook i {
+          background-image: svg-load('../images/icon_facebook-social.svg', fill = $gray-D3);
+        }
+        &.vk i {
+          background-image: svg-load('../images/icon_vk-social.svg', fill = $gray-D3);
+        }
+        &.ok i {
+          background-image: svg-load('../images/icon_ok-social.svg', fill = $gray-D3);
+        }
+      }
+      & span {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 24px;
+        width: 54px;
+        font-size: 14px;
+        font-family: $font-secondary-light;
+        border: 1px solid $gray-A8;
+        color: $gray-A8;
+        background-color: $white;
+        cursor: pointer;
+        &:before,
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          margin: auto 0;
+        }
+        &:before {
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 0 9px 9px;
+          border-color: transparent transparent $gray-A8 transparent;
+          left: -9px;
+          top: 7px;
+        }
+        &:after {
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 0 7px 7px;
+          border-color: transparent transparent $white transparent;
+          left: -6px;
+          top: 8px;
+          z-index: 2;
+        }
+      }
+      & i {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        height: 20px;
+        width: 20px;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+      }
+      &.facebook i {
+        background-image: svg-load('../images/icon_facebook-social.svg', fill = $gray-A8);
+      }
+      &.vk i {
+        background-image: svg-load('../images/icon_vk-social.svg', fill = $gray-A8);
+      }
+      &.ok i {
+        background-image: svg-load('../images/icon_ok-social.svg', fill = $gray-A8);
+      }
+    }
+  }
+  & .article-inner {
+    position: relative;
+    height: auto;
+    margin: 50px 0;
+    & .article-inner-wr {
+      position: relative;
+      width: 770px;
+      margin: 0 auto;
+      @media #{$M_SMX} {
+        width: 480px;
+      }
+      @media #{$M_X3S} {
+        width: 100%;
+        padding: 0 10px;
+      }
+      & p {
+        margin-bottom: 20px;
+      }
+    }
+    & .title-main {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    & .post-pic {
+      position: relative;
+      height: auto;
+      width: 100%;
+      margin: 50px 0;
+      padding-bottom: 72.728%;
+      background-position: 0 0;
+      -webkit-background-size: cover;
+      background-size: cover;
+      overflow: hidden;
+      & .author {
+        position: absolute;
+        bottom: 20px;
+        right: 30px;
+        font-family: $font-secondary;
+        font-size: 14px;
+        color: $white;
+        z-index: 2;
+        & strong {
+          font-family: $font-secondary-bold;
+        }
+      }
+    }
+  }
+  & .full-width-pic {
+    position: relative;
+    width: 100%;
+    margin: 50px 0;
+    & .author {
+      position: absolute;
+      bottom: 16px;
+      right: 40px;
+      font-family: $font-secondary;
+      font-size: 14px;
+      color: $white;
+      z-index: 2;
+    }
+  }
+  & .quote {
+    width: 100%;
+    padding-left: 24px;
+    line-height: 1.4em;
+    font-size: 20px;
+    font-family: $font-secondary-lightItalic;
+    border-left: 4px solid $black-20;
+  }
+  & .pics-bl {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    text-align: center;
+    @media #{$M_X3S} {
+      padding: 0 10px;
+    }
+    &__item {
+      height: auto;
+      padding-bottom: 43.239%;
+      margin-bottom: 30px;
+      background-position: 0 0;
+      -webkit-background-size: cover;
+      background-size: cover;
+      @media #{$M_X3S} {
+        width: 100%;
+      }
+      &.sm {
+        width: 39.144%;
+        @media #{$M_X3S} {
+          width: 100%;
+          padding-bottom: 100%;
+        }
+      }
+      &.md {
+        width: 58.096%;
+        @media #{$M_X3S} {
+          width: 100%;
+          padding-bottom: 75%;
+        }
+      }
+      &.lrg {
+        width: 100%;
+        @media #{$M_X3S} {
+          padding-bottom: 54.239%;
+        }
+      }
+    }
+    & .sub-text {
+      width: 100%;
+      padding-left: 13.4%;
+      text-align: left;
+      font-size: 16px;
+      color: $gray-6D;
+      @media #{$M_XS} {
+        padding: 0 90px;
+      }
+      @media #{$M_X3S} {
+        padding-left: 0;
+      }
+    }
+  }
+}
+.comments-section {
+  & .inner {
+    height: auto;
+    width: 770px;
+    margin: 0 auto;
+    @media #{$M_SMX} {
+      width: 100%;
+    }
+  }
+  & .title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 80px;
+    padding: 20px 0;
+    background-color: $gray-F0;
+    & a {
+      display: flex;
+      & span {
+        font-size: 18px;
+        color: $gray-6D;
+      }
+    }
+  }
+  & .comment-wr-logout {
+    margin-top: 35px;
+    font-size: 18px;
+    line-height: 28px;
+    font-family: $font-secondary-light;
+    @media #{$M_SMX} {
+      padding: 0 30px;
+    }
+    @media #{$M_X3S} {
+      font-size: 16px;
+      line-height: 20px;
+      padding: 0 20px;
+    }
+    & a {
+      font-size: inherit;
+      font-family: inherit;
+      color: $blue-66;
+    }
+  }
+  & .comment-wr {
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin-top: 40px;
+    padding-bottom: 22px;
+    @media #{$M_SMX} {
+      padding: 0 30px;
+    }
+    @media #{$M_X3S} {
+      padding: 0 20px;
+    }
+    & .user-comment-head {
+      font-size: 30px;
+      font-family: $font-base-bold;
+      color: $black-20;
+    }
+    & .user-comment-bl {
+      position: relative;
+      width: 100%;
+      margin-top: 35px;
+      padding-bottom: 22px;
+      & textarea {
+        display: block;
+        height: auto;
+        width: 100%;
+        padding-bottom: 22px;
+        font-family: $font-secondary-light;
+        font-size: 15px;
+        resize: none;
+        border: none;
+        border-bottom: 2px solid $black-20;
+        outline: none;
+      }
+      & .counter-bl {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-family: $font-secondary-light;
+        font-size: 13px;
+        color: $gray-6D;
+      }
+    }
+  }
+  & .btn-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    @media #{$M_X2SS} {
+      flex-flow: column wrap;
+      align-items: center;
+    }
+    & .btn {
+      font-family: $font-secondary;
+      padding: 0 30px;
+      color: $black-20;
+      font-size: 14px;
+      @media #{$M_X2SS} {
+        max-width: 250px;
+        margin-top: 10px;
+      }
+      &:hover {
+        color: $gray-6D;
+      }
+      &:active {
+        color: $gray-D3;
+      }
+      &.btn-default {
+        font-size: 18px;
+        font-family: $font-base;
+        color: $white;
+      }
+    }
+  }
+}
+.comment-feed {
+  margin-top: 50px;
+  @media #{$M_SMX} {
+    padding: 0 30px;
+  }
+  @media #{$M_X3S} {
+    padding: 0 20px;
+  }
+  & .comment {
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin-bottom: 50px;
+    padding-left: 100px;
+    font-family: $font-secondary;
+    @media #{$M_X3S} {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 0;
+    }
+    & a {
+      font-family: inherit;
+      color: $black-20;
+    }
+    &__pic {
+      position: absolute;
+      height: 73px;
+      width: 73px;
+      top: 0;
+      left: 0;
+      @include border-radius($full-round);
+      overflow: hidden;
+      @media #{$M_X3S} {
+        position: relative;
+      }
+    }
+    &__head {
+      display: flex;
+      width: 100%;
+      font-size: 14px;
+      @media #{$M_X3S} {
+        width: auto;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        margin-left: 18px;
+      }
+      & .username {
+        margin-right: 8px;
+        font-family: $font-secondary-bold;
+        @media #{$M_X3S} {
+          width: 100%;
+        }
+      }
+      & .date {
+        color: $gray-6D;
+        @media #{$M_X3S} {
+          width: 100%;
+          margin-top: 10px;
+        }
+      }
+    }
+    &__body {
+      width: 100%;
+      margin-top: 20px;
+      line-height: 1.4em;
+      font-family: $font-secondary-light;
+      font-size: 15px;
+    }
+    &__bottom {
+      display: flex;
+      width: 100%;
+      margin-top: 15px;
+      font-size: 13px;
+      & .likes {
+        position: relative;
+        padding: 0 16px 0 24px;
+        border-right: 1px solid $gray-6D;
+        color: $gray-6D;
+        cursor: pointer;
+        &:before {
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 14px;
+          width: 14px;
+          content: svg-load('../images/icon_like.svg', fill = $black-20);
+        }
+        &.active {
+          &:before {
+            content: svg-load('../images/icon_like-filled.svg', fill = $orange-FC);
+          }
+        }
+      }
+      & .options {
+        display: flex;
+        &__item {
+          margin-left: 15px;
+          cursor: pointer;
+          &:hover {
+            color: $gray-6D;
+          }
+          &:active {
+            color: $gray-D3;
+          }
+        }
+      }
+    }
+  }
+}

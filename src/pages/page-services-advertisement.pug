@@ -1,0 +1,126 @@
+doctype html
+include ../templates/vendor/bemto/bemto
+
+html(lang='ru')
+  head
+    include ../templates/partials/head/head
+  body
+    +b.popup-wr
+      include ../templates/partials/page-popups/authorization-popup
+          
+    +b.page-wrapper
+      +b.A.bg-link(href="#")
+      include ../templates/partials/page-anchor/anchor
+
+      +b.page-inner-wr
+        include ../templates/partials/page-header/header--logged
+        include ../templates/partials/page-search-toolbar/search-toolbar
+
+        +b.page-body
+          +b.page-profile
+            +b(style="background-image: url(./temp/page-top-bg2.png);").page-top
+              +e.user-info
+                +e.user-pic
+                  img(src="./assets/images/soys-about-logo.png")
+
+                +e.user-main
+                  +e.user-name.menu Меню
+                    +b.mobile-trigger
+
+            +b.page-aside
+              +e.list
+                +e.item
+                  a(href="#") О проекте
+                +e.item
+                  a(href="#") Правила
+                +e.item.active
+                  a(href="#") Рекламодателям
+                  +b('ul').list
+                    +e.item.active
+                      a(href="#") Медиакит
+                    +e.item
+                      a(href="#") Контакты рекламного отдела
+                    +e.item
+                      a(href="#") Владельцам заведений
+                    +e.item
+                      a(href="#") Организаторам мероприятий
+                +e.item
+                  a(href="#") Контакты
+                +e.item.active
+                  a(href="#") Помощь
+              +b.mobile-trigger
+
+            +b.page-main-content
+              +b.text-page
+                h2 Реклама на сайте
+
+                p #[a(href="#") Soys.by] — первый белорусский портал, который объединяет любителей и профессионалов мира кулинарии. Мы это:
+
+                +b.quote
+                  blockquote.blockquote
+                    p 2,7 млн. уникальных посетителей в месяц #[br] ≈100 тысяч посетителей ежедневно #[br] 9 миллионов просмотров в месяц
+                  i.subquote (Данные Google Analytics за август 2017 года)
+
+                +b.btn-row
+                  +b.A(href="#").btn.btn-default Медиакит по сайту
+                  +b.A(href="#").btn.btn-secondary Требования к рекламе
+
+                h3 Преимущества нашего портала:
+                +b('ul').list-dotted
+                  +e.item Нет конкурентов в сфере кулинарии в белорусском Интернет-пространстве, где пишут о еде, про еду и восхищаются едой.
+                  +e.item Кулинария - одна из самых популярных тем в соиальных сетях, следовательно, ожидается большое количество посетителей портала.
+
+                h3 Что мы предлагаем
+                +b('ul').list-dotted
+                  +e.item #[a(href="#") Нативная реклама] — статьи, тематический материал с упоминанием бренда
+                  +e.item Эксклюзивные рецепты, приготовленные на кухне известными шеф-поварами
+                  +e.item Совместные проекты с блогерами
+                  +e.item Статьи с интерактивными элементами
+                  +e.item Фотопроекты и видеопроекты
+                  +e.item Спецпроекты-тексты, кулинарные викторины, контентные проекты
+                  +e.item #[a(href="#") Брендирование-сайта], статьи, рубрики
+                  +e.item #[a(href="#") Банненая реклама]-перетяжка и боковые баннеры
+
+                h3 Контакты рекламного отдела
+
+                p По вопросам размещения нативной рекламы (спецпроекты, статьи, анонсы новинок и образовательных событий, тесты и прочие интерактивные форматы):
+
+                +b.info-bl
+                  span +375 (29) 785-17-00
+                  |
+                  br
+                  |
+                  a(href="#") sales@soys.by
+
+                p По вопросам размещения медийной рекламы (full screen, mobile full screen, баннеры и брендирование):
+
+                +b.info-bl
+                  span +375 (29) 785-17-00
+                  |
+                  br
+                  |
+                  a(href="#") info@soys.by
+
+              +b.text-page
+                h3 Владельцам заведений
+                p Портал о еде Soys.by каждый день ищет и находит что-то новое и интересное в столице, сообщая об этом своим читателям. Если вам кажется, что о вашем заведении тоже стоит рассказать, – напишите нам на #[a(href="#") info@soys.by].
+                p Если хотите разместить у нас рекламу своего заведения, зайдите в этот раздел. При этом мы открыты для свежих идей и предложений. В партнерстве с вами мы готовы создать интересные материалы (мы сами напишем их и честно обозначим, что они сделаны в рекламных целях в сотрудничестве с вами). Мы можем придумать и провести совместно с вами множество различных активностей – от кинопоказов и конкурсов до опросов и создания гидов, которые будут полезны и любопытны как вам, так и нашим читателям.
+              +b.text-page
+                h3 Организаторам мероприятий
+                p Анонсы и другую полезную информацию о мероприятиях высылайте, пожалуйста, на #[a(href="#") event@soys.by].
+                p Пожалуйста, не забывайте:
+                +b('ul').num-list
+                  +e.item указывать название мероприятия и даты проведения в теме письма,
+                  +e.item готовить изображения для афиши – 1060х686 пикселей, без текста на картинке,
+                  +e.item не забывайте о цене билета и месте проведения – без этой информации мероприятие в афише не появится,
+                  +e.item в текстовой информации о мероприятии не забывайте указывать возрастные ограничения ивента: 0+, 6+, 12+, 16+ или 18+.
+
+
+        include ../templates/partials/page-footer/footer
+
+  block scripts
+    script(src='assets/scripts/vendor/jquery-2.2.4.min.js')
+    script(src='assets/scripts/tools.js')
+    script(src='assets/scripts/vendor/slick.min.js')
+    script(src='assets/scripts/vendor/selectize.min.js')
+    script(src='assets/scripts/vendor/jquery-ui.min.js')

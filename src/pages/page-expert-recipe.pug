@@ -1,0 +1,216 @@
+doctype html
+include ../templates/vendor/bemto/bemto
+
+html(lang='ru')
+  head
+    include ../templates/partials/head/head
+  body
+    +b.popup-wr
+      include ../templates/partials/page-popups/recipe-popup
+
+    +b.page-wrapper
+      +b.A.bg-link(href="#")
+      include ../templates/partials/page-anchor/anchor
+
+      +b.page-inner-wr
+        include ../templates/partials/page-header/header
+        include ../templates/partials/page-search-toolbar/search-toolbar
+
+        +b.page-body
+          +b.newsopen-section
+            +b(style="background-image: url(./assets/images/expert-recipe-head.png);").page-title-main.bg-pic
+              h2 Рецепты от шефов
+
+            +b(itemscope="" itemtype="http://schema.org/HowTo").article-inner
+              +b.article-inner-wr
+                
+                +b.page-recipe-author-top
+                  +e.head
+                    +e.A( style="background-image: url(./temp/participant-11.png);" href="#").pic
+                    +e.main
+                      +b.username
+                        strong Автор: 
+                        | 
+                        a(href="#")(itemprop="author") Сергей Леонтьев
+                      +b(itemprop="datePublished").date 25 июня 2017
+                    +e.aside
+                      +b.A(href="#comments-section").comments 10
+                      +b.views 307
+                    +b.social
+                      +e.item.facebook
+                        i
+                        span 3456
+                      +e.item.vk
+                        i
+                        span 436
+                      +e.item.ok
+                        i
+                        span 38
+
+                  +e.body
+                    +b.author-about
+                      +b('p') Сергей Леонтьев — главный соратник Адриана Кетгласа, шеф ресторанов «The Сад», AQ Kitchen и Adri BBQ. Андрей начинал работу с Кетгласом в «Чиполлино», потом продолжил ее в Doce Uvas, одном из первых московских ресторанов, который попал в сотню лучших ресторанов мира. Леонтьев — один из лучших белорусских шефов, но он не стремится к славе, и поэтому широкая публика мало что о нем знает.
+
+                    +b('button').btn.btn-default Голосовать за участника
+
+
+
+                +b.title-main
+                  h2 Лазанья классическая с мясом
+
+                +b.recipe-features
+                  +e(itemprop="recipeYield").item.portions
+                    span.val 5 
+                    | 
+                    span порций
+                  +e(itemprop="totalTime").item.time
+                    span.val 40 
+                    | 
+                    span минут
+                +b.page-recipe-description
+                  p Schweinsohren (нем.) — смешное, но справедливое название этой замечательной выпечки из слоеного теста. Мне кажется, что булочки по своей форме напоминают свиные уши. Больше всего мне понравилось «кино», которое я наблюдала в духовке во время выпечки. Это чудо — наблюдать за тонкой полоской теста, которая на твоих глазах растет, дышит и превращается великолепную пышную булочку.
+
+                  +b.btn-row-recipes
+                    +b.btn.btn-secondary.add-book В кулинарную книгу
+                    +b.btn.btn-secondary.print Распечатать рецепт
+
+            +b.page-recipe-calc
+              +e.top
+                +b.title
+                  h3 Количество порций
+                +b.calc
+                  +b.button.minus
+                  +b('label').input
+                    input(type="text" value="0")
+                  +b.button.plus
+              +b.calc-table
+                +b.table-head Ингредиенты
+                +e(itemprop="recipeIngredient").item
+                  +b.name Мясной фарш
+                  +b.dots
+                  +b.count
+                    span 600 
+                    | 
+                    | г.
+                +e(itemprop="recipeIngredient").item
+                  +b.name Сыр
+                  +b.dots
+                  +b.count
+                    span 250 
+                    | 
+                    | г.
+                +e(itemprop="recipeIngredient").item
+                  +b.name Лук репчатый
+                  +b.dots
+                  +b.count
+                    span 1 
+                    | 
+                    | шт.
+                +e(itemprop="recipeIngredient").item
+                  +b.name Чеснок
+                  +b.dots
+                  +b.count
+                    span 3 
+                    | 
+                    | шт.
+                +e(itemprop="recipeIngredient").item
+                  +b.name Зелень рубленая
+                  +b.dots
+                  +b.count
+                    span По вкусу
+
+          +b.recipe-steps.expert-recipe
+            +e(itemprop="steps" itemscope="" itemtype="http://schema.org/HowToSection").section
+              +b.row
+                +b.recipe-section-title
+                  h3 Шаг 1. Фарш
+
+                +e(itemprop="recipeInstructions").text
+                  p Сначала приготовим мясной соус. Для этого лук, чеснок и морковь почистите, мелко порубите, обжарьте на оливковом масле до мягкости. Добавьте фарш, обжаривайте 10 минут.
+
+                +b.recipe-pic
+                  img(src="./temp/recipe-pic5.png")
+
+                +e.quote
+                  p Добавьте красное сухое вино. Дайте вину слегка выпариться. Добавьте протертые помидоры. Тушите под крышкой 45 минут на тихом огне, пока соус не загустеет. В конце посолите, поперчите, добавьте сахар. Снимите мясной соус с огня.
+
+            +e.section
+              +b.row
+                +b.recipe-section-title
+                  h3 Шаг 2. Соус
+
+                +e(itemprop="recipeInstructions").text
+                  p Приготовьте сливочный соус. Растопите сливочное масло в небольшом сотейнике.
+
+                +b.recipe-pic
+                  img(src="./temp/recipe-pic6.png")
+
+              +b.row
+                +e(itemprop="recipeInstructions").text
+                  p Добавьте муку к сливочному маслу и хорошо перемешайте, чтобы не было комочков.
+
+                +b.recipe-pic
+                  img(src="./temp/recipe-pic7.png")
+
+            +e.section
+              +b.row
+                +b.recipe-section-title
+                  h3 Шаг 3. Формовка
+
+                +e(itemprop="recipeInstructions").text
+                  p Снимите сливочный соус с огня и отставьте в сторону. Спелые помидоры нарежьте кружочками. Сыр натрите на терке.
+
+                +b.recipe-pic
+                  img(src="./temp/recipe-pic8.png")
+
+                +e.quote
+                  p Когда мука поджарится, постепенно влейте горячие сливки, постоянно работая венчиком, добавьте прованские травы, соль. Доведите до кипения, убавьте огонь до минимума и варите еще несколько минут, пока соус слегка не загустеет.
+
+                +b.recipe-pic
+                  img(src="./temp/recipe-pic9.png")
+
+            +e.section
+              +b.row
+                +b.recipe-section-title
+                  h3 Шаг 4. Приятного аппетита!
+
+                +b.recipe-pic
+                  img(src="./temp/recipe-pic10.png")
+
+
+
+            +b.btn-row-recipes
+              +b.btn.btn-secondary.add-book В кулинарную книгу
+              +b.btn.btn-secondary.print Распечатать рецепт
+
+
+            +b.shef-recipes
+              +b.section-title
+                h2
+                  a(href="#") Рецепты от шефов
+
+              +e.body
+                +e.item
+                  +e(style="background-image: url(./temp/participant-10.png);").item-pic
+                  +e.item-title Роман Лошманов
+                  +e.item-subtitle Шеф ресторана Selfie
+                  +e(style="background-image: url(./temp/participant-s-food-1.png);").item-recipe
+                    +b.title Сырный суп по‑французски с курицей
+
+                +e.item
+                  +e(style="background-image: url(./temp/participant-12.png);").item-pic
+                  +e.item-title Алексей Зимин
+                  +e.item-subtitle Шеф ресторанов «The Сад», AQ Kitchen и Adri BBQ
+                  +e(style="background-image: url(./temp/participant-s-food-3.png);").item-recipe
+                    +b.title Рыбные котлетки по‑азиатски
+
+        +b.page-line-divider
+
+        include ../templates/partials/page-footer/footer
+
+  block scripts
+    script(src='assets/scripts/vendor/jquery-2.2.4.min.js')
+    script(src='assets/scripts/tools.js')
+    script(src='assets/scripts/vendor/slick.min.js')
+    script(src='assets/scripts/vendor/selectize.min.js')
+    script(src='assets/scripts/vendor/jquery-ui.min.js')

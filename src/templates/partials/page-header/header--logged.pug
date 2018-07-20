@@ -1,0 +1,75 @@
++b('header')#header.header
+  +b.btn-header-mobile
+    +b.inner
+      span
+      span
+      span
+  +e.logo
+    a(href="#")
+  +e.nav-wr
+    +e('nav').nav-main
+      +b('ul').nav-main-list
+        +e.item
+          a(href="#") Рецепты
+        +e.item
+          a(href="#") Новости
+        +e.item
+          a(href="#") События
+        +e.item
+          a(href="#") Лайфхаки
+      +b.log-in.desktop
+        +b.user-logged.dropdown
+          +e.wr.dropdown-btn
+            +b(style="background-image: url(./temp/user-pic3.png);").user-pic
+              +b.notification 3
+            +b.user-name Света Светикова
+
+          +b.dropdown-list
+            +e.item
+              a(href="#") Мой профиль
+            +e.item.cookbook
+              a(href="#") Кулинарная книга
+            +e.item
+              a(href="#") Мои рецепты
+            +e.item.likes
+              a(href="#") Мне нравится
+            +e.item.notifications.active
+              a(href="#")
+                | Уведомления
+                |
+                span (3)
+            +e.item.logout-btn
+              a(href="#") Выход
+    +e.nav-category
+      +b('ul').nav-category-list
+        +e.item
+          a(href="#") Домашняя кухня
+        +e.item
+          a(href="#") Уличная еда
+        +e.item
+          a(href="#") Ресторанное меню
+        +e.item
+          a(href="#") Барная карта
+  +b.log-in.mobile
+    +b.user-logged.dropdown
+      +e.wr.dropdown-btn
+        +b(style="background-image: url(./temp/user-pic3.png);").user-pic
+          +b.notification 3
+        +b.user-name Света Светикова
+        
+      +b.dropdown-list
+        +e.item
+          a(href="#") Мой профиль
+        +e.item.cookbook
+          a(href="#") Кулинарная книга
+        +e.item
+          a(href="#") Мои рецепты
+        +e.item.likes
+          a(href="#") Мне нравится
+        +e.item.notifications.active
+          a(href="#")
+            | Уведомления
+            |
+            span (3)
+        +e.item.logout-btn
+          a(href="#") Выход

@@ -1,0 +1,197 @@
+doctype html
+include ../templates/vendor/bemto/bemto
+
+html(lang='ru')
+  head
+    include ../templates/partials/head/head
+  body
+    +b.popup-wr
+      include ../templates/partials/page-popups/authorization-popup
+          
+    +b.page-wrapper
+      +b.A.bg-link(href="#")
+      include ../templates/partials/page-anchor/anchor
+
+      +b.page-inner-wr
+        include ../templates/partials/page-header/header--logged
+        include ../templates/partials/page-search-toolbar/search-toolbar
+
+        +b.page-body
+          +b.page-profile
+            +b(style="background-image: url(./temp/page-top-bg.png);").page-top
+              +e.user-info
+                +e.user-pic
+                  img(src="./temp/user-pic3.png")
+
+                +e.user-main
+                  +e.user-name Света Светикова
+                    +b.mobile-trigger
+                  +e.user-status Эксперт
+
+            +b.page-aside
+              +e.list
+                +e.item.active
+                  a(href="#") Мой профиль
+                +e.item.cookbook
+                  a(href="#") Кулинарная книга
+                +e.item
+                  a(href="#") Мои рецепты
+                +e.item.likes
+                  a(href="#") Мне нравится
+                +e.item.notifications
+                  a(href="#") Уведомления
+                +e.item
+                  a(href="#") Выход
+
+            +b.page-main-content
+              +b.profile-section.active
+                h3 Персональные данные
+                +b.A.edit-btn(href="#") Редактировать
+
+                +b.input-group
+                  +b('label').group-label
+                    p Ваше имя*
+                    input(type="text" placeholder="Введите текст").input
+                  +b('label').group-label
+                    p Псевдоним
+                    input(type="text" placeholder="Введите текст").input
+                  +b('label').group-label
+                    p Дата рождения
+                    input(type="text" placeholder="Дд. Мм. Гггг").input#datepicker
+
+                    +b('label').sub-label Отображать дату рождения в профиле
+                      input(type="checkbox")
+                      i
+
+                +b.input-group
+                  +b('label').group-label
+                    p Страна
+                    select.input
+                      option Австралия
+                      option Австрия
+                      option Азербайджан
+                      option Беларусь
+                      option Бельгия
+                      option Ватикан
+                      option Гаити
+                      option Греция
+                      option Египет
+                      option Казахстан
+                      option Канада
+                      option Ливан
+                      option Малайзия
+                      option Нидерланды
+                      option Панама
+                      option Румыния
+                      option Сен-Мартен
+                      option Словакия
+                      option Тунис
+                      option Франция
+                  +b('label').group-label
+                    p Город
+                    select.input
+                      option Бобруйск
+                      option Борисов
+                      option Витебск
+                      option Гомель
+                      option Минск
+                      option Могилёв
+                      option Мозырь
+                      option Орша
+                      option Полоцк
+                      option Речица
+                      option Слуцк
+                      option Быхов
+                      option Ветка
+                      option Горки
+                      option Городок
+                  +b('label').group-label.lrg
+                    p Дата рождения
+                    textarea(placeholder="Напишите пару слов о ваших увлечениях" maxlenght="400").input.profile-textarea
+                    +b.profile-counter
+                      +b('span').val 400
+                      +b('span') /400
+                +b.btn-group
+                  button(type="submit").btn.btn-default Сохранить изменения
+                  button(type="reset").btn Отменить изменения
+
+              +b.profile-section
+                h3 Социальные сети
+                +b.A.edit-btn(href="#") Редактировать
+
+                p Нажмите на соответствующую иконку соц. сети, чтобы связать ее с вашим аккаунтом
+
+                +b.social-group
+                  +e(href="#").A.item.btn.facebook Фейсбук
+                  +e(href="#").A.item.btn.vk Вконтакте
+                  +e(href="#").A.item.btn.ok Одноклассники
+
+                +b.btn-group
+                  button(type="submit").btn.btn-default Сохранить изменения
+                  button(type="reset").btn Отменить изменения
+
+              +b.profile-section
+                h3 Смена пароля
+                +b.A.edit-btn(href="#") Редактировать
+
+                p Минимальная длина пароля – 8 символов. Не используйте пароли от других сайтов или варианты, которые злоумышленники смогут легко подобрать.
+
+                +b.input-group
+                  +b('label').group-label
+                    p Старый пароль
+                    input(type="password" placeholder="Введите пароль" value="1234567").input
+                  +b('label').group-label
+                    p Подтверждение
+                    input(type="password" placeholder="Введите пароль" value="1234567").input
+                  +b('label').group-label
+                    p Новый пароль
+                    input(type="password" placeholder="Введите пароль" value="1234567").input
+
+                +b.btn-group
+                  button(type="submit").btn.btn-default Сохранить изменения
+                  button(type="reset").btn Отменить изменения
+
+              +b.profile-section
+                h3 Рассылка
+                +b.A.edit-btn(href="#") Редактировать
+
+                p Выберите, как часто вы хотите получать от нас письма. Помимо вдохновляющих идей для приготовления блюд они включают в себя предложения, анонсы, скидки и розыгрыши ценных призов. 
+
+                +b.input-group
+                  +b('label').group-label
+                    p E-mail для рассылки
+                    input(type="email" placeholder="Введите email" value="svetata@mail.ru").input
+                +b.radio-group
+                  label(for="radio1").radio-label
+                    input(type="radio" name="radio-gr" id="radio1")
+                    i
+                    span Постоянно
+                    p Выберите эту опцию, если вы всегда в поиске предложений и вдохновения
+                  label(for="radio2").radio-label
+                    input(type="radio" name="radio-gr" id="radio2")
+                    i
+                    span Еженедельно
+                    p Отличная опция для нерегулярных приготовлений
+                  label(for="radio3").radio-label
+                    input(type="radio" name="radio-gr" id="radio3")
+                    i
+                    span Не хочу готовить
+                    p Не в настроении готовить? Не волнуйтесь, наши предложения будут ждать вас, когда вы снова захотите взяться за дело.
+
+                +b.checkbox-group
+                  label.checkbox-label Хочу регулярно получать рекламу и уведомления на email
+                    input(type="checkbox")
+                    i
+
+                +b.btn-group
+                  button(type="submit").btn.btn-default Сохранить изменения
+                  button(type="reset").btn Отменить изменения
+
+        include ../templates/partials/page-footer/footer
+
+  block scripts
+    script(src='assets/scripts/vendor/jquery-2.2.4.min.js')
+    script(src='assets/scripts/tools.js')
+    script(src='assets/scripts/vendor/slick.min.js')
+    script(src='assets/scripts/vendor/selectize.min.js')
+    script(src='assets/scripts/vendor/jquery-ui.min.js')

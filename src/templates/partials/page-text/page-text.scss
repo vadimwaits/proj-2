@@ -1,0 +1,232 @@
+.text-page {
+  & .site-about {
+    margin-bottom: 55px;
+    font-size: 18px;
+  }
+  & .list-dotted {
+    &__item {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 25px;
+      line-height: 1.4em;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      &:before {
+        content:'';
+        position: absolute;
+        top: 7px;
+        left: 0;
+        display: block;
+        height: 10px;
+        width: 10px;
+        background-color: $black-20;
+        @include border-radius($full-round);
+      }
+    }
+  }
+  & .quote {
+    & .blockquote {
+      display: block;
+      height: auto;
+      width: 100%;
+      margin-left: 0;
+      padding-bottom: 50px;
+      border-bottom: 1px solid $gray-E8;
+      & p {
+        padding-left: 50px;
+        font-size: 30px;
+        line-height: 1.5em;
+        font-family: $font-base-bold;
+        border-left: 5px solid $black-20;
+        margin: 0;
+        @media #{$M_XS} {
+          padding-left: 15px;
+          font-size: 18px;
+        }
+      }
+    }
+    & .subquote {
+      margin-top: 20px;
+      margin-left: 40%;
+      font-size: 14px;
+      font-family: $font-secondary-lightItalic;
+      color: $gray-6D;
+      @media #{$M_XS} {
+        margin-left: 0;
+      }
+    }
+  }
+  & .info-bl {
+    margin-top: 25px;
+    margin-bottom: 35px;
+    font-size: 18px;
+    font-family: $font-secondary;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    & a {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: inherit;
+      font-family: inherit;
+    }
+  }
+  & .btn-row {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0 55px;
+    @media #{$M_X3S} {
+      flex-wrap: wrap;
+      & .btn {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  & .btn {
+    margin-right: 18px;
+    padding: 0 40px;
+    font-size: 15px;
+    font-family: $font-base;
+    color: $white;
+    &:hover,
+    &:active {
+      color: $white;
+    }
+  }
+  .btn-secondary {
+    color: $black-20;
+  }
+}
+.expand-list {
+  margin-top: 50px;
+  font-family: $font-secondary-light;
+  &__item {
+    margin-bottom: 35px;
+    padding-left: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $gray-E8;
+    &:last-of-type {
+      margin-bottom: 0;
+      border-bottom: transparent;
+    }
+    &.active {
+      padding-bottom: 30px;
+      & .item-body {
+        display: block;
+      }
+      & .item-title {
+        color: $black-20;
+        &:before {
+          @include transform-rotate(0deg);
+        }
+      }
+    }
+    & .item-title {
+      position: relative;
+      color: $blue-66;
+      cursor: pointer;
+      &:hover {
+        &:before {
+          background-image: svg-load('../images/icon_select.svg', fill = $blue-66);
+        }
+      }
+      &:before {
+        content:'';
+        display: block;
+        position: absolute;
+        left: -25px;
+        top: 11px;
+        height: 7px;
+        width: 13px;
+        background-image: svg-load('../images/icon_select.svg', fill = $black-20);
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+        @include transform-rotate(-90deg);
+
+      }
+    }
+    & .item-body {
+      display: none;
+    }
+    p {
+      margin-top: 20px;
+    }
+  }
+}
+.num-list {
+  margin-top: 20px;
+  font-size: 16px;
+  list-style-type: decimal;
+  list-style-position: inside;
+  &__item {
+    padding-left: 30px;
+    margin-bottom: 22px;
+    line-height: 1.4em;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    & a {
+      font-size: inherit;
+      font-family: inherit;
+    }
+  }
+}
+.num-list-inherit {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.4em;
+  & .expand-list__item {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    color: $blue-66;
+    &:before {
+      font-family: $font-base-bold;
+      font-size: 30px;
+      line-height: 32px;
+      color: $blue-66;
+    }
+    &.active {
+      color: $black-20;
+      &:before {
+        color: $black-20;
+      }
+    }
+    & .item-body {
+      padding-bottom: 30px;
+    }
+  }
+
+  & ol {
+    list-style-type: none;
+    counter-reset: item;
+    margin: 0;
+    padding: 0;
+  }
+
+  & li {
+    counter-increment: item;
+    &:before {
+      content: counters(item, ".") ". ";
+      display: table-cell;
+      float: left;
+      padding-right: 8px;
+      font-size: 16px;
+    }
+    & li {
+      margin: 0 0 20px 0;
+      &:before {
+        content: counters(item, ".") ". ";
+      }
+      & li {
+        padding-left: 20px;
+      }
+    }
+  }
+}

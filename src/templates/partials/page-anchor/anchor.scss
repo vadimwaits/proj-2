@@ -1,0 +1,26 @@
+.anchor-btn {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 43px;
+  width: 43px;
+  z-index: 12;
+  background-color: $gray-52;
+  & a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    &:before {
+      content: svg-load('../images/icon_arrow-up.svg', fill = $white);
+      display: block;
+      height: 15px;
+      width: 13px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+}

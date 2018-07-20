@@ -1,0 +1,74 @@
+doctype html
+include ../templates/vendor/bemto/bemto
+
+html(lang='ru')
+  head
+    include ../templates/partials/head/head
+  body
+    +b.popup-wr
+      include ../templates/partials/page-popups/authorization-popup
+          
+    +b.page-wrapper
+      +b.A.bg-link(href="#")
+      include ../templates/partials/page-anchor/anchor
+
+      +b.page-inner-wr
+        include ../templates/partials/page-header/header--logged
+        include ../templates/partials/page-search-toolbar/search-toolbar
+
+        +b.page-body
+          +b.page-profile
+            +b(style="background-image: url(./temp/page-top-bg2.png);").page-top
+              +e.user-info
+                +e.user-pic
+                  img(src="./assets/images/soys-about-logo.png")
+
+                +e.user-main
+                  +e.user-name.menu Меню
+                    +b.mobile-trigger
+
+            +b.page-aside
+              +e.list
+                +e.item
+                  a(href="#") О проекте
+                +e.item
+                  a(href="#") Правила
+                +e.item
+                  a(href="#") Рекламодателям
+                +e.item.active
+                  a(href="#") Контакты
+                +e.item
+                  a(href="#") Помощь
+              +b.mobile-trigger
+
+            +b.page-main-content
+              +b.text-page
+                h2 Контактная информация
+
+                p +375 (29) 785-17-00 #[br] #[a(href="#") sales@soys.by]
+
+                +b.article
+                  h5 Адрес редакции:
+                  p 220036, г. Минск, пр. Дзержинского, 3-313, #[br] правое крыло здания. #[br] Ближайшее метро «Михалово»
+
+                h3 Реквизиты компании:
+                p ООО «Соус.бай»
+                p Местонахождение: #[br] 220036, г. Минск, пр. Дзержинского, 3-313
+                p Фактический адрес: #[br] 220036, г. Минск, пр. Дзержинского, 3-313.
+                p ИНН 7702819178
+                p КПП 770201001
+                p ОГРН 1137746635905
+                p Банковские реквизиты: #[br] р/с 40702810800200143637
+                p Центральный филиал ОАО Банка «БСБ Банк»
+                p к/c 30101810900000000181
+                p БИК 044525181
+
+
+        include ../templates/partials/page-footer/footer
+
+  block scripts
+    script(src='assets/scripts/vendor/jquery-2.2.4.min.js')
+    script(src='assets/scripts/tools.js')
+    script(src='assets/scripts/vendor/slick.min.js')
+    script(src='assets/scripts/vendor/selectize.min.js')
+    script(src='assets/scripts/vendor/jquery-ui.min.js')

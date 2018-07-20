@@ -1,0 +1,173 @@
+doctype html
+include ../templates/vendor/bemto/bemto
+
+html(lang='ru')
+  head
+    include ../templates/partials/head/head
+  body
+    +b.popup-wr
+      include ../templates/partials/page-popups/addbook-popup
+          
+    +b.page-wrapper
+      +b.A.bg-link(href="#")
+      include ../templates/partials/page-anchor/anchor
+
+      +b.page-inner-wr
+        include ../templates/partials/page-header/header--logged
+        include ../templates/partials/page-search-toolbar/search-toolbar
+
+        +b.page-body
+          +b.page-profile
+            +b(style="background-image: url(./temp/page-top-bg.png);").page-top
+              +e.user-info
+                +e.user-pic
+                  img(src="./temp/user-pic3.png")
+
+                +e.user-main
+                  +e.user-name Света Светикова
+                    +b.mobile-trigger
+                  +e.user-status Эксперт
+
+            +b.page-aside
+              +e.list
+                +e.item
+                  a(href="#") Мой профиль
+                +e.item.cookbook
+                  a(href="#") Кулинарная книга
+                +e.item
+                  a(href="#") Мои рецепты
+                +e.item.likes.active
+                  a(href="#") Мне нравится
+                +e.item.notifications
+                  a(href="#") Уведомления
+                +e.item
+                  a(href="#") Выход
+              +b.mobile-trigger
+
+            +b.page-main-content
+              +b.profile-section-wr
+                +b.search-result
+                  span Найдено: 
+                  |
+                  span.val 73 рецепта
+
+                +b.profile-sort-toolbar
+                  +e('label').search-bar.search-bar-default
+                    input(type="search" placeholder="Поиск по названию книги")
+                    i.icon
+
+                  +b.sort-list
+                    +b.title Сортировать:
+                    +b.dropdown-list
+                      select
+                        option Сначала новые
+                        option Сначала популярные
+                        option Сначала старые
+
+                +b.books-result-wr
+                  +b.recipe-section
+                    +b(style="background-image: url(./temp/recipe-lrg1.png);").section-bl.bl-lrg.street-food
+                      +b.overflow-wr
+                        +b.category Барная карта
+                        +b.overlay
+                        +b.inner
+                          +b.title
+                            h2 Арбузный лимонад с базиликом
+                          +e.info
+                            +b.author
+                              strong Автор: 
+                              |
+                              a(href="#") Soys.by
+                            +b.date 19 августа 2017
+                            +b.row
+                              +b.views 563
+                              +b.comments 923
+                              +b.likes.active 123
+
+                    +b(style="background-image: url(./temp/recipe-1.png);").section-bl.bl-min.bar
+                      +b.overflow-wr
+                        +b.category Барная карта
+                        +b.overlay
+                        +b.inner
+                          +b.title
+                            h2 Арбузный лимонад с базиликом
+                          +e.info
+                            +b.author
+                              strong Автор: 
+                              |
+                              a(href="#") Soys.by
+                            +b.date 19 августа 2017
+                            +b.row
+                              +b.views 563
+                              +b.comments 923
+                              +b.likes.active 123
+
+                    +b(style="background-image: url(./temp/recipe-1.png);").section-bl.bl-min.home-food
+                      +b.overflow-wr
+                        +b.overlay
+                        +b.category Барная карта
+                        +b.inner
+                          +b.title
+                            h2 Арбузный лимонад с базиликом
+                          +e.info
+                            +b.author
+                              strong Автор: 
+                              |
+                              a(href="#") Soys.by
+                            +b.date 19 августа 2017
+                            +b.row
+                              +b.views 563
+                              +b.comments 923
+                              +b.likes.active 123
+
+                    +b(style="background-image: url(./temp/recipe-lrg2.png);").section-bl.bl-lrg.restaurant-food
+                      +b.overflow-wr
+                        +b.category Барная карта
+                        +b.overlay
+                        +b.inner
+                          +b.title
+                            h2 Арбузный лимонад с базиликом
+                          +e.info
+                            +b.author
+                              strong Автор: 
+                              |
+                              a(href="#") Soys.by
+                            +b.date 19 августа 2017
+                            +b.row
+                              +b.views 563
+                              +b.comments 923
+                              +b.likes.active 123
+
+                    +b(style="background-image: url(./temp/recipe-lrg2.png);").section-bl.bl-lrg.restaurant-food
+                      +b.overflow-wr
+                        +b.category Барная карта
+                        +b.overlay
+                        +b.inner
+                          +b.title
+                            h2 Арбузный лимонад с базиликом
+                          +e.info
+                            +b.author
+                              strong Автор: 
+                              |
+                              a(href="#") Soys.by
+                            +b.date 19 августа 2017
+                            +b.row
+                              +b.views 563
+                              +b.comments 923
+                              +b.likes.active 123
+
+                    +b.A(href="#" style="background-image: url(./temp/banner2.png);").banner.item-sm.item
+
+                include ../templates/partials/page-pagination/pagination--no-border
+
+
+
+
+        include ../templates/partials/page-footer/footer
+
+  block scripts
+    script(src='assets/scripts/vendor/jquery-2.2.4.min.js')
+    script(src='assets/scripts/tools.js')
+    script(src='assets/scripts/vendor/slick.min.js')
+    script(src='assets/scripts/vendor/selectize.min.js')
+    script(src='assets/scripts/vendor/jquery-ui.min.js')
